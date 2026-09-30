@@ -13,14 +13,14 @@ type InfoboxProps = {
   embedded?: boolean;
 };
 
-// All groups collapse (native <details>). Identity defaults open (it's the
+// All groups collapse (native <details>). Sociological defaulted open once (the
 // hook); the rest default collapsed.
 // Professional opens first: the reader this site is for (an employer, a
-// partner) wants the work before the birth record. Identity stays one click away.
+// partner) wants the work before the birth record. Sociological stays one click away.
 const DEFAULT_OPEN = new Set(["Professional"]);
 
 /**
- * The infobox — the profile across four lenses (Identity / Professional /
+ * The infobox — the profile across four lenses (Sociological / Professional /
  * Psychological / Personal) as an encyclopedia data panel. Rows are a semantic
  * description list; groups are native <details> collapsibles (zero-JS,
  * keyboard/AT friendly, no CLS). Rendered twice (desktop rail + inline mobile

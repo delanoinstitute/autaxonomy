@@ -1,8 +1,8 @@
 // The infobox data — the right-column profile that sits beside the article,
 // like the summary box on a Wikipedia biography. Organized into four lenses
-// mirroring the site's arc from given to chosen: Identity (the givens) →
+// mirroring the site's arc from given to chosen: Sociological (the givens) →
 // Professional (the doing) → Psychological (the mind) → Personal (the pages,
-// one line each). Group headings carry a "See …" link into the page holding
+// one line each). Group headings carry a page-name link into the page holding
 // the full record. Financial/economic data beyond the one-line Wealth status
 // is intentionally excluded from the public site.
 
@@ -21,8 +21,8 @@ export type InfoboxRow = {
 
 export type InfoboxGroup = {
   heading: string;
-  headingLink?: { text: string; href: string }; // "(See Story)" beside the heading
-  headingNote?: string; // unlinked heading suffix, e.g. "(See Pages)"
+  headingLink?: { text: string; href: string }; // "(Story)" beside the heading
+  headingNote?: string; // unlinked heading suffix, e.g. "(Pages)"
   rows: InfoboxRow[];
 };
 
@@ -151,8 +151,8 @@ export const INFOBOX: InfoboxGroup[] = [
   {
     // The givens — birth, body, blood, culture, tongue; the legal row closes
     // (same shape as Professional's status pair). The full record is Story.
-    heading: "Identity",
-    headingLink: { text: "See Story", href: "/story" },
+    heading: "Sociological",
+    headingLink: { text: "Story", href: "/story" },
     rows: [
       {
         label: "Born",
@@ -180,7 +180,7 @@ export const INFOBOX: InfoboxGroup[] = [
     // own order (Works > Skills > Education, linked into their sections),
     // closing on the status pair.
     heading: "Professional",
-    headingLink: { text: "See Knowledge", href: "/knowledge" },
+    headingLink: { text: "Knowledge", href: "/knowledge" },
     rows: [
       {
         // The single designation — the method he IS (classify by function,
@@ -230,7 +230,7 @@ export const INFOBOX: InfoboxGroup[] = [
   {
     // The mind — the Nature page's headline outputs, one composite per row.
     heading: "Psychological",
-    headingLink: { text: "See Nature", href: "/nature" },
+    headingLink: { text: "Nature", href: "/nature" },
     // Intelligence leads the group — full-scale RIOT result, wired the same
     // day as the Nature page's battery (August 2026).
     rows: [
@@ -258,7 +258,7 @@ export const INFOBOX: InfoboxGroup[] = [
     // The pages — one status line per remaining page, labels linked; the
     // infobox doubles as the site index.
     heading: "Personal",
-    headingNote: "See Pages",
+    headingNote: "Pages",
     rows: [
       {
         label: "About",
