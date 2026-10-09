@@ -263,12 +263,12 @@ export const INFOBOX: InfoboxGroup[] = [
       {
         label: "About",
         labelHref: "/",
-        values: [{ text: "Every claim referenced" }],
+        values: [{ text: "West Palm Beach, available" }],
       },
       {
         label: "Lifestyle",
         labelHref: "/lifestyle",
-        values: [{ text: "12 habits, all 24 hours" }],
+        values: [{ text: "By design, adaptable" }],
       },
       {
         label: "Health",
@@ -283,7 +283,7 @@ export const INFOBOX: InfoboxGroup[] = [
       {
         label: "Network",
         labelHref: "/network",
-        values: [{ text: "Each seat benchmarked" }],
+        values: [{ text: "Single, no children" }],
       },
     ],
   },

@@ -872,7 +872,7 @@ export default function LifestylePage() {
 
       <h2 id="space">Space <span className="heading-paren">(Resources)</span></h2>
       <p>
-        Where you live is a function of <strong>conditions</strong> (given) and <strong>services</strong> (chosen), the two best predictors of what your life costs and allows. Mine: Austin, graded on land, market, and people; a home in five layers, from the shell to my bag.
+        Where you live is a function of <strong>conditions</strong> (given) and <strong>services</strong> (chosen), the two best predictors of what your life costs and allows. Mine: West Palm Beach, graded on land, market, and people; a home in five layers, from the shell to my bag.
       </p>
       <NestedTable {...SPACE} />
 
