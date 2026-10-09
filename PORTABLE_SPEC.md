@@ -29,32 +29,41 @@ publish yourself; you may not publish them.
 
 ## 2. Structure
 
-### Three levels, strictly
+### The page, then three levels, strictly
 
-1. **Page** — one domain of the person. Six to eight total.
+1. **Page** — one domain of the person. Six to eight total (this site runs
+   eight, in two navigation groups of four).
 2. **Branch** — `<h2>` section with a parenthetical gloss. **Exactly three per
    page.**
 3. **Band** — the coloured header inside a table. **Exactly two per branch.**
    This is the rule most likely to be broken and the one that keeps the site
    coherent. Bands split on a *principled binary* — individual against social,
    given against chosen, body against world. If a third band seems necessary,
-   the binary is wrong, not the rule.
+   the binary is wrong, not the rule. Three branches × two bands gives six
+   bands per page; tint them in spectrum order down the page (red, orange,
+   yellow, green, blue, violet), so hue marks position and never emphasis.
 4. **Category** — the grey subheader. **Variable**, one to four, following the
    data rather than a quota.
 
 ### Suggested page set
 
-| Page | Three branches |
-|---|---|
-| About | About, Contact |
-| Story | Inheritance, Development, Emergence |
-| Identity | Intellect, Character, Drive |
-| Health | Integrity, Balance, Capacity |
-| Knowledge | Works, Skills, Education |
-| Lifestyle | Activity, Time, Space |
-| Wealth | Socioeconomic |
+Two navigation groups of four: **Constitution** (the inputs: where you came
+from, who you are, how you live) and **Capital** (what those produce).
 
-Adapt the names, keep the shape.
+| Group | Page | Three branches (gloss) |
+|---|---|---|
+| Constitution | About | *Your name* (Introduction), Website (Guide), Contact (Offers) |
+| Constitution | Story | Inheritance (Identity), Development (Timeline), Emergence (Agency) |
+| Constitution | Nature | Intellect (Cognition), Character (Affect), Drive (Conation) |
+| Constitution | Lifestyle | Activity (Habits), Time (Routines), Space (Resources) |
+| Capital | Health | Integrity (Structure), Balance (Homeostasis), Capacity (Performance) |
+| Capital | Knowledge | Works (Production), Skills (Practice), Education (Theory) |
+| Capital | Wealth | Security (Protection), Efficiency (Leverage), Growth (Allocation) |
+| Capital | Network | Care (Support), Collaboration (Exchange), Contribution (Service) |
+
+Adapt the names, keep the shape. (Nature was first called Identity; the
+word moved to the Story page's Inheritance branch, and the page kept the
+given half of nature against nurture.)
 
 ### The Story page is the spine
 
@@ -67,7 +76,8 @@ Three branches on a single question — *when did this become true?*
   terms were not yours. Chronological entries grouped into life stages.
 - **Emergence** — chosen against what the first two would predict. Bands:
   dispositions (what you elected to be) against decisions (what you elected to
-  do), each split into demonstrated and declared.
+  do). (This spec once split each into demonstrated and declared; this site
+  now runs one category per band.)
 
 That discriminator resolves nearly every placement question. Citizenship is
 inheritance. Religion of upbringing is development — it was administered over
@@ -96,8 +106,9 @@ Every category opens with an **unlabelled italic first-person lead**, one line.
 
 ## 4. References
 
-Two blocks per page. Sections within them run **guidelines → data → evidence**,
-ordered to match the taxonomy above them:
+One or two blocks per page, each glossed by its kind — `References (Data)`,
+`References (Guidelines)`, `References (Evidence)`. Sections within them run
+**guidelines → data → evidence**, ordered to match the taxonomy above them:
 
 - **Guidelines** — the public standard you measure against (WHO, a national
   body, a published protocol).
@@ -158,21 +169,27 @@ was mistaken" is an argument, and belongs elsewhere if anywhere.
 
 ## 7. Technical shape
 
-Next.js App Router, TypeScript, Tailwind. Static-export friendly. Deploy on
-Vercel; push to `main` deploys.
+Next.js (App Router) with React and TypeScript, and Tailwind CSS; use current
+stable versions (Next.js 16, React 19, Tailwind CSS 4 at the time of writing).
+With Tailwind 4 there is no JavaScript config: design tokens are CSS variables
+in the global stylesheet, mapped to utilities in an `@theme` block. Pages carry
+no request-time data, so they prerender as static HTML; old-URL redirects and
+security headers live in `next.config`, which a pure static export would drop.
+Deploy on Vercel; push to `main` deploys.
 
-Three columns: left navigation, centre article, right infobox. The infobox
-renders twice — a desktop rail and a mobile disclosure.
+Three columns: left navigation (grouped), centre article, right infobox. The
+infobox renders twice — a desktop rail and a mobile disclosure.
 
 Content lives in typed data structures, not in JSX prose, so it can be
 validated. One `StatTableData` per branch:
 
 ```
-{ title, groups: [ { domain, label, rows: [ { category, metrics: [...] } ] } ] }
+{ title, groups: [ { domain, label, hue?, rows: [ { category, metrics: [...] } ] } ] }
 ```
 
-A metric is `[term, value, supportive?, tooltip?, href?]`. Values may be strings
-or arrays of nodes when they contain links.
+A group is a band; `hue` is its spectrum tint. A metric is
+`[term, value, supportive?, tooltip?, href?, sub?]`. Values may be strings or
+arrays of nodes when they contain links.
 
 **Checks before every commit:**
 

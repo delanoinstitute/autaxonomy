@@ -11,7 +11,9 @@ identity; those govern implementation.
 Status: v0.3 (2026-09-04). Symbol ratified: the Ranked Table (§1.1), a
 ruled 3×3 with the three ranks in its header row, replacing the LD cell
 (v0.1) and the diagonal (v0.2); the initials appear in no mark. Inks
-ratified (§2.2) with contrast ratios recorded.
+ratified (§2.2) with contrast ratios recorded. Tagline lockup ratified as
+the complete logo (§1.3), same day. Facts reconciled with the site code
+and the brand kit on 2026-10-09 (no new ratification).
 
 ---
 
@@ -52,7 +54,7 @@ the artifact, not an abstraction of it.
 
 - Geometry: square. Rule = side ÷ 30 (1 px minimum); inner rules equal
   the border; cells equal. No rounding, no ornament (a table, not a
-  badge; the current header circle is retired).
+  badge; the former LD header circle is retired).
 - **Primary**: ink rules, paper cells, triad header. Every size,
   including the 16 px favicon (4 px cells stay legible).
 - **Monochrome**: ink rules, paper cells, ink header: one tone, an ink
@@ -79,7 +81,8 @@ the artifact, not an abstraction of it.
 ### 1.2 The Wordmark
 
 **LORENZO DELANO** in Newsreader, semibold, uppercase, tracking 0.02em
-(site header) to 0.055em (large/print, as on the resume). Optical size
+(site header on mobile) to 0.055em (site header on desktop, large/print,
+as on the resume). Optical size
 axis on (`opsz`). One line; never stacked except in the vertical lockup
 (§1.3). Ink on paper; paper on ink or on a solid rank hue.
 
@@ -109,10 +112,12 @@ way, never larger than the primary wordmark when both appear.
   line and its bottom on the tagline's lowest descender; gap between
   symbol and text = half a side. Set with line-height 1, the cap line is
   0.02 N below the wordmark's box top and the tagline's box starts 1.065 N
-  below it. Standard on the site header (35 px symbol in a 68 px header,
-  so N = 21.7 px),
-  the LinkedIn banner (N = 64), and the YouTube channel art (N = 92 in the
-  1546 × 423 safe area). Ratified 2026-09-04.
+  below it. Standard on the desktop site header (35 px symbol in a 68 px
+  header, so N = 21.7 px; mobile drops the tagline for the horizontal
+  lockup), the LinkedIn banner (N = 64), the YouTube channel art (N = 92
+  in the 1546 × 423 safe area), and the Open Graph
+  image (`public/brand/og-1200x630.png`, with the URL beneath). Ratified
+  2026-09-04.
 
 ### 1.4 The Seal (secondary mark)
 
@@ -151,11 +156,18 @@ surface.
 | `paper` | `#ffffff` | Page, cell fill |
 | `mark` | `#fef6e7` | Highlight only |
 
+On the site (`app/globals.css`) the brand accent is ink: `--accent` is
+`ink` and `--accent-light` is `ink-2`, so the identity marks (symbol
+rules, active nav pill, carousel dot) stay neutral and the spectrum is the
+only color system; `--accent-soft` is `band-neutral`. The earlier teal
+accent is retired (values kept in a code comment).
+
 ### 2.2 The hierarchy palette (six ranks, spectrum order)
 
 Every ranked structure colors its levels in this order, first level red.
-Tints are the site's existing band colors (backgrounds, ink text on
-them). Inks are the saturated counterparts for marks, lines, and text on
+Tints are the site's band tokens, `--band-red` … `--band-violet`
+(backgrounds, ink text on them): every page's six bands (three branches ×
+two bands) take ranks 1–6 down the page. Inks are the saturated counterparts for marks, lines, and text on
 paper. Ratified 2026-09-04 against WCAG contrast: every ink clears AA
 (≥ 4.5:1) on paper, which also clears paper text on the ink (the ratio is
 symmetric), and the neutral ink clears every tint by a wide margin.
@@ -176,7 +188,9 @@ it: keywords in rank hue sit on paper, and tinted bands carry neutral ink.
 Blue stays identical to the site's link color on purpose.
 
 Functional colors that live outside rank: `link #3366cc` (also blue ink),
-`link-visited #6b4ba1`, `focus #0b57d0`, `danger = red-ink`.
+`link-visited #6b4ba1` (specified here; the site maps a `--link-visited`
+token but does not currently define it), `focus #0b57d0`,
+`danger = red-ink` (the site's `--link-red`).
 
 ### 2.3 The identity triad
 
@@ -267,13 +281,15 @@ marks. Every claim links to its evidence.
 
 | Surface | Form | Spec |
 | --- | --- | --- |
-| Favicon / app icons | Primary symbol | 16, 32, 180, 512 on paper · SVG source |
-| Site header | Primary symbol + wordmark (horizontal lockup) | Replaces the current LD circle |
+| Favicon / app icons | Primary symbol | SVG favicon (`app/icon.svg`), 180 (`app/apple-icon.png`), 192 and 512 (web manifest) on paper |
+| Site header | Tagline lockup (desktop, 35 px symbol); horizontal lockup (mobile, 26 px symbol) | Live; replaced the LD circle |
+| Open Graph / link previews (1200×630) | Tagline lockup, URL beneath | Paper ground; `public/brand/og-1200x630.png` |
 | Social avatars | Primary symbol | Square crop, paper ground, clear space one grid cell; no wordmark |
-| LinkedIn banner (1584×396) | Gloss lockup + tagline + triad row with URL | Paper ground; left 420 px kept clear for the photo |
-| YouTube channel art (2560×1440) | Gloss lockup + tagline in the 1546×423 safe area | Surface ground; triad bar along the top edge |
+| LinkedIn banner (1584×396) | Tagline lockup (N = 64), no gloss, no triad row, no URL | Paper ground; lockup centered right of the left 420 px kept clear for the photo. v1 (gloss lockup + tagline + triad row with URL) superseded by v2 |
+| YouTube channel art (2560×1440) | Tagline lockup (N = 92) in the 1546×423 safe area | Paper ground; no gloss, card, triad bar, or URL. v1 (gloss lockup, surface ground, triad bar) superseded by v2 |
+| YouTube watermark (150) | Primary symbol (paper or on-ink) | Whole video |
 | Letterhead | Gloss lockup top-left | Contact top-right in Inter xs; seal beside the signature; running foot with triad row |
-| Email signature | Primary symbol 48 px, rule, gloss lockup + tagline + links | Links in site blue only |
+| Email signature | Primary symbol 48 px (96 px source served from the site), rule, gloss lockup + tagline + links | Links in site blue only |
 | Resume | Existing type system; symbol may sit beside the name | Closing line unchanged |
 | Cover letters (table) | Title band per §4 | Already conformant |
 | Slides | Title master: ink title band with glossed title, triad bar beneath; symbol + wordmark in the foot | Body Inter; data JetBrains Mono |
@@ -294,12 +310,23 @@ marks. Every claim links to its evidence.
 3. ~~Export~~ Done: `public/brand/` — `symbol.svg`, `symbol-mono.svg`,
    `symbol-on-ink.svg`, `symbol-on-ink-mono.svg`, `seal.svg`,
    `wordmark.svg` (Newsreader 600 at opsz 72, outlined, tracking 0.055em),
-   `lockup-horizontal.svg`, `lockup-vertical.svg`; favicons `app/icon.svg`
-   (16-unit grid so the rule is 1 px at 16 px) and `app/apple-icon.png`
-   (180). The symbol is drawn from one construction wherever it appears:
-   `components/BrandSymbol.tsx` on the site, the export scripts for the
-   files.
-4. Wire: ~~site header symbol, favicon~~ done; LinkedIn banner and avatar,
-   YouTube channel art, letterhead template (Docs), email signature,
-   slide master.
-5. Version this document at each ratification.
+   `lockup-horizontal.svg`, `lockup-vertical.svg`, `lockup-tagline.svg`
+   and `lockup-tagline-on-ink.svg`; PNGs `symbol-96.png` (email
+   signature), `symbol-192.png` and `symbol-512.png` (web manifest),
+   `seal-96.png`, `triad-row-96x24.png`, `og-1200x630.png` (link
+   previews); favicons `app/icon.svg` (16-unit grid so the rule is 1 px at
+   16 px) and `app/apple-icon.png` (180). The symbol is drawn from one
+   construction wherever it appears: `components/BrandSymbol.tsx` on the
+   site, the export scripts for the files (those scripts are not kept in
+   the repo or the kit).
+4. Wire: ~~site header (tagline lockup), favicon and app icons, link
+   preview image~~ done. Produced in the brand kit, outside the repo at
+   `~/Developer/Artifacts/Brand/`: `Lorenzo-Delano-Brand-Guide-v0.3.pdf`
+   (this document, printed), `Lorenzo-Delano-Letterhead.docx`,
+   `Lorenzo-Delano-Slides.pptx` (slide master), `email-signature.html`,
+   `avatar-symbol-1200x1200.png`, the tagline lockup SVGs, and in
+   `Social/` the LinkedIn banner (1584×396 and @2x, v1 and v2), the
+   YouTube channel art (v2) and the YouTube watermark symbol (150, paper
+   and on-ink). Still open: the seal on the 404 page (§1.4).
+5. Version this document at each ratification, and regenerate the guide
+   PDF in the kit from it.

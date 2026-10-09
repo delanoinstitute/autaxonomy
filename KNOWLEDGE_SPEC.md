@@ -3,14 +3,60 @@
 Design spec for the `/knowledge` page: a tripartite framework housing
 **education, skills, and works** as one integrated record — both a timeline
 (when I studied, performed, created what) and a status (what I know, can do,
-have made). Mirrors the Identity and Health page architecture: 3 branches ×
-2 sub-branches, left column = view, right column = disclosing methodology
-(Wilber's enactment principle), PROFILE composite lines, tooltips, references.
+have made). Follows the site taxonomy standard shared by all eight pages
+(Nature, formerly Identity, and Health set it): 3 branches, each with
+exactly 2 bands, each band holding a variable number of categories. Rendered
+as a two-level row accordion (`NestedTable`: colored band rows over gray
+category rows, no left column), each category opening with an unlabelled
+italic first-person lead over its entries; tooltips carry credential images
+and detail; a References section closes the page. (The original layout —
+left column = view, right column = disclosing methodology, labelled PROFILE
+composite lines — was retired in July 2026; see "Current page" below.)
+
+Sections 1–3 are the July 2026 research and reasoning record and are kept
+as written; sections 4–5 record the decisions, with notes where the build
+diverged. The "Current page" section is the authoritative description of
+what `/knowledge` renders now.
 
 Longer-term ambition (superstudents project): a knowledge framework elegant
 enough to replace the university taxonomy (humanities/sciences,
 pure/applied). This page is the demonstration — the framework applied to one
 person.
+
+---
+
+## Current page (as built, October 2026)
+
+Code: `app/knowledge/page.tsx` (prose, order) and `content/knowledge.tsx`
+(tables, references). Nav: Knowledge sits in the Capital group (Health,
+Knowledge, Wealth, Network), beside Constitution (About, Story, Nature,
+Lifestyle) — a 4+4 nav of eight pages.
+
+Intro: hook ("Your knowledge picks the problems you get to solve."),
+promise (works = what you've made, skills = what you can do, education =
+what you know), and one paragraph linking the three branches.
+
+Branches render **evidence first** — Works, Skills, Education (reordered
+2026-07-16) — each `h2` with a parenthetical gloss, a lead naming its two
+bands as a given/chosen pair, then the table:
+
+| Branch (gloss) | Band 1 → categories | Band 2 → categories |
+|---|---|---|
+| **Works** (Production) | **Professional Experience** → First jobs (part-time employee); Employment (full-time employee); Partnerships (full-time co-operator); Self-employment (independent operator) | **Personal Works** → Methodologies (design principles); Designs (original contributions) |
+| **Skills** (Practice) | **Technical Skills** → Structural (knowledge and system design); Material (content and spatial design) | **Interpersonal Skills** → Pedagogical (teaching and training); Commercial (selling and negotiating); Directorial (profiling and orchestration) |
+| **Education** (Theory) | **Guided Education** → Formal (in-person schooling); Non-formal (in-person training) | **Independent Learning** → Non-formal (remote schooling); Informal (remote training) |
+
+Band-pair framing in the branch leads: employment (given) / authorship
+(chosen); technical (trained) / interpersonal (earned); schooling (issued) /
+curriculum (chosen). Category format is **Kind (scope)**. Each category
+opens with one italic first-person lead ("I …"); rows are bold label →
+value (role/subject, place, duration, years, age), with credential images
+and role detail in tooltips.
+
+References — titled **References (Evidence)** — hold only the page's own
+evidence, in three first-person sections: samples of skills caught in
+action; access to published co-creations; feedback from clients and
+students. The theoretical sources in section 6 are not cited on the page.
 
 ---
 
@@ -90,7 +136,9 @@ highest evidence of knowledge (the page's core argument).
 Integral Methodological Pluralism: knowledge domains are **methods that
 disclose** phenomena, not filing bins. Each sub-branch's right column names
 its methodology and evidence type. This is the same enactment logic as
-Health (Biochemistry/Blood) and Identity (Inventory/HEXACO).
+Health (Biochemistry/Blood) and Nature (Inventory/HEXACO) had at the time.
+(The right-column methodology display was later retired site-wide; the
+principle now lives in what each page cites as evidence.)
 
 ### The MECE verdict on the original 2-axis intuition
 
@@ -111,9 +159,9 @@ taxonomy; jargon-heavy for a public page).
 
 Gaps the stress-test found in any knowledge grid — affect/values, physical
 constitution — are already housed elsewhere on this site: values and beliefs
-on Identity, the body on Health. Knowledge does not need a heart or health
+on Nature, the body on Health. Knowledge does not need a heart or health
 column. Bloom's three domains are distributed across the site: cognitive →
-Knowledge, affective → Identity, psychomotor → Health (capacity) + Knowledge
+Knowledge, affective → Nature, psychomotor → Health (capacity) + Knowledge
 (embodied skill as competence).
 
 ---
@@ -133,7 +181,15 @@ The locus axis appears in a different guise per branch — transmission mode,
 exercise mode, authorship mode — which is exactly how a good facet behaves
 (Ranganathan): one dimension, many manifestations.
 
-Validation methodology per branch (right-column bands, IMP move):
+As built, the locus split became each branch's two bands, renamed:
+Knowing → Independent Learning / Guided Education; Doing → Technical
+Skills / Interpersonal Skills; Making → Personal Works / Professional
+Experience (the social band is listed first on the page for Education and
+Works).
+
+Validation methodology per branch (proposed as right-column bands, IMP
+move; the right column was retired with the row accordion on 2026-07-13,
+and evidence now sits in credential tooltips and the References section):
 
 - Knowing → **credentials & curricula** (transcripts; the library/curriculum
   actually completed)
@@ -147,15 +203,19 @@ Works are the strongest evidence (Bloom's Create at the apex).
 
 Site parallels:
 
-| Page | Triad | Mnemonic |
+| Page | Triad (page order) | Mnemonic |
 |---|---|---|
-| Identity | Intellect / Character / Drive | head / heart / gut |
-| Health | Balance / Integrity / Capacity | rest / build / load |
-| Knowledge | Knowing / Doing / Making | theory / practice / production |
+| Nature | Intellect / Character / Drive | head / heart / gut |
+| Health | Integrity / Balance / Capacity | build / rest / load |
+| Knowledge | Works / Skills / Education (Making / Doing / Knowing) | production / practice / theory |
 
-Surface language stays plain (Knowing/Doing/Making); Greek terms
-(theoria/praxis/poiesis, episteme/phronesis/techne) live in tooltips and
-section intros, per the site's de-jargoning standard (cf. Funk labels).
+Surface language stays plain: the branches are Works / Skills / Education,
+glossed (Production) / (Practice) / (Theory), and the page promise defines
+them as what you've made / can do / know. Greek terms
+(theoria/praxis/poiesis, episteme/phronesis/techne) were planned for
+tooltips and intros, per the site's de-jargoning standard (cf. Funk
+labels); since 2026-07-16 they no longer appear on the page and live only
+in this spec.
 
 ## 3. Replacing the university taxonomy (the argument)
 
@@ -175,16 +235,27 @@ The framework's polemical payload, kept implicit on the page:
 1. Branch surface names: **Education (theory), Skills (practice), Works
    (production)** — mapping directly onto the pre-existing pages; the
    knowing/doing/making triad and Greek terms live in intros and tooltips.
-2. Doing sub-branches: **Technical / Interpersonal**.
+   *Since 2026-07-16 the page runs Works, Skills, Education (evidence
+   first), and the Greek terms are off the page (see section 2).*
+2. Doing sub-branches: **Technical / Interpersonal** — kept, as the bands
+   Technical Skills / Interpersonal Skills.
 3. Methods, Models, and Writing survive as entry groupings inside
    **Authored** (all solo artifacts); course-production credits go under
    **Produced** (collaborative artifacts). Tables start sparse — filled as
-   cataloged.
+   cataloged. *Superseded (July 2026): the Works bands are Professional
+   Experience (First jobs, Employment, Partnerships, Self-employment) and
+   Personal Works (Methodologies, Designs); course productions appear as
+   Designs rows and as References co-creations.*
 4. Entries carry inline **period tags** (years/decades), Schwartz-tag style.
+   *As built: Education and Works rows end in duration, years, and age
+   (Skills rows carry no dates),
+   e.g. "3 years, 1994–1996 (age 6–8)".*
 5. **/knowledge replaces** /education, /skills, /works (301 redirects; nav
    entries removed; Experience page's Creative section absorbed). The
    site-level past/present/future grouping will need revision afterward —
-   deferred until the individual pages settle.
+   deferred until the individual pages settle. *Done: the three routes and
+   /experience redirect into /knowledge anchors; the site-level grouping
+   became the 4+4 Constitution / Capital nav.*
 
 ## 5a. Per-branch validation taxonomies (supersedes 5, July 2026)
 
@@ -211,8 +282,24 @@ stays **Kind (validated how)**:
 The page-wide evidence ladder still ascends: tests → certificates →
 solved problems → demonstrations → testimony → working artifacts →
 accepted deliveries. Reference added: Coombs & Ahmed (1974). Holland
-moved back to Identity only (RIASEC no longer drives surface categories;
+moved back to Nature only (RIASEC no longer drives surface categories;
 the facet table below is retained as background vocabulary/tags).
+
+*Where the build went next (July 2026):*
+
+- *Education kept the Coombs registers but crossed them with delivery
+  (in-person / remote) on 2026-07-09, under the bands Guided Education and
+  Independent Learning — see "Current page".*
+- *Skills: the medium categories and the Demonstrations / Testimony bands
+  were replaced on 2026-07-15 by a 2×2 reclassification — Technical Skills
+  (Structural, Material) and Interpersonal Skills (Pedagogical, Directorial;
+  Commercial added 2026-07-16). Testimony moved to the References section.*
+- *Works: Originals / Commissions became Personal Works (Methodologies,
+  Designs) and Professional Experience (employment history by contract
+  type).*
+- *Category format moved from "Kind (validated how)" to "Kind (scope)".
+  Coombs & Ahmed, like the other theoretical sources, left the page's
+  references on 2026-07-16.*
 
 ## 5b. Activity facets (background vocabulary; superseded as row structure)
 
@@ -222,7 +309,7 @@ the structural what, then the functional output — e.g. "Creative
 
 Six facets, a derived vocabulary anchored in Holland's RIASEC (credited in
 the references; RIASEC itself classifies interests and stays on the
-Identity page — this is an activity vocabulary built from it):
+Nature page — this is an activity vocabulary built from it):
 
 | Facet | RIASEC anchor | Scope |
 |---|---|---|
@@ -244,13 +331,19 @@ model, not a bucket scheme; several assignments were forced; it duplicated
 the locus axis and re-jargoned the page). Its correct use is narrative —
 education internalizes into skills, skills externalize into works.
 
-Current function words: socialized literacy / exploratory literacy
+Function words as of early July 2026 (historical; the current category
+glosses are listed under "Current page"): socialized literacy / exploratory literacy
 (Education — both end in the branch's function-noun, literacy; Pasteur
 tooltip on exploratory); structural design, movement mastery (Skills —
 Technical); live transmission, project orchestration (Skills —
 Interpersonal); codified originals, collaborative artifacts (Works).
 
 ## 6. Reference candidates for the page
+
+*Status: none of these is cited on the page. Since 2026-07-16 the
+Knowledge references carry only first-party evidence (skill samples,
+co-creations, feedback); this list stays as the theoretical bibliography
+for the framework and the superstudents project.*
 
 - Aristotle, Nicomachean Ethics VI (episteme/techne/phronesis;
   theoria/praxis/poiesis)

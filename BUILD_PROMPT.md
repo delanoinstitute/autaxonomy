@@ -11,7 +11,9 @@ encyclopaedia of one life rather than a portfolio, CV, or blog. I have attached
 `PORTABLE_SPEC.md`, which is the specification. Read it fully before writing
 anything; it is binding, not advisory.
 
-**Stack:** Next.js App Router, TypeScript, Tailwind, deployed on Vercel.
+**Stack:** Next.js (App Router) with React and TypeScript, Tailwind CSS,
+deployed on Vercel. Use current stable versions; with Tailwind CSS 4 the theme
+lives in CSS (an `@theme` block in the global stylesheet), not a config file.
 
 ## How I want you to work
 

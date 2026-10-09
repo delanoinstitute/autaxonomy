@@ -1,8 +1,7 @@
 // Global site metadata and navigation structure.
-// Navigation is grouped into three sections: Overview, then Constitution (the
-// inputs — where he came from, who he is, how he lives) and Capital (what those
-// produce — health, knowledge, wealth; the three canonical forms of personal
-// capital). Each group holds one or more pages; each page's children are its
+// Navigation is grouped into two sections of four pages: Constitution (the
+// inputs — who he is, where he came from, what he is made of, how he lives) and
+// Capital (what those produce — health, knowledge, wealth, network). Each page's children are its
 // in-page sections (introduction, three branches, references), rendered as a
 // table of contents under the active page in the left nav.
 //
@@ -143,8 +142,8 @@ export const NAV_GROUPS: NavGroup[] = [
         href: "/network",
         sections: [
           { label: "Introduction", anchor: "introduction" },
-          { label: "Nurture", anchor: "nurture" },
-          { label: "Progress", anchor: "progress" },
+          { label: "Care", anchor: "care" },
+          { label: "Collaboration", anchor: "collaboration" },
           { label: "Contribution", anchor: "contribution" },
           { label: "References", anchor: "references", kind: "refs" },
         ],
