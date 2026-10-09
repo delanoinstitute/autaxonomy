@@ -74,7 +74,7 @@ export default function RootLayout({
 
         <SiteHeader />
 
-        <div className="mx-auto grid max-w-[81.5rem] grid-cols-1 gap-0 px-0 sm:px-4 lg:grid-cols-[11rem_minmax(0,1fr)_21rem] lg:gap-6">
+        <div className="mx-auto grid max-w-326 grid-cols-1 gap-0 px-0 sm:px-4 lg:grid-cols-[11rem_minmax(0,1fr)_21rem] lg:gap-6">
           {/* Left rail: global Pages navigation (desktop only) */}
           <div className="hidden border-r border-rule px-3 py-5 lg:block">
             <div className="sticky-rail sticky top-[calc(var(--header-h)+0.5rem)] max-h-[calc(100dvh-var(--header-h)-1.5rem)] overflow-y-auto overscroll-contain">
@@ -86,7 +86,7 @@ export default function RootLayout({
           <main
             id="main"
             tabIndex={-1}
-            className="min-w-0 bg-paper px-5 py-5 outline-none sm:px-7"
+            className="min-w-0 bg-paper px-5 py-5 outline-hidden sm:px-7"
           >
             <article className="wiki-article">{children}</article>
           </main>
@@ -103,7 +103,7 @@ export default function RootLayout({
             right. Contact funnels through the About page's offer taxonomy
             rather than exposing a raw mailto (also keeps the address off
             scrapers). LinkedIn and YouTube are the only external profiles. */}
-        <footer className="mx-auto max-w-[81.5rem] px-5 py-8 text-xs text-muted sm:px-7">
+        <footer className="mx-auto max-w-326 px-5 py-8 text-xs text-muted sm:px-7">
           <div className="flex flex-col gap-2 border-t border-rule pt-4 sm:flex-row sm:items-center sm:justify-between">
             <p>
               © {new Date().getFullYear()} {SITE.name} · {SITE.tagline}
@@ -157,7 +157,7 @@ export default function RootLayout({
 
         {/* No-JS fallback navigation */}
         <noscript>
-          <nav aria-label="Pages" className="mx-auto max-w-[81.5rem] px-5 pb-8 text-sm">
+          <nav aria-label="Pages" className="mx-auto max-w-326 px-5 pb-8 text-sm">
             <ul className="flex flex-wrap gap-x-4 gap-y-1">
               {NAV.map((p) => (
                 <li key={p.href}>

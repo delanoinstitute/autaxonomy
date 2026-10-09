@@ -112,14 +112,14 @@ export default function Tooltip({
             role="dialog"
             aria-modal="true"
             aria-label={media.alt}
-            className="fixed inset-0 z-[70] flex items-center justify-center bg-[rgba(15,16,17,0.72)] p-4"
+            className="fixed inset-0 z-70 flex items-center justify-center bg-[rgba(15,16,17,0.72)] p-4"
             onClick={() => setExpanded(false)}
           >
             {/* w-fit shrink-wraps the box to the image; the caption's
                 w-0/min-w-full pair stops its text from widening the figure,
                 so it wraps at the image's edge instead. */}
             <figure
-              className="max-h-full w-fit max-w-[min(48rem,100%)] overflow-auto rounded border border-border-strong bg-paper shadow-overlay"
+              className="max-h-full w-fit max-w-[min(48rem,100%)] overflow-auto rounded-sm border border-border-strong bg-paper shadow-overlay"
               onClick={(e) => e.stopPropagation()}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -157,8 +157,8 @@ export default function Tooltip({
           style={{ left: pos.left, top: pos.top, bottom: pos.bottom }}
           className={
             media
-              ? `fixed z-50 ${media.portrait ? "w-80 max-w-[90vw]" : "w-72 max-w-[85vw]"} -translate-x-1/2 overflow-hidden rounded border border-border-strong bg-paper text-[0.82rem] font-normal not-italic leading-snug text-text shadow-overlay`
-              : "fixed z-50 w-64 max-w-[80vw] -translate-x-1/2 rounded border border-border-strong bg-paper px-3 py-2 text-[0.82rem] font-normal not-italic leading-snug text-text shadow-overlay"
+              ? `fixed z-50 ${media.portrait ? "w-80 max-w-[90vw]" : "w-72 max-w-[85vw]"} -translate-x-1/2 overflow-hidden rounded-sm border border-border-strong bg-paper text-[0.82rem] font-normal not-italic leading-snug text-text shadow-overlay`
+              : "fixed z-50 w-64 max-w-[80vw] -translate-x-1/2 rounded-sm border border-border-strong bg-paper px-3 py-2 text-[0.82rem] font-normal not-italic leading-snug text-text shadow-overlay"
           }
         >
           {media ? (

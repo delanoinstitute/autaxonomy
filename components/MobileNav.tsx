@@ -115,7 +115,7 @@ export default function MobileNav() {
           className="flex items-center justify-between border-b border-rule px-4"
           style={{ minHeight: "var(--header-h)" }}
         >
-          <span className="font-serif text-[var(--fs-wordmark)] font-semibold">
+          <span className="font-serif text-(--fs-wordmark) font-semibold">
             Navigation
           </span>
           <button

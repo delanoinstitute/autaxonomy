@@ -10,13 +10,13 @@ import BrandSymbol from "./BrandSymbol";
 export default function SiteHeader() {
   return (
     <header
-      className="sticky top-0 z-30 border-b border-rule bg-paper/95 backdrop-blur"
+      className="sticky top-0 z-30 border-b border-rule backdrop-blur-sm"
       style={{ height: "var(--header-h)" }}
     >
       {/* Left padding matches the page grid's rail (outer px-4 + rail px-3) so the
           symbol sits on the nav's text edge; right padding matches the outer px-4
           so the Email chip ends on the infobox column's edge. */}
-      <div className="mx-auto flex h-full max-w-[81.5rem] items-center gap-2 px-3 sm:px-4 lg:pl-7 lg:pr-4">
+      <div className="mx-auto flex h-full max-w-326 items-center gap-2 px-3 sm:px-4 lg:pl-7 lg:pr-4">
         <MobileNav />
 
         {/* Tagline lockup: the symbol spans from the wordmark's cap line to the
@@ -32,7 +32,7 @@ export default function SiteHeader() {
           <BrandSymbol size={26} className="shrink-0 self-center text-accent lg:hidden" />
           <BrandSymbol size={35} className="mt-[0.45px] hidden shrink-0 text-accent lg:block" />
           <span className="flex flex-col">
-            <span className="block font-serif text-[var(--fs-wordmark)] font-semibold uppercase leading-[24px] tracking-[0.02em] text-text lg:text-[21.7px] lg:leading-none lg:tracking-[0.055em]">
+            <span className="block font-serif text-(--fs-wordmark) font-semibold uppercase leading-[24px] tracking-[0.02em] text-text lg:text-[21.7px] lg:leading-none lg:tracking-[0.055em]">
               {SITE.name}
             </span>
             <span className="mt-[1.4px] hidden font-serif text-[12.75px] italic leading-none text-text lg:block">
@@ -45,7 +45,7 @@ export default function SiteHeader() {
             retired — same gray action chip, far right, on every page. */}
         <a
           href={`mailto:${SITE.email}`}
-          className="no-wiki ml-auto inline-flex items-center whitespace-nowrap rounded border border-rule bg-surface-subtle px-3 py-1 text-sm text-text transition-colors hover:border-accent hover:bg-accent hover:text-white"
+          className="no-wiki ml-auto inline-flex items-center whitespace-nowrap rounded-sm border border-rule bg-surface-subtle px-3 py-1 text-sm text-text transition-colors hover:border-accent hover:bg-accent hover:text-white"
         >
           Email Lorenzo
         </a>

@@ -1,9 +1,71 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind v4, imported in parts so utilities stay UNLAYERED, as in v3: the site's
+   own rules below then win or lose by specificity and source order exactly as
+   before, instead of always beating every utility (v4's layered default). */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css';
+
+/* Tailwind theme: maps the design tokens below to utility names (text-muted,
+   bg-paper, font-serif, shadow-overlay…). `inline` makes each utility use the
+   token directly, as tailwind.config did in v3, so the token names can match. */
+@theme inline {
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+  --color-link-visited: var(--link-visited);
+  --color-link-red: var(--link-red);
+
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+
+  --color-focus: var(--focus);
+  --color-paper: var(--surface-paper);
+  --color-surface-app: var(--surface-app);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-surface-band: var(--surface-band);
+  --color-border-strong: var(--border-strong);
+  --color-rule: var(--rule);
+  --color-rule-soft: var(--rule-soft);
+  --color-mark: var(--mark);
+
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+
+  --shadow-overlay: var(--shadow-overlay);
+
+  --container-article: 68ch;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #e5e7eb; /* v3's default border color (gray-200), exact */
+  }
+
+  /* v4 dropped the pointer cursor on buttons; keep v3's hand cursor. */
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 /* ===================================================================
-   Design tokens — single source of truth (mirrored in tailwind.config)
+   Design tokens — single source of truth (mapped to utilities by @theme above)
    See DESIGN_SPEC.md §2 (color), §1 (type), §3 (spacing/elevation).
    =================================================================== */
 
@@ -255,6 +317,12 @@ body {
 
 .wiki-article li {
   margin: 0.25rem 0;
+}
+
+/* References: 0.5rem between entries, exactly as Tailwind v3's space-y-2 set them. */
+.wiki-article .reference-list > li + li {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 .wiki-article dl {

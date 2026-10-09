@@ -6,7 +6,7 @@ The brief in one line: a Wikipedia-style personal profile that wins the trust of
 
 **Hard constraints:** Next.js App Router + Tailwind, statically rendered on Vercel, mobile-first, fast (no layout shift), fonts via `next/font`, accessibility **WCAG 2.2 AA minimum** (verified with axe-core zero-violations + one keyboard/VoiceOver pass per page).
 
-**Conventions in this doc:** all colors are CSS custom properties (`--token`) mirrored into `tailwind.config.ts`; **never write a raw hex inline.** All spacing is on a 4px grid named in rem. All type sizes are tokens.
+**Conventions in this doc:** all colors are CSS custom properties (`--token`) mapped to Tailwind utilities by the `@theme` block in `app/globals.css`; **never write a raw hex inline.** All spacing is on a 4px grid named in rem. All type sizes are tokens.
 
 ---
 

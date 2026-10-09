@@ -29,7 +29,7 @@ function ReferenceList({ items, start = 1 }: { items: Reference[]; start?: numbe
   return (
     <ol
       start={start}
-      className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-snug text-muted marker:text-muted-2"
+      className="reference-list mt-2 list-decimal pl-5 text-sm leading-snug text-muted marker:text-muted-2"
     >
       {items.map((r) => (
         <li key={r.id} id={`ref-${r.id}`} className="pl-1">
