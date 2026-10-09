@@ -325,8 +325,11 @@ marks. Every claim links to its evidence.
    (this document, printed), `Lorenzo-Delano-Letterhead.docx`,
    `Lorenzo-Delano-Slides.pptx` (slide master), `email-signature.html`,
    `avatar-symbol-1200x1200.png`, the tagline lockup SVGs, and in
-   `Social/` the LinkedIn banner (1584×396 and @2x, v1 and v2), the
-   YouTube channel art (v2) and the YouTube watermark symbol (150, paper
-   and on-ink). Still open: the seal on the 404 page (§1.4).
+   `Social/` the LinkedIn banner (1584×396 and @2x, v2), the YouTube
+   channel art (v2) and the YouTube watermark symbol (150, paper and
+   on-ink); `Social/Social (Legacy)/` keeps the v1 LinkedIn banners and the
+   pre-brand 2026-02 "Personal Development Education" YouTube banner. The
+   guide PDF is rebuilt from this file by `Brand/guide-source/` (last
+   2026-10-09). Still open: the seal on the 404 page (§1.4).
 5. Version this document at each ratification, and regenerate the guide
-   PDF in the kit from it.
+   PDF with `Brand/guide-source/build_guide.py`.
