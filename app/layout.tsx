@@ -64,6 +64,16 @@ export default function RootLayout({
       className={`${serif.variable} ${sans.variable} ${mono.variable}`}
     >
       <body>
+        {/* Without JavaScript the taxonomy tables can't be toggled, so show every
+            row and hide the chevrons. Declared in Tailwind's base layer: its
+            [hidden] rule is !important there, and only a more specific rule in
+            the same layer can override it. */}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html:
+              "<style>@layer base{.wiki-article tr[hidden]{display:table-row!important}}.wiki-article .stat-chevron{display:none}</style>",
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSON_LD) }}

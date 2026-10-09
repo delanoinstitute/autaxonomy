@@ -15,7 +15,6 @@
   --color-muted-2: var(--muted-2);
   --color-link: var(--link);
   --color-link-hover: var(--link-hover);
-  --color-link-visited: var(--link-visited);
   --color-link-red: var(--link-red);
 
   --color-accent: var(--accent);
@@ -420,6 +419,9 @@ button.cardlink:focus-visible {
   margin: 0.25rem 0;
 }
 
+/* Arriving at a reference (#ref-…) highlights it. The References component
+   uses .reference-list; .references-list styles the metric lists. */
+.reference-list li:target,
 .references-list li:target {
   background: var(--mark);
 }

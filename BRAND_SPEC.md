@@ -112,8 +112,9 @@ way, never larger than the primary wordmark when both appear.
   line and its bottom on the tagline's lowest descender; gap between
   symbol and text = half a side. Set with line-height 1, the cap line is
   0.02 N below the wordmark's box top and the tagline's box starts 1.065 N
-  below it. Standard on the desktop site header (35 px symbol in a 68 px
-  header, so N = 21.7 px; mobile drops the tagline for the horizontal
+  below it. Standard on the desktop site header (35.72 px symbol in a 68 px
+  header, so N = 22.15 px and the tagline is exactly the 13 px text floor;
+  was a 35 px symbol, N = 21.7, until 2026-10-09; mobile drops the tagline for the horizontal
   lockup), the LinkedIn banner (N = 64), the YouTube channel art (N = 92
   in the 1546 × 423 safe area), and the Open Graph
   image (`public/brand/og-1200x630.png`, with the URL beneath). Ratified
@@ -188,8 +189,7 @@ it: keywords in rank hue sit on paper, and tinted bands carry neutral ink.
 Blue stays identical to the site's link color on purpose.
 
 Functional colors that live outside rank: `link #3366cc` (also blue ink),
-`link-visited #6b4ba1` (specified here; the site maps a `--link-visited`
-token but does not currently define it), `focus #0b57d0`,
+`focus #0b57d0`,
 `danger = red-ink` (the site's `--link-red`).
 
 ### 2.3 The identity triad
@@ -282,7 +282,7 @@ marks. Every claim links to its evidence.
 | Surface | Form | Spec |
 | --- | --- | --- |
 | Favicon / app icons | Primary symbol | SVG favicon (`app/icon.svg`), 180 (`app/apple-icon.png`), 192 and 512 (web manifest) on paper |
-| Site header | Tagline lockup (desktop, 35 px symbol); horizontal lockup (mobile, 26 px symbol) | Live; replaced the LD circle |
+| Site header | Tagline lockup (desktop, 35.72 px symbol); horizontal lockup (mobile, 26 px symbol) | Live; replaced the LD circle |
 | Open Graph / link previews (1200×630) | Tagline lockup, URL beneath | Paper ground; `public/brand/og-1200x630.png` |
 | Social avatars | Primary symbol | Square crop, paper ground, clear space one grid cell; no wordmark |
 | LinkedIn banner (1584×396) | Tagline lockup (N = 64), no gloss, no triad row, no URL | Paper ground; lockup centered right of the left 420 px kept clear for the photo. v1 (gloss lockup + tagline + triad row with URL) superseded by v2 |

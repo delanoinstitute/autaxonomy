@@ -40,9 +40,9 @@ Base rises from 15px → **16px (`1rem`)**. Tokens are CSS custom properties; **
 | `--fs-body` | 16 | static | Inter 400 | **1.65** | `0` | Default body |
 | `--fs-sm` | 14 | static | Inter 400/500 | 1.3–1.45 | `0` | Captions, infobox labels, nav |
 | `--fs-xs` | 13 | static | Inter 400 | 1.4–1.5 | `0` | References, credits, footer, "(age N)" |
-| `--fs-wordmark` | 18 | static | Newsreader 600, uppercase | 24px | `0.02em` | Header wordmark below `lg`. At `lg` the header sets the tagline lockup instead (BRAND_SPEC §1.3): name 21.7px / `0.055em`, italic tagline 12.75px |
+| `--fs-wordmark` | 18 | static | Newsreader 600, uppercase | 24px | `0.02em` | Header wordmark below `lg`. At `lg` the header sets the tagline lockup instead (BRAND_SPEC §1.3): name 22.15px / `0.055em`, italic tagline 13px (the lockup was scaled up 2% on 2026-10-09 so the tagline meets the 13px floor) |
 
-**13px is the floor — nothing smaller.** Body 16px / line-height 1.65 satisfies WCAG 1.4.8; rem + rem-based clamp floors satisfy 1.4.4 (resize to 200%). *Open breaches in code (2026-10): the `lg` header tagline (12.75px) and the carousel photographer credit (`0.7rem` ≈ 11.2px).*
+**13px is the floor — nothing smaller.** Body 16px / line-height 1.65 satisfies WCAG 1.4.8; rem + rem-based clamp floors satisfy 1.4.4 (resize to 200%). *Met everywhere since 2026-10-09: the header tagline (was 12.75px) and the carousel photo credit (was `0.7rem`) were raised to 13px.*
 
 ### 1.3 Measure
 
@@ -65,7 +65,6 @@ Near-monochrome chrome in ink and greys; the **ROYGBIV band tints are the site's
 | `--muted-2` | `#5B6168` | The fix for the failing `#72777d`: references tag, photo credit, tooltip dotted underline | 6.3:1 paper / 5.8:1 subtle | AA |
 | `--link` | `#3366CC` | Links (default) | 5.4:1 on paper | AA |
 | `--link-hover` | `#2A4B8D` | Active (darken); hover adds the underline | 8.4:1 on paper | AAA |
-| `--link-visited` | `#795CB2` | Visited — **specified but not implemented**: no `--link-visited` value in `:root` and no `:visited` rule (only a dangling `@theme` mapping) | 5.3:1 on paper | AA |
 | `--link-red` | `#BA0000` | Unwritten/placeholder links (`a.red`) — styled, no current markup uses it | 6.8:1 on paper | AA |
 | `--accent` | `#1B1C1D` | Ink brand accent: brand-symbol rules, active carousel dot, "Email Lorenzo" chip hover fill (white text) | 17.1:1 on paper; white on accent 17.1:1 | AAA |
 | `--accent-light` | `#3A3D3F` | Optional lighter ink (mapped to a utility; currently unused) | 10.9:1 on paper | AAA |
@@ -84,7 +83,7 @@ Near-monochrome chrome in ink and greys; the **ROYGBIV band tints are the site's
 | `--border-strong` | `#A8ADB4` | Infobox frame, data-table cells | decorative | exempt |
 | `--rule` | `#C8CCD1` | Default rules, H2 underline, dividers | decorative | exempt |
 | `--rule-soft` | `#E6E8EB` | Hairline row separators | decorative | exempt |
-| `--mark` | `#FEF6E7` | `:target` citation highlight | — | — |
+| `--mark` | `#FEF6E7` | Highlights a reference when a link lands on it (`#ref-…`, `:target`) | — | — |
 
 **Resolved conflicts:**
 - **Accent is ink `#1B1C1D`.** The accent was teal (`#0F6E66`, promoted to `#0B5E57` for AAA white-on-pill text, with `#C9DED8` bands) until 2026-08-29; it retired to ink so the identity marks stay neutral and the ROYGBIV spectrum is the only hue on the page. `--accent-light` is now `#3A3D3F`.
@@ -157,7 +156,7 @@ Looks like an encyclopedia data panel, not a profile widget.
 
 - **Frame:** 1px `--border-strong`, **square**, `--surface-subtle` body, no shadow. The rail copy is `<aside aria-label="Profile summary">`.
 - **Title bar:** `--surface-band`, centered, Newsreader 600 / 19px, `--text`.
-- **Portrait carousel** (`PortraitCarousel`): a square (`aspect-square`) box, `next/image` with `fill` (the fixed box prevents CLS), `sizes="(min-width: 1024px) 480px, 100vw"`. Each page lands on its own photo (`PAGE_PORTRAIT`); manual only — prev/next arrows, dots, ←/→ keys, swipe; 300ms crossfade. Caption beneath ("Delano in YEAR (PLACE)") in `--fs-xs` `--muted`, credit line in `--muted-2`. On mobile cap at `max-w-[16rem] mx-auto`. The box has a `--surface-band` fill behind the image; there is no initials placeholder.
+- **Portrait carousel** (`PortraitCarousel`): a square (`aspect-square`) box, `next/image` with `fill` (the fixed box prevents CLS), `sizes="(min-width: 1024px) 480px, 100vw"`. Each page lands on its own photo (`PAGE_PORTRAIT`); manual only — prev/next arrows, dots, ←/→ keys, swipe; 150ms crossfade. Caption beneath ("Delano in YEAR (PLACE)") in `--fs-xs` `--muted`, credit line in `--muted-2`. On mobile cap at `max-w-[16rem] mx-auto`. The box has a `--surface-band` fill behind the image; there is no initials placeholder.
 - **Group headings** (Sociological / Professional / Psychological / Personal): each is a native `<details>` whose `<summary>` is the heading — `--surface-band`, centered, Inter 13px / 600 / italic / `+0.04em` / `uppercase`, with a chevron. **Professional opens by default** (the employer wants the work before the birth record); the rest start collapsed.
 - **Rows:** a `<dl>` grid — label `dt` 34% width, Inter 600, sentence case ("Known for"); value `dd` Inter 400, `tabular-nums`, `overflow-wrap:anywhere`. Separators `--rule-soft`. **Omit any empty row entirely** — no em-dash/"N/A" placeholder. *(The earlier `<table>` with `scope` attributes and an sr-only caption was replaced by the `<dl>`.)*
 - **Mobile:** wrapped in native `<details><summary>Quick facts</summary>` (`MobileInfobox`, rendered by `PageHeading` under the title rule) — **open on About (`/`), collapsed on inner pages** (free keyboard/AT support, zero JS, no CLS). The component renders **twice** (desktop rail + inline mobile copy, each hidden at the other breakpoint); only the rail copy sets `priority` on its image, and the embedded mobile copy drops the `<aside>` landmark.
@@ -169,7 +168,7 @@ Looks like an encyclopedia data panel, not a profile widget.
 ### 4.5 Page anatomy & taxonomy tables
 
 - **Page anatomy (all eight pages, `.zoned`):** `PageHeading` (H1 + title rule + mobile Quick facts) → the intro trio (`.page-hook` headline that sells the page, `.page-promise` subheadline that inventories it, one paragraph that explains how to read it) → zone rule → three branches (`<h2>` + one intro paragraph + a `NestedTable`) → zone rule → References. All page prose lives in the intro and branch paragraphs; the tables run bare.
-- **`NestedTable`** (every taxonomy branch): a two-level row accordion with no left column. **Band row** = tinted header (`data-hue` → `--band-*`, else `--accent-soft`), italic Title Case 15px label with its gloss and an item count; **category row** = `--surface-subtle`, italic label, parentheticals unbolded; **content row** = the italic first-person lead over a numbered `--muted` metric list. Everything **loads collapsed** to the band titles; each level opens by choice (`aria-expanded` disclosure buttons, chevrons). Collapsed rows stay in the DOM (`hidden`) for find-in-page and crawlers. Arriving by `#branch` opens that branch's bands and first category; `#branch:category` opens the named category and scrolls to the branch.
+- **`NestedTable`** (every taxonomy branch): a two-level row accordion with no left column. **Band row** = tinted header (`data-hue` → `--band-*`, else `--accent-soft`), italic Title Case 15px label with its gloss and an item count; **category row** = `--surface-subtle`, italic label, parentheticals unbolded; **content row** = the italic first-person lead over a numbered `--muted` metric list. Everything **loads collapsed** to the band titles; each level opens by choice (`aria-expanded` disclosure buttons, chevrons). Collapsed rows stay in the DOM (`hidden`) for find-in-page and crawlers. **Without JavaScript** the toggles can't work, so a `<noscript>` style in `app/layout.tsx` shows every row and hides the chevrons (declared in Tailwind's base layer, the only place it can beat the `!important` `[hidden]` rule). Arriving by `#branch` opens that branch's bands and first category; `#branch:category` opens the named category and scrolls to the branch.
 - **`StatTable`** (two-column DOMAIN | metrics form) remains in the codebase and supplies the shared data types, but no page currently renders it.
 - **Overflow:** wrap tables in `<div className="-mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">`; `.stat-table` sets `min-width: 33rem` (the nested form resets it to `0`). Prefer `<dl>` for simple label/value pairs.
 - **Timeline — retired.** The `<Timeline>` component was deleted when Story moved to `NestedTable`; its era data is kept unrendered in `content/timeline.tsx` as source material for Story → Development.
@@ -177,7 +176,7 @@ Looks like an encyclopedia data panel, not a profile widget.
 ### 4.6 Links (the core trust signal)
 
 - **Internal:** Next `<Link>`, same tab, prefetched, no glyph. **External:** new tab, `rel="noopener noreferrer"`, persistent decorative `↗` (`::after`, `aria-hidden`) + an `sr-only` "(opens in a new tab)" hint — the visible trust boundary between "inside the record" and "leaving to a third party". Never open internal nav in a new tab. `mailto:` is chrome (no glyph, no new tab).
-- **States:** default `--link` no underline; **hover/focus underline** + `text-underline-offset:2px`; `:focus-visible` ring; `:active` `--link-hover`; **`:visited` `--link-visited` enabled globally** (a real orientation cue for returning visitors) — *not yet implemented: see §2.* Link text always names the destination — never "click here".
+- **States:** default `--link` no underline; **hover/focus underline** + `text-underline-offset:2px`; `:focus-visible` ring; `:active` `--link-hover`; **No visited-link colour** (dropped 2026-10-09: on a small site of eight pages it adds a second link colour without helping orientation). Link text always names the destination — never "click here".
 
 ### 4.7 Visual signaling standard (binding)
 
@@ -207,8 +206,8 @@ click = lightbox with caption, `Esc`/backdrop closes, `role=dialog`).
 - **Sticky-offset chain — derive from ONE source.** Header height, every sticky `top`, and `scroll-padding-top` must all agree. `--header-h` is **56px** (68px at `lg`) and sets the header's height and both rails' `top: calc(var(--header-h) + 0.5rem)`; `scroll-padding-top: 6rem` base with `@media (min-width:1024px){ html{ scroll-padding-top:7rem } }` clears the header with buffer. With the SectionNav retired, the header is the only sticky bar. This satisfies 2.4.11 (focus not obscured) and prevents the "anchor jump hides the heading" bug.
 - **Tooltips & citations (WCAG 1.4.13)** — implemented in `Tooltip`: open on hover **and** focus; **dismissable with `Esc`** without moving the pointer; **persistent** via a hover bridge (a 120ms close delay, and the bubble keeps itself open on hover). Plain glosses are focusable `<button>` triggers (dotted underline) with `aria-describedby`; link triggers (`interactive`) add no extra tab stop. On touch, a tap toggles; an outside tap or any scroll closes. The bubble is portaled with fixed positioning so table overflow can't clip it, flipping above the trigger when there's no room below. Every `[n]` must *also* be a real anchor to its reference — the tooltip is enhancement, the anchor is the contract; `:target` rows flash `--mark`. *(Reference items carry `id="ref-{id}"`; the `:target` highlight is written for `.references-list`, a class the References component does not use, so it does not currently fire there.)*
 - **Self-link anchors** on every H2/H3 (a `#` revealed on hover/focus, `--muted` → `--link`, padded to a 24px target) so any section is citable/deep-linkable — *not yet implemented; branch `<h2>`s carry `id`s, so deep links work, but there is no visible `#`.*
-- **Motion:** transitions ≤ 150ms `ease-out`, color/background/transform only; honor `@media (prefers-reduced-motion: reduce)` — a global rule cuts every animation and transition to ~0 and sets `scroll-behavior:auto` (smooth scroll is only enabled under `no-preference`). *(The carousel crossfade runs 300ms, over this ceiling.)*
-- **Edge/empty states degrade honestly:** empty infobox row → omit (no placeholder); empty infobox group → omit; missing portrait → the `--surface-band` box fill; long URLs wrap (`overflow-wrap:anywhere`); the 404 is titled "This page has not been written" and links back to About; with JS off, anchors/nav/infobox still work and the `<noscript>` Pages list shows (taxonomy bands, being client-side accordions, stay collapsed).
+- **Motion:** transitions ≤ 150ms `ease-out`, color/background/transform only; honor `@media (prefers-reduced-motion: reduce)` — a global rule cuts every animation and transition to ~0 and sets `scroll-behavior:auto` (smooth scroll is only enabled under `no-preference`). *(The carousel crossfade was brought down from 300ms to 150ms on 2026-10-09.)*
+- **Edge/empty states degrade honestly:** empty infobox row → omit (no placeholder); empty infobox group → omit; missing portrait → the `--surface-band` box fill; long URLs wrap (`overflow-wrap:anywhere`); the 404 is titled "This page has not been written" and links back to About; with JS off, anchors/nav/infobox still work and the `<noscript>` Pages list shows and every taxonomy row is shown open, chevrons hidden (see `NestedTable`).
 
 ---
 
@@ -218,7 +217,7 @@ click = lightbox with caption, `Esc`/backdrop closes, `role=dialog`).
 2. **Headings:** one `<h1>` per page; never skip `h2`→`h4`.
 3. **Contrast:** no text below 4.5:1; **no `#72777d` left in the tree**; `--muted-2` only at ≥13px.
 4. **Focus:** every focusable element shows the ≥2px / ≥3:1 ring (§5); tabbing to an in-page anchor lands fully below the sticky chrome.
-5. **Targets:** ≥24×24px everywhere; **≥44×44px** on coarse pointers for the hamburger, drawer items, and the header "Email Lorenzo" chip (inline prose links use the 2.5.8 inline exception). *(The chip is currently `px-3 py-1 text-sm`, well under 44px tall — open.)*
+5. **Targets:** ≥24×24px everywhere; **≥44×44px** on coarse pointers for the hamburger, drawer items, and the header "Email Lorenzo" chip (inline prose links use the 2.5.8 inline exception). *(The chip stays visually 30px tall; an invisible `::before` extends its hit area 10px above and below and 4px to each side, giving 48px.)*
 6. **Keyboard:** full traversal with no trap — skip link → header → drawer (open/trap/`Esc`/restore) → nav → article links and band toggles → tooltips (open via Tab, close via `Esc`) → infobox → footer.
 7. **Color never sole cue:** active nav = bold + `aria-current="page"`; band/category state = chevron rotation + `aria-expanded`; links = color + hover/focus underline.
 8. **State via `aria-current`** (not `aria-selected`) for navigation; ARIA only where native semantics fall short. *(The carousel dots use the tab pattern, `role="tab"` + `aria-selected`, which is the correct exception.)*
@@ -249,7 +248,7 @@ Test at **360, 390, 768, 1024, 1280px**. On each: (a) nav reachable, (b) infobox
 ### 8.2 Spelling, capitalization, punctuation
 
 - **US spelling** (`-ize`, `-or`, `-er`) throughout — e.g. color, behavior, organize, center, hemoglobin; never British forms. "program" for every named product/program (never "programme").
-- **Sentence case everywhere** except proper nouns and the wordmark — H1–H4, infobox group headings and labels, buttons. *(Exception in code: taxonomy band names are set in Title Case italic by deliberate choice, per the `.nested-band-toggle` note in `globals.css`.)* "Known for", never "Known For". Brand casing exact: Mindvalley, CrossFit, YouTube, SaaS, NLP, 10X, 10X Quest.
+- **Sentence case everywhere** except proper nouns and the wordmark — H1–H4, infobox group headings and labels, buttons. **Exception, by rule:** taxonomy band names are Title Case italic ("Professional Experience", "Guided Education"). A band names a domain, the way a proper noun does, and the capitals separate it from the sentence-case category rows beneath. "Known for", never "Known For". Brand casing exact: Mindvalley, CrossFit, YouTube, SaaS, NLP, 10X, 10X Quest.
 - **Oxford comma always.** Dashes: hyphen for compounds; **en dash `–`** (unspaced) for numeric/date ranges; **em dash `—`** (spaced) for prose breaks. "South African" takes **no** hyphen.
 - **Middot `·`** is restricted to **one job**: an inline series separator inside infobox values / compact metadata ("Bruce Lee · Ken Wilber · David Deutsch", one space each side). Banned in running prose (use Oxford commas), as a bullet, as a label→value separator, and for joining distinct *facts* (the Born row must split into rows or a sentence). Schedule lists use semicolons.
 - **Curly quotes/apostrophes only**; true primes `5′9″` (U+2032/U+2033), never ASCII. Logical (British) punctuation placement.
@@ -305,7 +304,7 @@ The site is a faceted classification of one person. Every page is an application
 
 ### 9.3 References
 
-Two blocks per page, both using the `References` component, titled by what they hold — `(Personal)` / `(Social)` (Lifestyle), `(Data)` / `(Evidence)` (Nature), `(Data)` / `(Guidelines)` (Health, Wealth, Network), `(Data)` / `(Media)` (Story). About and Knowledge currently carry a single `(Evidence)` block. Sections within run **guidelines → data → evidence**, ordered to match the taxonomy above them. Labels are sentences: "My data derived from…", "Public evidence of…".
+One or two blocks per page, each using the `References` component, titled by what they hold — `(Personal)` / `(Social)` (Lifestyle), `(Data)` / `(Evidence)` (Nature), `(Data)` / `(Guidelines)` (Health, Wealth, Network), `(Data)` / `(Media)` (Story). About and Knowledge carry a single `(Evidence)` block: their evidence is one kind, so a second block would be empty. Sections within run **guidelines → data → evidence**, ordered to match the taxonomy above them. Labels are sentences: "My data derived from…", "Public evidence of…".
 
 ### 9.4 Sourcing and consent (binding)
 

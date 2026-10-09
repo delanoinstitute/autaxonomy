@@ -66,7 +66,7 @@ export default function PortraitCarousel({ priority = false }: { priority?: bool
             quality={82}
             priority={priority && i === pagePhoto}
             style={{ objectPosition: img.objectPosition }}
-            className={`object-cover transition-opacity duration-300 ${
+            className={`object-cover transition-opacity duration-150 ${
               i === index ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -102,7 +102,7 @@ export default function PortraitCarousel({ priority = false }: { priority?: bool
             Delano in {CAROUSEL[index].year} ({CAROUSEL[index].location})
           </div>
           {CAROUSEL[index].photographer && (
-            <div className="text-[0.7rem] italic leading-tight text-muted-2">
+            <div className="text-[0.8125rem] italic leading-tight text-muted-2">
               Photograph by {CAROUSEL[index].photographer}
             </div>
           )}
