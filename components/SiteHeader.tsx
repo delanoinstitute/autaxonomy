@@ -33,7 +33,7 @@ export default function SiteHeader() {
           <BrandSymbol size={26} className="shrink-0 self-center text-accent lg:hidden" />
           <BrandSymbol size={35.72} className="mt-[0.44px] hidden shrink-0 text-accent lg:block" />
           <span className="flex flex-col">
-            <span className="block font-serif text-(--fs-wordmark) font-semibold uppercase leading-[24px] tracking-[0.02em] text-text lg:text-[22.15px] lg:leading-none lg:tracking-[0.055em]">
+            <span className="block font-serif text-(--fs-wordmark) font-semibold uppercase leading-[24px] tracking-[0.02em] whitespace-nowrap text-text lg:text-[22.15px] lg:leading-none lg:tracking-[0.055em]">
               {SITE.name}
             </span>
             <span className="mt-[1.44px] hidden font-serif text-[13px] italic leading-none text-text lg:block">
@@ -43,12 +43,28 @@ export default function SiteHeader() {
         </Link>
 
         {/* The Email CTA returns to the header now that the SectionNav bar is
-            retired — same gray action chip, far right, on every page. */}
+            retired — same gray action chip, far right, on every page. The
+            wordmark never wraps, so the chip yields on narrow phones:
+            "Email Lorenzo" ≥400px, "Email" 360–399px, an envelope below 360px
+            (the 320px floor). Its accessible name is always "Email Lorenzo". */}
         <a
           href={`mailto:${SITE.email}`}
-          className="no-wiki relative ml-auto inline-flex items-center before:absolute before:-inset-x-1 before:-inset-y-2.5 before:content-[''] whitespace-nowrap rounded-sm border border-rule bg-surface-subtle px-3 py-1 text-sm text-text transition-colors hover:border-accent hover:bg-accent hover:text-white"
+          aria-label="Email Lorenzo"
+          className="no-wiki relative ml-auto inline-flex shrink-0 items-center before:absolute before:-inset-x-1 before:-inset-y-2.5 before:content-[''] whitespace-nowrap rounded-sm border border-rule bg-surface-subtle px-3 py-1 text-sm text-text transition-colors hover:border-accent hover:bg-accent hover:text-white max-[359px]:px-2.5"
         >
-          Email Lorenzo
+          <span className="max-[399px]:hidden">Email Lorenzo</span>
+          <span className="hidden max-[399px]:inline max-[359px]:hidden">Email</span>
+          <svg
+            className="hidden max-[359px]:block"
+            width="16"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect x="3" y="5" width="18" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.8" />
+            <path d="M3.5 6l8.5 7 8.5-7" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+          </svg>
         </a>
       </div>
     </header>

@@ -135,7 +135,7 @@ lg (≥1024):     Pages rail (176px) | article | infobox (336px)
 
 | Surface | Job | Desktop | Mobile (< lg) |
 |---|---|---|---|
-| **SiteHeader** (sticky, `z-30`, height `--header-h`: 56px mobile / 68px at `lg`) | Identity + escape hatch | brand symbol + wordmark + tagline left, **"Email Lorenzo"** chip far right | hamburger + symbol + wordmark + "Email Lorenzo" |
+| **SiteHeader** (sticky, `z-30`, height `--header-h`: 56px mobile / 68px at `lg`) | Identity + escape hatch | brand symbol + wordmark + tagline left, **"Email Lorenzo"** chip far right | hamburger + symbol + wordmark (never wraps) + chip that yields to fit: "Email Lorenzo" ≥400px, "Email" 360–399px, envelope icon below 360px; accessible name always "Email Lorenzo" |
 | **Primary "Pages" nav** | Move between the 8 pages | left rail 176px, sticky | **slide-in drawer** from hamburger |
 | ~~**SectionNav**~~ | *Retired.* | — | — |
 | **Infobox** | Summarize the person | right rail 336px, sticky | **inline under the title rule**, `<details>` "Quick facts" |
