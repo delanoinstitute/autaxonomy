@@ -6,7 +6,7 @@ The brief in one line: a Wikipedia-style personal profile that wins the trust of
 
 **Hard constraints:** Next.js 16 App Router + React 19 + Tailwind CSS 4, statically rendered on Vercel, mobile-first, fast (no layout shift), fonts via `next/font`, accessibility **WCAG 2.2 AA minimum** (verified with axe-core zero-violations + one keyboard/VoiceOver pass per page).
 
-**Conventions in this doc:** all colors are CSS custom properties (`--token`) in `:root` of `app/globals.css`, mapped to Tailwind utilities by the `@theme inline` block in the same file (there is no `tailwind.config` — it was retired in the Tailwind 4 upgrade). Tailwind's utilities are imported **unlayered**, so the site's own rules win or lose by specificity and source order exactly as they did under v3. **Never write a raw hex inline.** All spacing is on a 4px grid named in rem. All type sizes are tokens.
+**Conventions in this doc:** all colors are CSS custom properties (`--token`) in `:root` of `app/globals.css`, mapped to Tailwind utilities by the `@theme inline` block in the same file (there is no `tailwind.config` — it was retired in the Tailwind 4 upgrade). Tailwind's utilities are imported **unlayered**, so the site's own rules win or lose by specificity and source order exactly as they did under v3. Three v3 behaviours are restored in the `@layer base` block: the default border colour (`#e5e7eb`), the pointer cursor on buttons, and normal (not tabular) digits in buttons and form controls (v4's `font: inherit` would otherwise pull `tabular-nums` into tooltip labels). **Never write a raw hex inline.** All spacing is on a 4px grid named in rem. All type sizes are tokens.
 
 ---
 

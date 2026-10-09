@@ -56,6 +56,16 @@
     border-color: #e5e7eb; /* v3's default border color (gray-200), exact */
   }
 
+  /* v4 gives form controls `font: inherit`, so a button inside a tabular-nums
+     list (e.g. a tooltip label in .references-list) took tabular figures; in
+     v3 the browser's control font reset them to normal. Keep v3's digits. */
+  button,
+  input,
+  select,
+  textarea {
+    font-variant-numeric: normal;
+  }
+
   /* v4 dropped the pointer cursor on buttons; keep v3's hand cursor. */
   button:not(:disabled),
   [role='button']:not(:disabled) {
