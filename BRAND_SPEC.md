@@ -321,15 +321,18 @@ marks. Every claim links to its evidence.
    the repo or the kit).
 4. Wire: ~~site header (tagline lockup), favicon and app icons, link
    preview image~~ done. Produced in the brand kit, outside the repo at
-   `~/Developer/Artifacts/Brand/`: `Lorenzo-Delano-Brand-Guide-v0.3.pdf`
-   (this document, printed), `Lorenzo-Delano-Letterhead.docx`,
-   `Lorenzo-Delano-Slides.pptx` (slide master), `email-signature.html`,
-   `avatar-symbol-1200x1200.png`, the tagline lockup SVGs, and in
-   `Social/` the LinkedIn banner (1584×396 and @2x, v2), the YouTube
-   channel art (v2) and the YouTube watermark symbol (150, paper and
-   on-ink); `Social/Social (Legacy)/` keeps the v1 LinkedIn banners and the
-   pre-brand 2026-02 "Personal Development Education" YouTube banner. The
-   guide PDF is rebuilt from this file by `Brand/guide-source/` (last
+   `~/Developer/Artifacts/Brand/` (named `Subject (Type)`; git keeps the
+   history, so no version numbers): `Brand (Guide).pdf` (this document,
+   printed), `Letterhead (Template).docx`, `Slides (Template).pptx` (slide
+   master), `Email Signature (Template).html`, and in `Social/`
+   `Profile (Avatar).png` (1200 px), `LinkedIn (Banner).png` (1584×396) and
+   `@2x`, `YouTube (Channel Art).png` (2560×1440) and the YouTube watermark
+   (150 px, paper and on-ink); `Social/Social (Legacy)/` keeps the
+   2026-09-04 LinkedIn banners and the pre-brand 2026-02 "Personal
+   Development Education" channel art. The marks themselves (symbol,
+   wordmark, lockups, seal, favicons) have one master each, in the site's
+   `public/brand/`; the kit holds no copies. The guide PDF is rebuilt from
+   this file by `Brand/Guide (Source)/` (last
    2026-10-09). Still open: the seal on the 404 page (§1.4).
 5. Version this document at each ratification, and regenerate the guide
-   PDF with `Brand/guide-source/build_guide.py`.
+   PDF with `Brand/Guide (Source)/build_guide.py`.
