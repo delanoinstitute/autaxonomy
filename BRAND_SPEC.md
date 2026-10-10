@@ -302,7 +302,12 @@ Anatomy, top-down:
 5. **Cells**: paper, 1 unit `rule` border, bullets; sub-labels bold italic
    with glosses; nested lists indent once.
    Keywords take their legend colour (§2.3a); group and row words take
-   the identity triad.
+   the identity triad. When the matrix's left column holds labels
+   (routine titles, equipment items) rather than content, those labels
+   are ink: the band above already carries the row. Compound nouns stay
+   open ("stability drills", not "stability-drills"); hyphens are kept
+   for pairs (flex-extend, hip-knee), modifiers before a noun (full-range
+   reps) and established words (warm-up, pull-up).
 6. **Leads**: unlabelled italic first row of a category, first person,
    one line.
 
