@@ -283,8 +283,14 @@ Anatomy, top-down:
    `TEMPLATE (MAP)`.
 2. **Section bands**: `ink-2` fill, paper text, uppercase bold italic:
    `FACETS`, `MATRIX`, `INSTRUCTIONS`.
+3. **Sub-section headers** (a full-width grey row inside a section,
+   e.g. `5-Step Design (Mastery)`, `Training (Time)`): `rule` (`#c8ccd1`)
+   fill, ink bold; darker than column headers so they read as the head of
+   the rows beneath.
 3. **Column headers**: `band-neutral` fill, ink bold, glossed:
    `Learning (Plan)`.
+   Row labels in a left column take `surface` (`#f4f5f6`): ink-2 band →
+   rule sub-header → band-neutral column header → surface label → paper.
 4. **Ranked heading rows**: rank tints in spectrum order down the table;
    rank inks for column-header fills when the columns themselves are
    ranked (the template's red/green/blue column bar is the triad rule in
