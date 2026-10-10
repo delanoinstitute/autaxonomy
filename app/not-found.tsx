@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandSymbol from "@/components/BrandSymbol";
 import PageHeading from "@/components/PageHeading";
 
 export default function NotFound() {
@@ -17,6 +18,8 @@ export default function NotFound() {
         </Link>
         .
       </p>
+      {/* The seal signs the page (BRAND_SPEC §1.4): a stamp, one per surface, never beside the wordmark. */}
+      <BrandSymbol variant="seal" size={40} className="mt-8" />
     </>
   );
 }

@@ -8,12 +8,15 @@ Companion documents: `DESIGN_SPEC.md` (site typography and layout),
 `KNOWLEDGE_SPEC.md` (taxonomy content structure). This document governs
 identity; those govern implementation.
 
-Status: v0.3 (2026-09-04). Symbol ratified: the Ranked Table (§1.1), a
-ruled 3×3 with the three ranks in its header row, replacing the LD cell
-(v0.1) and the diagonal (v0.2); the initials appear in no mark. Inks
-ratified (§2.2) with contrast ratios recorded. Tagline lockup ratified as
-the complete logo (§1.3), same day. Facts reconciled with the site code
-and the brand kit on 2026-10-09 (no new ratification).
+Status: v0.4 (2026-10-10). v0.3 (2026-09-04) ratified the symbol (the
+Ranked Table, §1.1: a ruled 3×3 with the three ranks in its header row,
+replacing the LD cell of v0.1 and the diagonal of v0.2; no initials in any
+mark), the inks with their contrast ratios (§2.2) and the tagline lockup
+as the complete logo (§1.3). v0.4 adds the taxonomy-document standard: the
+legend triad (§2.3a), the Docs anatomy, links, labels, hyphens and running
+foot (§4), and the asset inventory (§6.1). Every v0.3 deliverable is
+built. Version this document at each ratification and rebuild the guide
+PDF with `Brand/Guide (Source)/build_guide.py`.
 
 ---
 
@@ -256,6 +259,11 @@ stop, so it becomes violet; blue is now reserved for legend position 2
 | Body, UI, tables, letters | **Inter** | 400, 500, 600 | 14–16 px UI; 9.4–11 pt print |
 | Data, IDs, code, hashes | **JetBrains Mono** | 400 | Disambiguates 0/O, 1/l/I |
 
+Google Docs (taxonomies, plans): band headings (paper text on ink) take
+Newsreader; body stays Arial, the face the documents were laid out in, so
+no line re-wraps. Inter replaces Arial only in documents built new outside
+Docs.
+
 Scale (site tokens): h1 1.75–2.25 rem · h2 1.375–1.625 rem · h3 1.125–1.25
 rem · lead 1.06–1.125 rem · body 1 rem · small 0.875 rem · xs 0.8125 rem
 (floor) · wordmark 1.125 rem. Print (resume): body 9.4 pt, h2 10.5 pt
@@ -277,39 +285,49 @@ Devices:
 The tabled taxonomy is the brand's signature deliverable; its anatomy is
 constant even as its grid changes.
 
-Structure (classic): **Title band → FACETS → MATRIX → other sections
-(e.g., INSTRUCTIONS)**. Grid shape follows the taxonomy's function: 3×3
-(classic), 3×2 (the site's page anatomy), n×m as the domain demands.
-The cell is the constant.
+Structure: **Title band → FACETS → MATRIX → PRACTICE → PERSPECTIVE**.
+FACETS names the three groups (left column), three rows (middle) and three
+legend categories (right); MATRIX crosses groups with rows; PRACTICE gives
+the steps; PERSPECTIVE defines the terms. Grid shape follows the
+taxonomy's function: 3×3 (classic), 3×2 (the site's page anatomy), n×m as
+the domain demands. The cell is the constant.
 
 Anatomy, top-down:
-1. **Title band**: ink fill, paper text, uppercase bold, glossed:
-   `TEMPLATE (MAP)`.
-2. **Section bands**: `ink-2` fill, paper text, uppercase bold italic:
-   `FACETS`, `MATRIX`, `INSTRUCTIONS`.
+1. **Title band**: `ink` fill, paper text, uppercase Newsreader, glossed:
+   `TAXONOMY (TYPE)`.
+2. **Section bands**: `ink-2` fill, paper text, uppercase Newsreader bold
+   italic: `FACETS`, `MATRIX`, `PRACTICE`, `PERSPECTIVE`.
 3. **Sub-section headers** (a full-width grey row inside a section,
    e.g. `5-Step Design (Mastery)`, `Training (Time)`): `rule` (`#c8ccd1`)
    fill, ink bold; darker than column headers so they read as the head of
    the rows beneath.
-3. **Column headers**: `band-neutral` fill, ink bold, glossed:
-   `Learning (Plan)`.
-   Row labels in a left column take `surface` (`#f4f5f6`): ink-2 band →
-   rule sub-header → band-neutral column header → surface label → paper.
-4. **Ranked heading rows**: rank tints in spectrum order down the table;
-   rank inks for column-header fills when the columns themselves are
-   ranked (the template's red/green/blue column bar is the triad rule in
-   action; standardize to red/green/violet).
-5. **Cells**: paper, 1 unit `rule` border, bullets; sub-labels bold italic
-   with glosses; nested lists indent once.
-   Keywords take their legend colour (§2.3a); group and row words take
-   the identity triad. When the matrix's left column holds labels
-   (routine titles, equipment items) rather than content, those labels
-   are ink: the band above already carries the row. Compound nouns stay
-   open ("stability drills", not "stability-drills"); hyphens are kept
-   for pairs (flex-extend, hip-knee), modifiers before a noun (full-range
-   reps) and established words (warm-up, pull-up).
-6. **Leads**: unlabelled italic first row of a category, first person,
+4. **Column headers**: `band-neutral` fill, ink bold, glossed:
+   `Learning (Plan)`. Row labels in a left column take `surface`. The grey
+   ladder, darkest to lightest: ink-2 band → rule sub-header →
+   band-neutral column header → surface label → paper.
+5. **Group bars** (the matrix's column headers): the identity triad's
+   inks, red · green · violet, paper text in Newsreader.
+6. **Row bands**: the identity triad's tints in order (red, green, violet
+   tint); unranked rows take the rule grey.
+7. **Cells**: paper, 1 unit border, bullets; sub-labels bold italic with
+   glosses; nested lists indent once. Keywords take their legend ink
+   (§2.3a), group and row words the identity triad; a cell that belongs to
+   one legend category takes that legend's tint. Body text is ink.
+8. **Label column**: when the matrix's left column holds labels (routine
+   titles, equipment items) rather than content, the labels are ink: the
+   band above already carries the row.
+9. **Leads**: unlabelled italic first row of a category, first person,
    one line.
+
+**Words:** compound nouns stay open ("stability drills", not
+"stability-drills"); hyphens stay for pairs (flex-extend, hip-knee,
+Balance-row), modifiers before a noun (full-range reps, single-leg hold),
+prefixes (anti-, de-, non-) and established words (warm-up, pull-up).
+
+**Links (Docs):** ink, underlined. Never link blue: in a taxonomy, blue is
+legend position 2, so a blue link reads as a category. The underline is the
+cue. A link that is also a legend keyword keeps its legend colour. On the
+site, links stay `#3366cc`: no taxonomy legend competes with them there.
 
 **Running foot (Docs):** one centred line inside the bottom margin, so it
 never moves a page break: triad row · **LORENZO DELANO** (Newsreader bold) ·
@@ -317,14 +335,26 @@ lorenzodelano.com (lowercase) · © year · DOCUMENT NAME, in Arial 8 pt
 `muted`. A client's copy (filed in Commissions/<Client>) adds *Designed for
 <Client>* (name in italics), optionally followed by Confidential; masters in
 Works and personal documents never name a client. A long line drops the
-document name, which the title band already shows. Applied by
-`Brand/Docs Brand Pass (Script).gs` (set `CLIENT`, `CONFIDENTIAL`).
+document name, which the title band already shows.
 
-**Links (Docs):** ink, underlined. Never link blue: in a taxonomy, blue is
-legend position 2, so a blue link reads as a category. The underline is the cue.
-A link that is also a legend keyword keeps its legend colour. (Decided
-2026-10-10. On the site, links stay `#3366cc`: no taxonomy legend competes
-with them there.)
+**Producing a taxonomy in Docs:**
+- **New:** copy `Admin/Taxonomy (Template)` in Google Drive (every heading
+  and bullet a placeholder in final formatting) into the project's folder,
+  then rename it; set the footer title to the new name.
+- **Existing:** run the brand pass on it. Audit the document's old colours
+  first: most legacy documents share one role map (red-family groups and
+  rows, red/orange/gold legend), but some swap roles (Archive (Register):
+  red is a group, pink/gold/blue the legend) and take an override.
+- **Scripts** (in `Brand/`, run from the standalone Apps Script project
+  "Docs Brand Pass", which opens any document by ID): `Docs Brand Pass`
+  (colours, fills, band font, sub-headers, links, label column, running
+  foot; settings `CLIENT`, `CONFIDENTIAL`, `LABELS`, `OVERRIDE`),
+  `Docs Hyphen Pass` (opens listed compound nouns), `Docs Template Pass`
+  (turns a copy into a template) and `Docs Runner` (the IDs and entry
+  points). Text edits are typed inside the run they replace, so inherited
+  formatting survives.
+- **Verify** every pass: the PDF export keeps the same pages and the same
+  lines per page; every text colour and fill is a brand token.
 
 Digital tables follow `DESIGN_SPEC.md`; printed/Docs tables follow this
 section with the same tokens.
@@ -341,62 +371,50 @@ marks. Every claim links to its evidence.
 
 ---
 
-## 6. Applications (specs to produce)
+## 6. Applications
 
 | Surface | Form | Spec |
 | --- | --- | --- |
 | Favicon / app icons | Primary symbol | SVG favicon (`app/icon.svg`), 180 (`app/apple-icon.png`), 192 and 512 (web manifest) on paper |
 | Site header | Tagline lockup (desktop, 35.72 px symbol); horizontal lockup (mobile, 26 px symbol) | Live; replaced the LD circle |
+| 404 page | Seal, 40 px, closing the page | Live (`app/not-found.tsx`, `BrandSymbol variant="seal"`) |
 | Open Graph / link previews (1200×630) | Tagline lockup, URL beneath | Paper ground; `public/brand/og-1200x630.png` |
-| Social avatars | Primary symbol | Square crop, paper ground, clear space one grid cell; no wordmark |
-| LinkedIn banner (1584×396) | Tagline lockup (N = 64), no gloss, no triad row, no URL | Paper ground; lockup centered right of the left 420 px kept clear for the photo. v1 (gloss lockup + tagline + triad row with URL) superseded by v2 |
-| YouTube channel art (2560×1440) | Tagline lockup (N = 92) in the 1546×423 safe area | Paper ground; no gloss, card, triad bar, or URL. v1 (gloss lockup, surface ground, triad bar) superseded by v2 |
+| Brand avatars (institution accounts) | Primary symbol | `Social/Profile (Avatar).png`, 1200 px square, paper ground, clear space one grid cell; no wordmark |
+| Personal profile photo | Square headshot | `Photos/Headshot (Square).jpg`; the same photo across every personal account |
+| Press kit | Headshots and press photos | `Photos/`, with photographer credits in `Photos/Credits.md` |
+| LinkedIn banner (1584×396) | Tagline lockup (N = 64), no gloss, no triad row, no URL | Paper ground; lockup centered right of the left 420 px kept clear for the photo |
+| YouTube channel art (2560×1440) | Tagline lockup (N = 92) in the 1546×423 safe area | Paper ground; no gloss, card, triad bar, or URL |
 | YouTube watermark (150) | Primary symbol (paper or on-ink) | Whole video |
 | Letterhead | Gloss lockup top-left | Contact top-right in Inter xs; seal beside the signature; running foot with triad row |
 | Email signature | Primary symbol 48 px (96 px source served from the site), rule, gloss lockup + tagline + links | Links in site blue only |
 | Resume | Existing type system; symbol may sit beside the name | Closing line unchanged |
-| Cover letters (table) | Title band per §4 | Already conformant |
-| Slides | Title master: ink title band with glossed title, triad bar beneath; symbol + wordmark in the foot | Body Inter; data JetBrains Mono |
+| Cover letters (table) | Title band per §4 | Conformant |
+| Slides | Title master: ink title band with glossed title, triad bar beneath; symbol + wordmark in the foot | Body Inter; data JetBrains Mono. Google Slides taxonomies are not yet branded: the slide approach is redesigned with the next project |
 | Stamp / seal | Red symbol (or 龍 personal variant) | Physical: 20–25 mm square |
 | Video titles / thumbnails | Wordmark on paper or ink; single rank hue as accent bar | Never a hued background |
-| Documents / taxonomies (Docs, PDF) | §4 anatomy | Tints for bands, inks for column bars |
+| Documents / taxonomies (Docs) | §4 anatomy | `Admin/Taxonomy (Template)` for new ones; the Docs scripts for existing ones (§4) |
 
----
+### 6.1 Where the assets live
 
-## 7. Deliverables and next steps
-
-1. ~~Canvas explorations~~ Done (v0.3): the Ranked Table with the header
-   row ratified as the symbol after four candidates; construction, forms,
-   size ladder, don'ts, the record board, and all application mockups on
-   the brand canvas.
-2. ~~Ratify inks~~ Done: all six pass AA on paper unchanged, so no site
-   token moved; ratios in §2.2.
-3. ~~Export~~ Done: `public/brand/` — `symbol.svg`, `symbol-mono.svg`,
-   `symbol-on-ink.svg`, `symbol-on-ink-mono.svg`, `seal.svg`,
-   `wordmark.svg` (Newsreader 600 at opsz 72, outlined, tracking 0.055em),
-   `lockup-horizontal.svg`, `lockup-vertical.svg`, `lockup-tagline.svg`
-   and `lockup-tagline-on-ink.svg`; PNGs `symbol-96.png` (email
-   signature), `symbol-192.png` and `symbol-512.png` (web manifest),
-   `seal-96.png`, `triad-row-96x24.png`, `og-1200x630.png` (link
-   previews); favicons `app/icon.svg` (16-unit grid so the rule is 1 px at
-   16 px) and `app/apple-icon.png` (180). The symbol is drawn from one
-   construction wherever it appears: `components/BrandSymbol.tsx` on the
-   site, the export scripts for the files (those scripts are not kept in
-   the repo or the kit).
-4. Wire: ~~site header (tagline lockup), favicon and app icons, link
-   preview image~~ done. Produced in the brand kit, outside the repo at
-   `~/Developer/Artifacts/Brand/` (named `Subject (Type)`; git keeps the
-   history, so no version numbers): `Brand (Guide).pdf` (this document,
-   printed), `Letterhead (Template).docx`, `Slides (Template).pptx` (slide
-   master), `Email Signature (Template).html`, and in `Social/`
-   `Profile (Avatar).png` (1200 px), `LinkedIn (Banner).png` (1584×396) and
-   `@2x`, `YouTube (Channel Art).png` (2560×1440) and the YouTube watermark
-   (150 px, paper and on-ink); `Social/Social (Legacy)/` keeps the
-   2026-09-04 LinkedIn banners and the pre-brand 2026-02 "Personal
-   Development Education" channel art. The marks themselves (symbol,
-   wordmark, lockups, seal, favicons) have one master each, in the site's
-   `public/brand/`; the kit holds no copies. The guide PDF is rebuilt from
-   this file by `Brand/Guide (Source)/` (last
-   2026-10-09). Still open: the seal on the 404 page (§1.4).
-5. Version this document at each ratification, and regenerate the guide
-   PDF with `Brand/Guide (Source)/build_guide.py`.
+- **Marks** (one master each, in the site repo's `public/brand/`):
+  `symbol.svg`, `symbol-mono.svg`, `symbol-on-ink.svg`,
+  `symbol-on-ink-mono.svg`, `seal.svg`, `wordmark.svg` (Newsreader 600 at
+  opsz 72, outlined, tracking 0.055em), `lockup-horizontal.svg`,
+  `lockup-vertical.svg`, `lockup-tagline.svg`, `lockup-tagline-on-ink.svg`;
+  PNGs `symbol-96.png` (email signature), `symbol-192.png` and
+  `symbol-512.png` (web manifest), `seal-96.png`, `triad-row-96x24.png`,
+  `og-1200x630.png`; favicons `app/icon.svg` (16-unit grid, so the rule is
+  1 px at 16 px) and `app/apple-icon.png`. On the site the symbol is drawn
+  by `components/BrandSymbol.tsx` from the same construction.
+- **Brand kit** (`~/Developer/Artifacts/Brand/`, a git repository; files
+  named `Subject (Type)`, git keeps the history, so no version numbers):
+  `Brand (Guide).pdf` (this document, printed), `Letterhead (Template).docx`,
+  `Slides (Template).pptx`, `Email Signature (Template).html`; `Social/`
+  (avatar, LinkedIn banner and `@2x`, YouTube channel art and watermarks;
+  `Social (Legacy)/` keeps superseded banners); `Photos/` (official
+  headshots and press photos, exported from the originals in Apple Photos);
+  the four Docs scripts (§4); `Guide (Source)/` (builds the guide PDF).
+  The kit holds no copies of the marks.
+- **Google Drive**: `Admin/Taxonomy (Template)`, the master for new
+  taxonomies. **Apple Photos**: the photo originals (Profile album and the
+  Categories albums).
