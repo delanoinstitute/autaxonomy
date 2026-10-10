@@ -199,6 +199,38 @@ three-level structures), the palette compresses to three stops spanning
 the spectrum: **red · green · violet** — ranks 1, 4, 6: the beginning,
 middle, and end of every page; the arc from given to chosen.
 
+### 2.3a The legend triad (taxonomy legends)
+
+A taxonomy's FACETS row has three columns with three jobs (§4): the left
+column names the **groups** (the matrix columns), the middle column the
+**rows** (the matrix bands), and the right column is the **legend**: the
+categories that keywords inside the cells are colour-coded by. Groups and
+rows share the identity triad (red · green · violet, in order). The legend
+gets its own triad so a keyword's legend colour can never be mistaken for
+a group or row:
+
+| Legend position | Hue | Ink | On paper | Lifestyle (Plan) example |
+| --- | --- | --- | --- | --- |
+| 1 | ochre | `#7a5c00` (the yellow ink) | 6.25 | Maintenance |
+| 2 | blue | `#3366cc` (the blue ink) | 5.37 | Development |
+| 3 | magenta | `#ad1457` | 6.97 | Leisure |
+
+It follows the same order rule: red → green → violet runs round the hue
+wheel, and ochre → blue → magenta continues in the same direction.
+Ratified 2026-10-09 on measured distinctness: the weakest pair is
+ΔE2000 36.6 apart for typical vision and 15.2 under simulated
+deuteranopia, protanopia and tritanopia, and at least 18.0 from every
+triad hue. The red/orange/gold legend it replaces measured 14.8, 1.9 and
+0 (its red was the group red). The brand's in-between ranks (orange ·
+yellow · blue) were rejected as a legend: orange and red read as one
+colour (1.9) to red-green colour-blind readers. Magenta is a legend-only
+ink; it never ranks.
+
+**Legacy documents.** Older taxonomies used red · green · **blue** as the
+identity triad. Blue in a legacy document's groups or rows means the third
+stop, so it becomes violet; blue is now reserved for legend position 2
+(and links on screen).
+
 ### 2.4 Rules
 
 1. Hue count = level count. Six levels → ROYGBV. Three → red/green/violet.
@@ -259,6 +291,8 @@ Anatomy, top-down:
    action; standardize to red/green/violet).
 5. **Cells**: paper, 1 unit `rule` border, bullets; sub-labels bold italic
    with glosses; nested lists indent once.
+   Keywords take their legend colour (§2.3a); group and row words take
+   the identity triad.
 6. **Leads**: unlabelled italic first row of a category, first person,
    one line.
 
