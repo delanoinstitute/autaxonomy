@@ -315,6 +315,12 @@ Works and personal documents never name a client. A long line drops the
 document name, which the title band already shows. Applied by
 `Brand/Docs Brand Pass (Script).gs` (set `CLIENT`, `CONFIDENTIAL`).
 
+**Links (Docs):** ink, underlined. Never link blue: in a taxonomy, blue is
+legend position 2, so a blue link reads as a category. The underline is the cue.
+A link that is also a legend keyword keeps its legend colour. (Decided
+2026-10-10. On the site, links stay `#3366cc`: no taxonomy legend competes
+with them there.)
+
 Digital tables follow `DESIGN_SPEC.md`; printed/Docs tables follow this
 section with the same tokens.
 
