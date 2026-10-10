@@ -209,11 +209,15 @@ rows share the identity triad (red · green · violet, in order). The legend
 gets its own triad so a keyword's legend colour can never be mistaken for
 a group or row:
 
-| Legend position | Hue | Ink | On paper | Lifestyle (Plan) example |
-| --- | --- | --- | --- | --- |
-| 1 | ochre | `#7a5c00` (the yellow ink) | 6.25 | Maintenance |
-| 2 | blue | `#3366cc` (the blue ink) | 5.37 | Development |
-| 3 | magenta | `#ad1457` | 6.97 | Leisure |
+| Legend position | Hue | Ink | Tint | On paper | Lifestyle (Plan) example |
+| --- | --- | --- | --- | --- | --- |
+| 1 | ochre | `#7a5c00` (the yellow ink) | `#efe3b8` | 6.25 | Maintenance |
+| 2 | blue | `#3366cc` (the blue ink) | `#c8daee` | 5.37 | Development |
+| 3 | magenta | `#ad1457` | `#edcbda` | 6.97 | Leisure |
+
+Legend tints fill cells that belong to one legend category (Training
+(Plan)'s Mobilise · Stabilise · Perform steps). The magenta tint matches
+the red and violet tints' lightness; neutral ink on it is 11.5.
 
 It follows the same order rule: red → green → violet runs round the hue
 wheel, and ochre → blue → magenta continues in the same direction.
