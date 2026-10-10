@@ -302,6 +302,15 @@ Anatomy, top-down:
 6. **Leads**: unlabelled italic first row of a category, first person,
    one line.
 
+**Running foot (Docs):** one centred line inside the bottom margin, so it
+never moves a page break: triad row · **LORENZO DELANO** (Newsreader bold) ·
+lorenzodelano.com (lowercase) · © year · DOCUMENT NAME, in Arial 8 pt
+`muted`. A client's copy (filed in Commissions/<Client>) adds *Designed for
+<Client>* (name in italics), optionally followed by Confidential; masters in
+Works and personal documents never name a client. A long line drops the
+document name, which the title band already shows. Applied by
+`Brand/Docs Brand Pass (Script).gs` (set `CLIENT`, `CONFIDENTIAL`).
+
 Digital tables follow `DESIGN_SPEC.md`; printed/Docs tables follow this
 section with the same tokens.
 
