@@ -302,7 +302,11 @@ Anatomy, top-down:
    fill, ink bold; darker than column headers so they read as the head of
    the rows beneath.
 4. **Column headers**: `band-neutral` fill, ink bold, glossed:
-   `Learning (Plan)`. Row labels in a left column take `surface`. The grey
+   `Learning (Plan)`. In FACETS the gloss names the column's role, so the
+   reader knows how to read the matrix: `Subject (Groups)` ·
+   `Subject (Rows)` · `Subject (Legend)`, e.g. `Tactics (Groups)` ·
+   `Spaces (Rows)` · `Skills (Legend)`. PERSPECTIVE's headings repeat
+   them word for word, in the same order. Row labels in a left column take `surface`. The grey
    ladder, darkest to lightest: ink-2 band → rule sub-header →
    band-neutral column header → surface label → paper.
 5. **Group bars** (the matrix's column headers): the identity triad's
