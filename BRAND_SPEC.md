@@ -285,10 +285,15 @@ Devices:
 The tabled taxonomy is the brand's signature deliverable; its anatomy is
 constant even as its grid changes.
 
-Structure: **Title band → FACETS → MATRIX → PRACTICE → PERSPECTIVE**.
-FACETS names the three groups (left column), three rows (middle) and three
-legend categories (right); MATRIX crosses groups with rows; PRACTICE gives
-the steps; PERSPECTIVE defines the terms. Grid shape follows the
+Structure: **Title band → FACETS → MATRIX → PRACTICE → PROPOSITIONS →
+PRINCIPLES**. Each table is a complete knowledge unit. FACETS names the
+three groups (left column), three rows (middle) and three legend
+categories (right); MATRIX crosses groups with rows; PRACTICE gives the
+steps; PROPOSITIONS defines the nine facets; PRINCIPLES states the five
+laws that always hold. FACETS and MATRIX are the reference (one page where
+possible); the last three sections are the one-off education, mapping to
+procedural, propositional and participatory knowing (the MATRIX carries
+the perspectival). Grid shape follows the
 taxonomy's function: 3×3 (classic), 3×2 (the site's page anatomy), n×m as
 the domain demands. The cell is the constant.
 
@@ -296,17 +301,22 @@ Anatomy, top-down:
 1. **Title band**: `ink` fill, paper text, uppercase Newsreader, glossed:
    `TAXONOMY (TYPE)`.
 2. **Section bands**: `ink-2` fill, paper text, uppercase Newsreader bold
-   italic: `FACETS`, `MATRIX`, `PRACTICE`, `PERSPECTIVE`.
-3. **Sub-section headers** (a full-width grey row inside a section,
-   e.g. `5-Step Design (Mastery)`, `Training (Time)`): `rule` (`#c8ccd1`)
-   fill, ink bold; darker than column headers so they read as the head of
-   the rows beneath.
+   italic: `FACETS`, `MATRIX`, `PRACTICE`, `PROPOSITIONS`, `PRINCIPLES`.
+3. **Sub-section headers** (a full-width grey row inside a section): a
+   count, a unit and a noun, glossed with what the section builds:
+   PRACTICE `5-Step Setup (Mastery)` (the noun varies: Setup, Design,
+   Selection, Assessment), PROPOSITIONS `9-Facet Definitions
+   (Understanding)`, PRINCIPLES `5-Law Canon (Wisdom)`. `rule`
+   (`#c8ccd1`) fill, ink bold; darker than column headers so they read as
+   the head of the rows beneath.
 4. **Column headers**: `band-neutral` fill, ink bold, glossed:
    `Learning (Plan)`. In FACETS the gloss names the column's role, so the
    reader knows how to read the matrix: `Subject (Groups)` ·
    `Subject (Rows)` · `Subject (Legend)`, e.g. `Tactics (Groups)` ·
-   `Spaces (Rows)` · `Skills (Legend)`. PERSPECTIVE's headings repeat
-   them word for word, in the same order. Row labels in a left column take `surface`. The grey
+   `Spaces (Rows)` · `Skills (Legend)`. PROPOSITIONS' headings repeat
+   them word for word, in the same order. PRINCIPLES is one row: the
+   table's subject with its count (`Design (5)`), then five
+   `Law (gloss): statement; implication` bullets, each within three lines. Row labels in a left column take `surface`. The grey
    ladder, darkest to lightest: ink-2 band → rule sub-header →
    band-neutral column header → surface label → paper.
 5. **Group bars** (the matrix's column headers): the identity triad's
