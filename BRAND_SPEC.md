@@ -315,8 +315,12 @@ Anatomy, top-down:
    `Subject (Rows)` · `Subject (Legend)`, e.g. `Tactics (Groups)` ·
    `Spaces (Rows)` · `Skills (Legend)`. PROPOSITIONS' headings repeat
    them word for word, in the same order. PRINCIPLES is one row: the
-   table's subject with its count (`Design (5)`), then five
-   `Law (gloss): statement; implication` bullets, each within three lines. Row labels in a left column take `surface`. The grey
+   table's subject (`Design (Laws)`), then five
+   `Law (gloss): statement; implication` bullets, each within three lines.
+   Labels take a gloss, never a count: Practice steps read
+   `1) Orient (Overview)`. A count appears only where it tells the reader
+   something they can't see, e.g. `Map (30)` (benchmarks) inside a bullet;
+   the fixed counts live once, in the sub-headers (5-Step, 9-Facet, 5-Law). Row labels in a left column take `surface`. The grey
    ladder, darkest to lightest: ink-2 band → rule sub-header →
    band-neutral column header → surface label → paper.
 5. **Group bars** (the matrix's column headers): the identity triad's
