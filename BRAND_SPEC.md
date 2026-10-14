@@ -212,7 +212,7 @@ rows share the identity triad (red · green · violet, in order). The legend
 gets its own triad so a keyword's legend colour can never be mistaken for
 a group or row:
 
-| Legend position | Hue | Ink | Tint | On paper | Lifestyle (Plan) example |
+| Legend position | Hue | Ink | Tint | On paper | Timing (Plan) example |
 | --- | --- | --- | --- | --- | --- |
 | 1 | ochre | `#7a5c00` (the yellow ink) | `#efe3b8` | 6.25 | Maintenance |
 | 2 | blue | `#3366cc` (the blue ink) | `#c8daee` | 5.37 | Development |
