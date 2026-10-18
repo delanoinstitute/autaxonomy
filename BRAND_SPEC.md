@@ -337,6 +337,22 @@ Anatomy, top-down:
 9. **Leads**: unlabelled italic first row of a category, first person,
    one line.
 
+**Supporting tables** (registers, checklists, lists): a lower-order table
+that serves one main table.
+- **Placement:** directly below the table it supports, before the next main
+  table (e.g. `Setup (Checklist)` under Producing (Space)).
+- **Heading:** an H4 paragraph above the table, `Subject (Type)`; main tables
+  carry no heading (the title band names them), so the H4 alone marks rank.
+- **Sections:** FACETS and MATRIX only. Practice, Propositions and
+  Principles stay with the parent.
+- **Types** (closed vocabulary): **Register** = an inventory of what you hold
+  and where (Accounts, Archive); **Checklist** = a sequence to work through
+  in order (codes S1, F1, A1… as in workflows); **List** = an unordered
+  collection (watchlists, shopping).
+- **Checklist links:** the code links to the item's best tutorial, `(guide)`
+  to the official guide; an item repeated on a second device links its
+  guide only.
+
 **Words:** compound nouns stay open ("stability drills", not
 "stability-drills"); hyphens stay for pairs (flex-extend, hip-knee,
 Balance-row), modifiers before a noun (full-range reps, single-leg hold),
