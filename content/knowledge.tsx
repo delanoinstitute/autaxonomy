@@ -413,7 +413,7 @@ export const WORKS: StatTableData = {
         {
           category: "Designs (original contributions)",
           metrics: [
-            ["", "I am the creator of the below published protocols, programs, systems, and models", false],
+            ["", "I am the creator of the below published protocols, programs, and systems", false],
             [
               "10X",
               [
@@ -462,15 +462,6 @@ export const WORKS: StatTableData = {
                 <WikiLink key="design" href="https://youtube.com/playlist?list=PLkxFhm6Fhw9pveFENc_sdY9wRT8JAjDlk">design</WikiLink>,
                 ") courses and ",
                 <WikiLink key="tax" href="https://drive.google.com/file/d/1DlHZfG5Nv2TS2Y4dMQwufA_5hnMGFqGC/view">taxonomies</WikiLink>,
-              ],
-              true,
-            ],
-            [
-              "Autaxonomy",
-              [
-                "The taxonomy of the self: a ",
-                <WikiLink key="tax" href="/">map</WikiLink>,
-                " of a person (constitution and capital) designed using my 3Squared learning methodology, coded and edited by Claude",
               ],
               true,
             ],
