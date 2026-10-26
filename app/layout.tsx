@@ -50,7 +50,7 @@ const PERSON_JSON_LD = {
   email: `mailto:${SITE.email}`,
   image: `${SITE.url}/carousel/portrait.jpg`,
   sameAs: [SITE.linkedin, SITE.youtube],
-  knowsAbout: ["Functional Taxonomy", "Benchmark Apprenticeship", "personal transformation", "learning design"],
+  knowsAbout: ["Functional Taxonomy", "3Squared", "Benchmark Apprenticeship", "personal transformation", "learning design"],
 };
 
 export default function RootLayout({

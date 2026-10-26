@@ -405,8 +405,8 @@ export const WORKS: StatTableData = {
         {
           category: "Methodologies (design principles)",
           metrics: [
-            ["", "I am the creator of two methodologies: one for learning (FT), one for teaching (BA)", false],
-            ["Functional Taxonomy", "My learning methodology, published as 3Squared: a standard (54 principles, 17 taxonomy types) for classifying any domain by function into tables of nine facets, for efficient reference, retrieval, and transmission", true, "Every taxonomy is one table: nine facets (three groups, three rows, and three legend categories; hence 3Squared, 3\u00b2 = 9) crossed in its body, then taught through a five-step practice, nine definitions, and five laws. Its type comes from a map of 17 (from registers to logs), chosen by what the reader must know, analyze, or do and by how predictable the situation is; 54 principles in nine tenets keep every table structured, economical, and consistent."],
+            ["", "I am the creator of two methodologies: one for learning (3Squared), one for teaching (BA)", false],
+            ["3Squared", "My learning methodology, Functional Taxonomy: a standard (54 principles, 17 taxonomy types) for classifying any domain by function into tables of nine facets, for efficient reference, retrieval, and transmission", true, "Every taxonomy is one table: nine facets (three groups, three rows, and three legend categories; hence 3Squared, 3\u00b2 = 9) crossed in its body, then taught through a five-step practice, nine definitions, and five laws. Its type comes from a map of 17 (from registers to logs), chosen by what the reader must know, analyze, or do and by how predictable the situation is; 54 principles in nine tenets keep every table structured, economical, and consistent."],
             ["Benchmark Apprenticeship", "My teaching methodology: establish the fastest verified transmission of a skill to self-sufficiency under ideal conditions, then hold every medium to that benchmark", true, "The benchmark experience: once-off (1\u20132 days), four-part (thesis, evaluation, strategy, and training), 1-on-1/duo, in person, apprenticeship-based. The clock stops when the student can execute, track, and close their remaining gaps alone; formats that deviate (group, virtual, book) pay the delta in the learner\u2019s own hours, making media design loss minimization. Theory ships ahead with a self-assessment; the session itself is hands-on."],
           ],
         },
@@ -442,7 +442,7 @@ export const WORKS: StatTableData = {
               [
                 "A universal basic-fitness program co-authored with ",
                 <WikiLink key="jelena" href="https://jelenalakic.com/">Jelena Lakic</WikiLink>,
-                "; FT-mapped, BA-delivered, and available as a ",
+                "; 3Squared-mapped, BA-delivered, and available as a ",
                 <WikiLink key="mv" href="https://www.mindvalley.com/body-first">Mindvalley quest</WikiLink>,
               ],
               true,
@@ -450,7 +450,7 @@ export const WORKS: StatTableData = {
             [
               "MSP",
               [
-                "An exercise-mastery protocol built entirely on FT, available as five free YouTube (",
+                "An exercise-mastery protocol built entirely on 3Squared, available as five free YouTube (",
                 <WikiLink key="map" href="https://youtube.com/playlist?list=PLkxFhm6Fhw9rBcU7Fwl6-eizseHRR50lI">map</WikiLink>,
                 ", ",
                 <WikiLink key="routines" href="https://youtube.com/playlist?list=PLkxFhm6Fhw9oejXvkzADRTChNUd1LB0lZ">routines</WikiLink>,
@@ -470,7 +470,7 @@ export const WORKS: StatTableData = {
               [
                 "The taxonomy of the self: a ",
                 <WikiLink key="tax" href="/">map</WikiLink>,
-                " of a person (constitution and capital) designed using my FT learning methodology, coded and edited by Claude",
+                " of a person (constitution and capital) designed using my 3Squared learning methodology, coded and edited by Claude",
               ],
               true,
             ],
@@ -582,7 +582,7 @@ export const KNOWLEDGE_REFERENCE_SECTIONS: ReferenceSection[] = [
         id: "values-factor",
         cite: (
           <>
-            <strong>Author collaboration</strong>: <em><WikiLink href="https://www.mindvalley.com/values">ValuesFactor Quest</WikiLink> (2024, Cape Town)</em>; Eudaemonia, Inc. (Delano, L.); skills of negotiation, profiling, architecture, and management • course (Mindvalley)
+            <strong>Author collaboration</strong>: <em><WikiLink href="https://www.mindvalley.com/values">Values Factor Quest</WikiLink> (2024, Cape Town)</em>; Eudaemonia, Inc. (Delano, L.); skills of negotiation, profiling, architecture, and management • course (Mindvalley)
           </>
         ),
       },
@@ -691,7 +691,7 @@ export const KNOWLEDGE_REFERENCE_SECTIONS: ReferenceSection[] = [
         id: "values-factor-stories",
         cite: (
           <>
-            <strong>Student stories</strong>: <em><WikiLink href="https://stories.mindvalley.com/product/the-values-factor">ValuesFactor Quest</WikiLink> (2024, worldwide)</em> • website (Mindvalley)
+            <strong>Student stories</strong>: <em><WikiLink href="https://stories.mindvalley.com/product/the-values-factor">Values Factor Quest</WikiLink> (2024, worldwide)</em> • website (Mindvalley)
           </>
         ),
       },

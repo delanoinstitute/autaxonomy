@@ -450,7 +450,7 @@ const CONTACT: StatTableData = {
               "Values",
               [
                 "Identify, own, and modify your highest values with Dr. John Demartini in the ",
-                <WikiLink key="vfq" href="https://www.mindvalley.com/values">ValuesFactor</WikiLink>,
+                <WikiLink key="vfq" href="https://www.mindvalley.com/values">Values Factor</WikiLink>,
                 " Quest",
               ],
               true,

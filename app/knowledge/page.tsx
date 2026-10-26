@@ -12,7 +12,7 @@ import {
 
 export const metadata = pageMeta(
   "Knowledge",
-  "What Lorenzo Delano knows and makes: published works, benchmarked skills, and a self-designed education, including Functional Taxonomy and Benchmark Apprenticeship.",
+  "What Lorenzo Delano knows and makes: published works, benchmarked skills, and a self-designed education, including 3Squared (Functional Taxonomy) and Benchmark Apprenticeship.",
   "/knowledge",
 );
 
