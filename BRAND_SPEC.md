@@ -15,8 +15,12 @@ mark), the inks with their contrast ratios (§2.2) and the tagline lockup
 as the complete logo (§1.3). v0.4 adds the taxonomy-document standard: the
 legend triad (§2.3a), the Docs anatomy, links, labels, hyphens and running
 foot (§4), and the asset inventory (§6.1). Every v0.3 deliverable is
-built. Version this document at each ratification and rebuild the guide
-PDF with `Brand/Guide (Source)/build_guide.py`.
+built. v0.5 (2026-10-26) aligns the colour principle and §4 with Taxonomy
+(Spec): hue encodes sequence and kind, value encodes hierarchy (§0, §2);
+the body is named by the taxonomy's type; supporting tables keep the full
+anatomy; the footer name is muted. Version this document at each
+ratification and rebuild the guide PDF with
+`Brand/Guide (Source)/build_guide.py`.
 
 ---
 
@@ -30,8 +34,11 @@ template) — the cell is invariant. The identity is built from that atom.
 Three principles, in rank order:
 
 1. **Structure over ornament.** Every element earns its place by function.
-2. **Color ranks; it never decorates.** Hue encodes hierarchy, in spectrum
-   order, always. Emphasis is done with weight and italics, not color.
+2. **Color sequences; it never decorates.** Hue encodes position on the
+   spectrum (kind and order), always in spectrum order; it reads as rank
+   only where the sequence is a progression (start at red, graduate to
+   violet). Value, the grey ladder, encodes hierarchy. Emphasis is done
+   with weight and italics, not color.
 3. **Specificity over hype.** The voice states, measures, and cites.
 
 Permitted rule-bends (the "uniquely me" allowances): the parenthetical
@@ -68,7 +75,7 @@ the artifact, not an abstraction of it.
 - **Seal**: rules and header in `red-ink`, paper cells (§1.4).
 - Minimum size: 16 px. Clear space: one grid cell (side ÷ 3) on all
   sides.
-- The three hues are legitimate here only because they mark rank
+- The three hues are legitimate here only because they mark sequence
   (columns one to three, as in every matrix). They are never reordered,
   never spread below the header, never graded.
 - Retired candidates, for the record (canvas board "Record"): the LD
@@ -155,7 +162,7 @@ surface.
 | `muted` | `#5a5f66` | Secondary text, glosses in UI |
 | `rule` | `#c8ccd1` | Table rules, cell borders |
 | `rule-soft` | `#e6e8eb` | Interior hairlines |
-| `band-neutral` | `#e8eaed` | Unranked bands (infobox headers) |
+| `band-neutral` | `#e8eaed` | Bands outside a sequence (infobox headers) |
 | `surface` | `#f4f5f6` | App ground |
 | `paper` | `#ffffff` | Page, cell fill |
 | `mark` | `#fef6e7` | Highlight only |
@@ -166,17 +173,20 @@ rules, active nav pill, carousel dot) stay neutral and the spectrum is the
 only color system; `--accent-soft` is `band-neutral`. The earlier teal
 accent is retired (values kept in a code comment).
 
-### 2.2 The hierarchy palette (six ranks, spectrum order)
+### 2.2 The spectrum palette (six stops, spectrum order)
 
-Every ranked structure colors its levels in this order, first level red.
+Every sequenced structure colors its steps in this order, first step red.
+Hue marks where an item sits in the sequence and what kind it is; it marks
+hierarchy only when the sequence is itself a progression. Hierarchy proper
+is carried by value: the grey ladder (§4).
 Tints are the site's band tokens, `--band-red` … `--band-violet`
 (backgrounds, ink text on them): every page's six bands (three branches ×
-two bands) take ranks 1–6 down the page. Inks are the saturated counterparts for marks, lines, and text on
+two bands) take stops 1–6 down the page. Inks are the saturated counterparts for marks, lines, and text on
 paper. Ratified 2026-09-04 against WCAG contrast: every ink clears AA
 (≥ 4.5:1) on paper, which also clears paper text on the ink (the ratio is
 symmetric), and the neutral ink clears every tint by a wide margin.
 
-| Rank | Hue | Tint (bg) | Ink (fg) | Ink on paper | Neutral ink on tint | Ink on own tint |
+| Stop | Hue | Tint (bg) | Ink (fg) | Ink on paper | Neutral ink on tint | Ink on own tint |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | red | `#ecccc9` | `#ba0000` | 6.80 | 11.42 | 4.55 |
 | 2 | orange | `#f0d9c0` | `#b45309` | 5.02 | 12.51 | 3.68 |
@@ -185,13 +195,13 @@ symmetric), and the neutral ink clears every tint by a wide margin.
 | 5 | blue | `#c8daee` | `#3366cc` | 5.37 | 11.96 | 3.76 |
 | 6 | violet | `#d9cfe8` | `#5e35b1` | 8.02 | 11.41 | 5.36 |
 
-The last column governs one rule: a rank ink on its own tint (orange,
+The last column governs one rule: a stop's ink on its own tint (orange,
 green, blue fall between 3:1 and 4.5:1) is permitted only for large or
 bold text and for rules and fills, never for body text. Tables never need
-it: keywords in rank hue sit on paper, and tinted bands carry neutral ink.
+it: keywords in their hue sit on paper, and tinted bands carry neutral ink.
 Blue stays identical to the site's link color on purpose.
 
-Functional colors that live outside rank: `link #3366cc` (also blue ink),
+Functional colors that live outside the sequence: `link #3366cc` (also blue ink),
 `focus #0b57d0`,
 `danger = red-ink` (the site's `--link-red`).
 
@@ -199,7 +209,7 @@ Functional colors that live outside rank: `link #3366cc` (also blue ink),
 
 For identity surfaces (banner, letterhead accents, slide title bars,
 three-level structures), the palette compresses to three stops spanning
-the spectrum: **red · green · violet** — ranks 1, 4, 6: the beginning,
+the spectrum: **red · green · violet** — stops 1, 4, 6: the beginning,
 middle, and end of every page; the arc from given to chosen.
 
 ### 2.3a The legend triad (taxonomy legends)
@@ -212,14 +222,14 @@ rows share the identity triad (red · green · violet, in order). The legend
 gets its own triad so a keyword's legend colour can never be mistaken for
 a group or row:
 
-| Legend position | Hue | Ink | Tint | On paper | Timing (Plan) example |
+| Legend position | Hue | Ink | Tint | On paper | Timing (Budget) example |
 | --- | --- | --- | --- | --- | --- |
 | 1 | ochre | `#7a5c00` (the yellow ink) | `#efe3b8` | 6.25 | Maintenance |
 | 2 | blue | `#3366cc` (the blue ink) | `#c8daee` | 5.37 | Development |
 | 3 | magenta | `#ad1457` | `#edcbda` | 6.97 | Leisure |
 
 Legend tints fill cells that belong to one legend category (Training
-(Plan)'s Mobilise · Stabilise · Perform steps). The magenta tint matches
+(Schedule)'s Mobilise · Stabilise · Perform steps). The magenta tint matches
 the red and violet tints' lightness; neutral ink on it is 11.5.
 
 It follows the same order rule: red → green → violet runs round the hue
@@ -228,10 +238,10 @@ Ratified 2026-10-09 on measured distinctness: the weakest pair is
 ΔE2000 36.6 apart for typical vision and 15.2 under simulated
 deuteranopia, protanopia and tritanopia, and at least 18.0 from every
 triad hue. The red/orange/gold legend it replaces measured 14.8, 1.9 and
-0 (its red was the group red). The brand's in-between ranks (orange ·
+0 (its red was the group red). The brand's in-between stops (orange ·
 yellow · blue) were rejected as a legend: orange and red read as one
 colour (1.9) to red-green colour-blind readers. Magenta is a legend-only
-ink; it never ranks.
+ink; it never marks a group or a row.
 
 **Legacy documents.** Older taxonomies used red · green · **blue** as the
 identity triad. Blue in a legacy document's groups or rows means the third
@@ -240,14 +250,17 @@ stop, so it becomes violet; blue is now reserved for legend position 2
 
 ### 2.4 Rules
 
-1. Hue count = level count. Six levels → ROYGBV. Three → red/green/violet.
+1. Hue count = stop count. Six stops → ROYGBV. Three → red/green/violet.
    Two → red/violet (the ends). One → ink only.
-2. Spectrum order is hierarchy order, top-down or left-to-right. Never
-   shuffle hues for aesthetics.
+2. Spectrum order is sequence order, top-down or left-to-right; it reads
+   as hierarchy only when the sequence is a progression. Hierarchy itself
+   is value: the grey ladder. Never shuffle hues for aesthetics.
 3. Text on tints is ink. Text on inks is paper. Never tint-on-tint.
 4. Hue is never used for emphasis, decoration, mood, or "brand splash."
    The one exception is the seal.
 5. Neutrals carry ≥ 80% of any surface; hue is the legend, not the page.
+6. A hue means one thing everywhere in a document: a group hue is never a
+   legend hue, and a legend keyword keeps its hue wherever it appears.
 
 ---
 
@@ -283,12 +296,18 @@ Devices:
 ## 4. The Taxonomy Table (the brand's core artifact)
 
 The tabled taxonomy is the brand's signature deliverable; its anatomy is
-constant even as its grid changes.
+constant even as its grid changes. The full standard (54 principles, the
+17 types, every term defined) is **Taxonomy (Spec)**, Works/3Squared in
+Drive, brand 3Squared; the Systems repo's `/taxonomy` skill applies it.
+This section keeps the identity-level rules.
 
-Structure: **Title band → FACETS → MATRIX → PRACTICE → PROPOSITIONS →
-PRINCIPLES**. Each table is a complete knowledge unit. FACETS names the
+Structure: **Title band → FACETS → BODY → PRACTICE → PROPOSITIONS →
+PRINCIPLES**. Each table is a complete knowledge unit, titled
+`Subject (Type)` with the type from Taxonomy (Map). FACETS names the
 three groups (left column), three rows (middle) and three legend
-categories (right); MATRIX crosses groups with rows; PRACTICE gives the
+categories (right); the BODY is named for the type's function: MATRIX by
+default (groups crossed with rows), or GLOSSARY, INDEX, LOG, FORM or
+CHECKLIST when items vary on one axis; PRACTICE gives the
 steps; PROPOSITIONS defines the nine facets; PRINCIPLES states the five
 laws that always hold. FACETS and MATRIX are the reference (one page where
 possible); the last three sections are the one-off education, mapping to
@@ -315,7 +334,7 @@ Anatomy, top-down:
    `Subject (Rows)` · `Subject (Legend)`, e.g. `Tactics (Groups)` ·
    `Spaces (Rows)` · `Skills (Legend)`. PROPOSITIONS' headings repeat
    them word for word, in the same order. PRINCIPLES is one row: the
-   table's subject (`Design (Laws)`), then five
+   table's type (`Schedule (Laws)`, `Program (Laws)`), then five
    `Law (gloss): statement; implication` bullets, each within three lines.
    Labels take a gloss, never a count: Practice steps read
    `1) Orient (Overview)`. A count appears only where it tells the reader
@@ -326,9 +345,12 @@ Anatomy, top-down:
 5. **Group bars** (the matrix's column headers): the identity triad's
    inks, red · green · violet, paper text in Newsreader.
 6. **Row bands**: the identity triad's tints in order (red, green, violet
-   tint); unranked rows take the rule grey.
-7. **Cells**: paper, 1 unit border, bullets; sub-labels bold italic with
-   glosses; nested lists indent once. Keywords take their legend ink
+   tint); rows outside a sequence take the rule grey.
+7. **Cells**: paper, 1 unit border (Google Docs tables use black
+   `#000000` 1 pt borders, the one exception to `rule`: they print
+   crisper), bullets; every cell opens with a bold italic subtitle,
+   glossed; nested lists indent once, the parent bullet underlined and its
+   nested lines italic. Keywords take their legend ink
    (§2.3a), group and row words the identity triad; a cell that belongs to
    one legend category takes that legend's tint. Body text is ink.
 8. **Label column**: when the matrix's left column holds labels (routine
@@ -337,18 +359,18 @@ Anatomy, top-down:
 9. **Leads**: unlabelled italic first row of a category, first person,
    one line.
 
-**Supporting tables** (registers, checklists, lists): a lower-order table
-that serves one main table.
-- **Placement:** directly below the table it supports, before the next main
-  table (e.g. `Setup (Checklist)` under Producing (Space)).
-- **Heading:** an H4 paragraph above the table, `Subject (Type)`; main tables
-  carry no heading (the title band names them), so the H4 alone marks rank.
-- **Sections:** FACETS and MATRIX only. Practice, Propositions and
-  Principles stay with the parent.
-- **Types** (closed vocabulary): **Register** = an inventory of what you hold
-  and where (Accounts, Archive); **Checklist** = a sequence to work through
-  in order (codes S1, F1, A1… as in workflows); **List** = an unordered
-  collection (watchlists, shopping).
+**Supporting tables**: a lower-order table that serves one main table.
+- **Placement:** directly below the table it supports, starting on a new
+  page (e.g. `Setup (Checklist)` under Producing (Spec)).
+- **Heading:** the title band itself is Heading 4 with the main band's look
+  (Newsreader 14, bold, paper on ink, centred); main bands are Heading 3, so
+  the outline ranks it without an extra heading paragraph.
+- **Sections:** the full anatomy. Every table is a complete knowledge unit,
+  so a supporting table keeps its own PRACTICE, PROPOSITIONS and
+  PRINCIPLES.
+- **Types:** any of the 17 on Taxonomy (Map) (Register, List, Index,
+  Glossary, Budget, Schedule, Checklist, Routine, Form, Spec, Map, Plan,
+  Program, Assessment, Model, Portfolio, Log).
 - **Checklist links:** the code links to the item's best tutorial, `(guide)`
   to the official guide; an item repeated on a second device links its
   guide only.
@@ -364,9 +386,10 @@ cue. A link that is also a legend keyword keeps its legend colour. On the
 site, links stay `#3366cc`: no taxonomy legend competes with them there.
 
 **Running foot (Docs):** one centred line inside the bottom margin, so it
-never moves a page break: triad row · **LORENZO DELANO** (Newsreader bold) ·
-lorenzodelano.com (lowercase) · © year · DOCUMENT NAME, in Arial 8 pt
-`muted`. A client's copy (filed in Commissions/<Client>) adds *Designed for
+never moves a page break: triad row · **LORENZO DELANO** (Newsreader 9 pt
+bold, `muted` like the rest, so it reads as a signature, not data; A/B
+tested 2026-10-24) · lorenzodelano.com (lowercase) · © year · DOCUMENT
+NAME, in Arial 8 pt `muted`. A client's copy (filed in Commissions/<Client>) adds *Designed for
 <Client>* (name in italics), optionally followed by Confidential; masters in
 Works and personal documents never name a client. A long line drops the
 document name, which the title band already shows.
@@ -425,7 +448,7 @@ marks. Every claim links to its evidence.
 | Cover letters (table) | Title band per §4 | Conformant |
 | Slides | Title master: ink title band with glossed title, triad bar beneath; symbol + wordmark in the foot | Body Inter; data JetBrains Mono. Google Slides taxonomies are not yet branded: the slide approach is redesigned with the next project |
 | Stamp / seal | Red symbol (or 龍 personal variant) | Physical: 20–25 mm square |
-| Video titles / thumbnails | Wordmark on paper or ink; single rank hue as accent bar | Never a hued background |
+| Video titles / thumbnails | Wordmark on paper or ink; single spectrum hue as accent bar | Never a hued background |
 | Documents / taxonomies (Docs) | §4 anatomy | `Admin/Taxonomy (Template)` for new ones; the Docs scripts for existing ones (§4) |
 
 ### 6.1 Where the assets live
