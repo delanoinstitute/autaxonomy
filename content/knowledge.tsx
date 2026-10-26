@@ -406,7 +406,7 @@ export const WORKS: StatTableData = {
           category: "Methodologies (design principles)",
           metrics: [
             ["", "I am the creator of two methodologies: one for learning (FT), one for teaching (BA)", false],
-            ["Functional Taxonomy", "My learning methodology: a universal process that classifies any domain by function into five frames, for efficient reference, retrieval, and transmission", true, "The five frames of a functional taxonomy: maps (the view of a domain), routines (the full search space of possible paths), designs (the paths selected), spaces (the tools and environment implementation takes), and programs (what to do when). The same content classifies differently by frame; the frame follows the taxonomy\u2019s function."],
+            ["Functional Taxonomy", "My learning methodology, published as 3Squared: a standard (54 principles, 17 taxonomy types) for classifying any domain by function into tables of nine facets, for efficient reference, retrieval, and transmission", true, "Every taxonomy is one table: nine facets (three groups, three rows, and three legend categories; hence 3Squared, 3\u00b2 = 9) crossed in its body, then taught through a five-step practice, nine definitions, and five laws. Its type comes from a map of 17 (from registers to logs), chosen by what the reader must know, analyze, or do and by how predictable the situation is; 54 principles in nine tenets keep every table structured, economical, and consistent."],
             ["Benchmark Apprenticeship", "My teaching methodology: establish the fastest verified transmission of a skill to self-sufficiency under ideal conditions, then hold every medium to that benchmark", true, "The benchmark experience: once-off (1\u20132 days), four-part (thesis, evaluation, strategy, and training), 1-on-1/duo, in person, apprenticeship-based. The clock stops when the student can execute, track, and close their remaining gaps alone; formats that deviate (group, virtual, book) pay the delta in the learner\u2019s own hours, making media design loss minimization. Theory ships ahead with a self-assessment; the session itself is hands-on."],
           ],
         },
@@ -429,22 +429,21 @@ export const WORKS: StatTableData = {
               true,
             ],
             [
+              "PWS",
+              [
+                "A 10X-centric physical wellbeing system that scores health, fitness, and beauty against benchmarks, ranks the gaps into goals, and prescribes the energy- and stress-balance program that closes them; my ",
+                <WikiLink key="health" href="/health">health page</WikiLink>,
+                " applies its assessment to me",
+              ],
+              true,
+            ],
+            [
               "BodyFirst",
               [
                 "A universal basic-fitness program co-authored with ",
                 <WikiLink key="jelena" href="https://jelenalakic.com/">Jelena Lakic</WikiLink>,
                 "; FT-mapped, BA-delivered, and available as a ",
                 <WikiLink key="mv" href="https://www.mindvalley.com/body-first">Mindvalley quest</WikiLink>,
-              ],
-              true,
-            ],
-            [
-              "ValuesFactor",
-              [
-                "A universal values-mastery program co-authored with ",
-                <WikiLink key="djd" href="https://drdemartini.com/">Dr. John Demartini</WikiLink>,
-                "; FT-mapped, BA-delivered, and available as a ",
-                <WikiLink key="vf" href="https://www.mindvalley.com/values">Mindvalley quest</WikiLink>,
               ],
               true,
             ],
