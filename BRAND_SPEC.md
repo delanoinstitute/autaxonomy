@@ -2,7 +2,7 @@
 
 Global brand identity for everything Lorenzo produces: website, favicon,
 letterhead, email, stamps, slides, documents, taxonomies, video titles.
-Not Autaxonomy-specific; Autaxonomy is one product of the brand.
+Not Autaxonomy-specific; Autaxonomy is the site, one surface of the brand.
 
 Companion documents: `DESIGN_SPEC.md` (site typography and layout),
 `KNOWLEDGE_SPEC.md` (taxonomy content structure). This document governs
@@ -96,8 +96,9 @@ as on the resume). Optical size
 axis on (`opsz`). One line; never stacked except in the vertical lockup
 (§1.3). Ink on paper; paper on ink or on a solid rank hue.
 
-Secondary wordmark: **Autaxonomy** and other product names set the same
-way, never larger than the primary wordmark when both appear.
+Secondary wordmark: product names (**3Squared**, **MSP**, **TimeWell** and
+the rest) and the site's name, **Autaxonomy**, set the same way, never
+larger than the primary wordmark when both appear.
 
 ### 1.3 Lockups
 
