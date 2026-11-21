@@ -302,6 +302,154 @@ body {
   margin: 1.5rem 0;
 }
 
+/* At-a-glance block (pilot: /family) — the ten-second summary for a reader
+   who will not open the tables: an identity strip on phones (the desktop rail
+   already shows the portrait), three columns that mirror the page's three
+   branches in the same hue order, and one action. */
+.glance {
+  margin: 1rem 0 0.75rem;
+}
+
+.glance-id {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0.25rem 0 0.25rem;
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+}
+
+/* Hidden here, not with a utility: this unlayered rule set would override it. */
+@media (min-width: 1024px) {
+  .glance-id {
+    display: none;
+  }
+}
+
+.glance-photo {
+  position: relative;
+  flex: none;
+  width: 7rem;
+  height: 7rem;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-band);
+}
+
+/* Crop to head and shoulders: the source is a three-quarter studio portrait. */
+.glance-photo img {
+  object-position: 50% 30%;
+  transform: scale(1.75);
+  transform-origin: 50% 26%;
+}
+
+.glance-name {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.glance-credit {
+  font-size: var(--fs-xs);
+  font-style: italic;
+  color: var(--muted-2);
+}
+
+.glance-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border: 1px solid var(--border-strong);
+  background: var(--surface-subtle);
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+}
+
+.glance-col + .glance-col {
+  border-top: 1px solid var(--border-strong);
+}
+
+@media (min-width: 640px) {
+  .glance-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .glance-col + .glance-col {
+    border-top: 0;
+    border-left: 1px solid var(--border-strong);
+  }
+}
+
+.wiki-article a.glance-head {
+  display: block;
+  padding: 0.35rem 0.6rem;
+  border-bottom: 1px solid var(--border-strong);
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.wiki-article a.glance-head:hover,
+.wiki-article a.glance-head:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.glance-red { background: var(--band-red); }
+.glance-yellow { background: var(--band-yellow); }
+.glance-blue { background: var(--band-blue); }
+
+.glance-paren {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.wiki-article .glance-grid dl {
+  margin: 0;
+}
+
+.glance-row {
+  padding: 0.4rem 0.6rem;
+}
+
+.glance-row + .glance-row {
+  border-top: 1px solid var(--rule-soft);
+}
+
+.wiki-article .glance-row dt {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.wiki-article .glance-row dd {
+  margin: 0;
+}
+
+.wiki-article p.glance-action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.85rem;
+  margin: 0.85rem 0 0;
+  font-size: var(--fs-sm);
+}
+
+.wiki-article a.glance-button {
+  display: inline-block;
+  padding: 0.5rem 0.95rem;
+  border-radius: 2px;
+  background: var(--accent);
+  color: var(--surface-paper);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wiki-article a.glance-button:hover,
+.wiki-article a.glance-button:focus-visible {
+  background: var(--accent-light);
+}
+
 /* Title rule — the hairline under the page title, standing in for the
    retired SectionNav bar; same stroke as the zone rules below it. */
 .title-rule {

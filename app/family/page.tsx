@@ -1,5 +1,7 @@
 import { SITE, pageMeta } from "@/content/site";
+import { CAROUSEL } from "@/content/profile";
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHeading from "@/components/PageHeading";
 import { NestedTable } from "@/components/NestedTable";
 import type { StatTableData } from "@/components/StatTable";
@@ -16,6 +18,48 @@ import WikiLink from "@/components/WikiLink";
 // range of people taught, by role only: NO client or family names on this page,
 // ever (consent rule); references are given on request. Engagement (Hiring)
 // gives the method and the terms a recruiter needs to place me.
+
+// At a glance — the ten-second read for a recruiter who will not open the
+// tables. Three columns mirror the three branches below (same names, same
+// order, the first band hue of each), three lines each. Every line restates a
+// row of the tables: change the tables first, then this.
+const PORTRAIT = CAROUSEL[0];
+const ROLE = "Private educator and household chief of staff";
+const GLANCE: { id: string; title: string; paren: string; hue: string; rows: [string, string][] }[] = [
+  {
+    id: "service",
+    title: "Service",
+    paren: "Offer",
+    hue: "red",
+    rows: [
+      ["Thinking", "Decisions questioned down to one page"],
+      ["Producing", "A week, devices, files, and home in order"],
+      ["Health", "Assessment, training, and meals"],
+    ],
+  },
+  {
+    id: "record",
+    title: "Record",
+    paren: "Proof",
+    hue: "yellow",
+    rows: [
+      ["Years", "Teaching and training since 2007"],
+      ["Range", "Kindergarten classrooms to grandparents"],
+      ["Scale", "500+ coaches certified (10X, 2020–2025)"],
+    ],
+  },
+  {
+    id: "engagement",
+    title: "Engagement",
+    paren: "Hiring",
+    hue: "blue",
+    rows: [
+      ["Location", "New York City and the New York area"],
+      ["Basis", "Full time, for one household"],
+      ["Checks", "US work authorization, CPR and AED"],
+    ],
+  },
+];
 
 const SERVICE: StatTableData = {
   title: "Service",
@@ -241,12 +285,63 @@ export default function FamilyPage() {
         hatnote={<>This page is private. I share it by link with families and the agencies that represent them.</>}
       />
 
+      {/* Identity strip: phones and tablets only (hidden in CSS from 1024px); the desktop rail shows the portrait. */}
+      <div className="glance-id">
+        <div className="glance-photo">
+          <Image
+            src={PORTRAIT.src}
+            alt="Portrait of Lorenzo Delano"
+            fill
+            sizes="224px"
+            quality={82}
+            loading="eager"
+            className="object-cover"
+          />
+        </div>
+        <div className="min-w-0">
+          <div className="glance-name">{SITE.name}</div>
+          <div>{ROLE}</div>
+          <div className="text-muted">New York City</div>
+          {PORTRAIT.photographer && <div className="glance-credit">Photograph by {PORTRAIT.photographer}</div>}
+        </div>
+      </div>
+
       <p id="introduction" className="page-hook">I give a family back its time, its health, and its clear thinking.</p>
       <p className="page-promise">
         I work with <strong>one household</strong> at a time, as private educator and household chief of staff. I counsel the parents, teach the children, and train the staff, then arrange the home so the right action is the easy one.
       </p>
+
+      <section className="glance" aria-label="At a glance">
+        <div className="glance-grid">
+          {GLANCE.map((col) => (
+            <div className="glance-col" key={col.id}>
+              <a href={`#${col.id}`} className={`glance-head glance-${col.hue} no-wiki`}>
+                {col.title} <span className="glance-paren">({col.paren})</span>
+              </a>
+              <dl>
+                {col.rows.map(([term, value]) => (
+                  <div className="glance-row" key={term}>
+                    <dt>{term}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ))}
+        </div>
+
+        <p className="glance-action">
+          <a href={`mailto:${SITE.email}?subject=Placement`} className="glance-button no-wiki">
+            Discuss a placement
+          </a>
+          <span>
+            or write to <WikiLink href={`mailto:${SITE.email}`}>{SITE.email}</WikiLink>
+          </span>
+        </p>
+      </section>
+
       <p>
-        Everything I teach I have tested on myself first, and the rest of this site is the record of that. To discuss a placement, write to <WikiLink href={`mailto:${SITE.email}`}>{SITE.email}</WikiLink>.
+        Everything I teach I have tested on myself first, and the rest of this site is the record of that. The three sections below give the detail behind each column.
       </p>
 
       <hr className="zone-rule" />
