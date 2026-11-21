@@ -30,13 +30,18 @@ function labelParts(text: string) {
 export function NestedTable({
   groups,
   hint,
-}: StatTableData & { hint?: string }) {
+  defaultOpen = false,
+}: StatTableData & { hint?: string; defaultOpen?: boolean }) {
   // Default: everything closed — the page loads compressed to its band
   // titles, and the reader explores branch by branch. Categories inside a
   // band stay collapsed too, so each level opens by choice.
-  const [openBands, setOpenBands] = useState<Set<string>>(() => new Set());
+  // defaultOpen reverses that for a page read in one pass (the Family page):
+  // every band and category starts open, and the reader collapses by choice.
+  const [openBands, setOpenBands] = useState<Set<string>>(
+    () => new Set(defaultOpen ? groups.map((g) => g.domain) : []),
+  );
   const [closedCats, setClosedCats] = useState<Set<string>>(
-    () => new Set(groups.flatMap((g) => g.rows.map((r) => `${g.domain}:${r.category}`))),
+    () => new Set(defaultOpen ? [] : groups.flatMap((g) => g.rows.map((r) => `${g.domain}:${r.category}`))),
   );
 
   const toggleBand = (key: string) =>
