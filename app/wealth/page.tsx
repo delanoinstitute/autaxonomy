@@ -745,10 +745,10 @@ export default function WealthPage() {
 
       <p id="introduction" className="page-hook">Your money system, not your income, sets you free.</p>
       <p className="page-promise">
-        Wealth refers to the three jobs of a balance sheet: <strong>security</strong> (insure, then earn), <strong>efficiency</strong> (spend and settle), and <strong>growth</strong> (invest what remains). Your wealth predicts your freedom: how soon your hours are your own.
+        My wealth does three jobs: <strong>security</strong> (what I can risk), <strong>efficiency</strong> (how much I keep), and <strong>growth</strong> (how far my remainder goes). Together they predict my freedom: how soon my hours are my own.
       </p>
       <p>
-        Income is negotiable; the order is not: <WikiLink href="#security">protect</WikiLink>, then earn, <WikiLink href="#efficiency">spend</WikiLink>, <WikiLink href="#growth">invest</WikiLink>. Each is best measured against a named benchmark per account, never a balance. To master your wealth is to run yourself as a firm of one, with free cash on rules.
+        My income is negotiable; the order is not: <WikiLink href="#security">protect</WikiLink>, then earn, <WikiLink href="#efficiency">spend</WikiLink>, <WikiLink href="#growth">invest</WikiLink>. I measure each account against a named benchmark, never a balance. To master my wealth, I run myself as a firm of one, with free cash on rules.
       </p>
 
       <hr className="zone-rule" />

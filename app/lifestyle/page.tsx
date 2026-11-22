@@ -850,10 +850,10 @@ export default function LifestylePage() {
 
       <p id="introduction" className="page-hook">Your days are what your years are made of.</p>
       <p className="page-promise">
-        Lifestyle refers to the three coordinates of a day: <strong>activity</strong> (what you do), <strong>time</strong> (when you do it), and <strong>space</strong> (where you do it). Your lifestyle predicts your capital: what your hours build, and what they drain.
+        My lifestyle has three coordinates: <strong>activity</strong> (what I do), <strong>time</strong> (when I do it), and <strong>space</strong> (where I live). Together they predict my capital: what my hours build, and what they drain.
       </p>
       <p>
-        <WikiLink href="#activity">Hours</WikiLink> are fixed at twenty-four; how they are spent, <WikiLink href="#time">scheduled</WikiLink>, and <WikiLink href="#space">housed</WikiLink> is not. Each is best measured by a designed day held against the lived one. To master your lifestyle is to build days that run themselves, then keep them.
+        My <WikiLink href="#activity">hours</WikiLink> are fixed at twenty-four; how I spend, <WikiLink href="#time">schedule</WikiLink>, and <WikiLink href="#space">house</WikiLink> them is not. I measure each by holding my designed day against the lived one. To master my lifestyle, I build days that run themselves, then keep them.
       </p>
 
       <hr className="zone-rule" />

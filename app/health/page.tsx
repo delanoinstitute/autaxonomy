@@ -540,10 +540,10 @@ export default function HealthPage() {
 
       <p id="introduction" className="page-hook">Your body decides how long your best years last.</p>
       <p className="page-promise">
-        Health refers to the three states of a body: <strong>integrity</strong> (how it&rsquo;s built), <strong>balance</strong> (how it rests), and <strong>capacity</strong> (what it can do). Your health predicts your span: how many years you get, and how good they are.
+        My health has three states: <strong>integrity</strong> (how my body is built), <strong>balance</strong> (how it rests), and <strong>capacity</strong> (what it can do). Together they predict my span: how many years I get, and how good they are.
       </p>
       <p>
-        Frame and bone are largely fixed; fat, muscle, blood, and fitness are not. Each is best measured in a lab: DEXA for <WikiLink href="#integrity">structure</WikiLink>, blood at <WikiLink href="#balance">rest</WikiLink>, CPET at <WikiLink href="#capacity">full effort</WikiLink>. To master your health is to keep every marker in range, with a reserve to spare.
+        My frame and bone are largely fixed; my fat, muscle, blood, and fitness are not. I measure each in a lab: DEXA for <WikiLink href="#integrity">structure</WikiLink>, blood at <WikiLink href="#balance">rest</WikiLink>, CPET at <WikiLink href="#capacity">full effort</WikiLink>. To master my health, I keep every marker in range, with a reserve to spare.
       </p>
 
       <hr className="zone-rule" />

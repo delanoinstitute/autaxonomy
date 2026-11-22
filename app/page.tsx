@@ -676,10 +676,10 @@ export default function AboutPage() {
 
       <p id="introduction" className="page-hook">Hi, I&rsquo;m Lorenzo. I make knowledge transformative.</p>
       <p className="page-promise">
-        Welcome to my autaxonomy, a map of the self in two halves: <strong>constitution</strong> (story, nature, lifestyle) and <strong>capital</strong> (health, knowledge, wealth, network). Both predict your potential: what you can become, and what you can build.
+        Welcome to my autaxonomy, a map of myself in two halves: <strong>constitution</strong> (story, nature, lifestyle) and <strong>capital</strong> (health, knowledge, wealth, network). Together they predict my potential: what I can become and what I can build.
       </p>
       <p>
-        Constitution is mostly given; capital is mostly built. Each is measured on its own page, every claim referenced. To master yourself is to measure both halves honestly, and build on what the numbers say. This site is my attempt to do exactly that.
+        My constitution is mostly given; my capital is mostly built. I measure each on its own page and reference every claim. To master myself, I measure both halves honestly and build on what the numbers say. This site is my attempt to do exactly that.
       </p>
 
       <hr className="zone-rule" />

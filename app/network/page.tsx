@@ -642,10 +642,10 @@ export default function NetworkPage() {
 
       <p id="introduction" className="page-hook">Your network carries your work farther than you can.</p>
       <p className="page-promise">
-        Network refers to the three directions of a relationship: <strong>care</strong> (who you lean on), <strong>collaboration</strong> (who you walk with), and <strong>contribution</strong> (who counts on you). Your network predicts your reach: what you can attempt.
+        My network runs in three directions: <strong>care</strong> (who I lean on), <strong>collaboration</strong> (who I walk beside), and <strong>contribution</strong> (who counts on me). Together they predict my reach: what I can attempt.
       </p>
       <p>
-        Family is given; every other seat is chosen, hired, or earned. Each is best measured by a graded roster: four A&rsquo;s for people, three C&rsquo;s for services, open seats listed. To master your network is to fill each seat to the standard it deserves, and hold it.
+        My family is given; every other seat is chosen, hired, or earned. I measure each by a graded roster: four A’s for people, three C’s for services, open seats listed. To master my network, I fill each seat to the standard it deserves, and hold it.
       </p>
 
       <hr className="zone-rule" />

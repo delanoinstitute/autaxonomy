@@ -335,14 +335,10 @@ export default function IdentityPage() {
 
       <p id="introduction" className="page-hook">Your nature already knows where you belong.</p>
       <p className="page-promise">
-        Nature refers to the three constituents of the mind: <strong>intellect</strong> (how you think), <strong>character</strong> (how you&rsquo;re wired), and <strong>drive</strong> (what moves you). Your nature predicts your niche: where you fit, and whom you serve best.
+        My nature has three constituents: <strong>intellect</strong> (how I think), <strong>character</strong> (how I’m wired), and <strong>drive</strong> (what moves me). Together they predict my niche: where I fit, and whom I serve best.
       </p>
       <p>
-        <WikiLink href="#intellect">Intelligence</WikiLink> and{" "}
-        <WikiLink href="#character">personality</WikiLink> are fixed; beliefs and{" "}
-        <WikiLink href="#drive">values</WikiLink> are not. Each is best measured
-        psychometrically, then checked against how you live. To master your nature is to
-        master your emotions, develop your strengths, and find your fit.
+        My <WikiLink href="#intellect">intelligence</WikiLink> and <WikiLink href="#character">personality</WikiLink> are fixed; my beliefs and <WikiLink href="#drive">values</WikiLink> are not. I measure each psychometrically, then check it against how I live. To master my nature, I master my emotions, develop my strengths, and find my fit.
       </p>
 
       <hr className="zone-rule" />

@@ -259,10 +259,10 @@ export default function StoryPage() {
 
       <p id="introduction" className="page-hook">Your story is how you meet what comes next.</p>
       <p className="page-promise">
-        Story refers to the three phases of a life: <strong>inheritance</strong> (what you were given), <strong>development</strong> (what shaped you), and <strong>emergence</strong> (what you chose). Your story predicts your trajectory: what you make of what you were given.
+        My story has three phases: <strong>inheritance</strong> (what I was given), <strong>development</strong> (what shaped me), and <strong>emergence</strong> (what I chose). Together they predict my trajectory: what I make of what I was given.
       </p>
       <p>
-        <WikiLink href="#inheritance">Inheritance</WikiLink> is fixed; <WikiLink href="#development">development</WikiLink> is done; only <WikiLink href="#emergence">emergence</WikiLink> is still being written. Each is best measured by record: the genome and the family tree, then a dated timeline. To master your story is to treat the given as material, and to keep choosing.
+        My <WikiLink href="#inheritance">inheritance</WikiLink> is fixed and my <WikiLink href="#development">development</WikiLink> is done; only my <WikiLink href="#emergence">emergence</WikiLink> is still being written. I measure each by record: my genome and family tree, then a dated timeline. To master my story, I treat the given as material and keep choosing.
       </p>
 
       <hr className="zone-rule" />
