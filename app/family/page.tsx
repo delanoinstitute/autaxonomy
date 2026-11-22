@@ -350,7 +350,7 @@ export default function FamilyPage() {
         Service <span className="heading-paren">(Offer)</span>
       </h2>
       <p>
-        What a household gains is a function of its <strong>people</strong> (taught) and its <strong>systems</strong> (built), the two best predictors of whether a change lasts. Mine: I counsel the parents, teach the children, train the staff, and build the systems that hold it all together.
+        What I do for a household: <strong>family</strong> care (parents and children) and household <strong>operations</strong> (staff). Together they decide whether change lasts. I counsel the parents, teach the children, train the staff, and build the systems that hold it together.
       </p>
       <NestedTable {...SERVICE} defaultOpen />
 
@@ -358,7 +358,7 @@ export default function FamilyPage() {
         Record <span className="heading-paren">(Proof)</span>
       </h2>
       <p>
-        Whom to trust with a family is a function of <strong>record</strong> (years) and <strong>range</strong> (ages), the two best predictors of how someone acts unsupervised. Mine: teaching and training since 2007, from kindergarten classrooms to grandparents, in homes and in companies.
+        Whom I’ve served: <strong>private</strong> households (families and individuals at home) and <strong>public</strong> programs (schools and companies). Together they show how I act unsupervised. I have taught since 2007, from kindergarten classrooms to grandparents.
       </p>
       <NestedTable {...RECORD} defaultOpen />
 
@@ -366,7 +366,7 @@ export default function FamilyPage() {
         Engagement <span className="heading-paren">(Hiring)</span>
       </h2>
       <p>
-        How we work together is a function of <strong>method</strong> (four steps) and <strong>terms</strong> (one household), the two best predictors of whether the work outlives me. Mine: assess, arrange, train, and hand over, for one family at a time, in New York.
+        How we would work: my <strong>method</strong> (four steps) and my <strong>terms</strong> (one household, with the checks you need). Together they decide whether the work outlives me. I assess, arrange, train, and hand over, for one family at a time.
       </p>
       <NestedTable {...ENGAGEMENT} defaultOpen />
 

@@ -349,23 +349,19 @@ export default function IdentityPage() {
 
       <h2 id="intellect">Intellect <span className="heading-paren">(Cognition)</span></h2>
       <p>
-        How you think is a function of <strong>intelligence</strong> (fixed) and <strong>worldview</strong> (modifiable), the two best predictors of the type and scope of problems you are drawn to. Mine: an Enlightenment humanist, IQ 112, drawn to making knowledge transformative.
+        How I think: my <strong>aptitude</strong> (tested intelligence) and my <strong>perspective</strong> (the worldview I reason from). Together they predict the problems I am drawn to. I am an Enlightenment humanist, IQ 112, drawn to making knowledge transformative.
       </p>
       <NestedTable {...INTELLECT} />
 
       <h2 id="character">Character <span className="heading-paren">(Affect)</span></h2>
       <p>
-        How you&rsquo;re wired is a function of <strong>personality</strong> (fixed) and <strong>beliefs</strong> (modifiable),
-        the two best predictors of who trusts you and who can live and work with you. Mine:
-        disciplined, honest, and curious; easy with risk; a world felt as good and improving.
+        How I’m wired: my <strong>temperament</strong> (personality and appetite for risk) and my <strong>sentiment</strong> (how the world feels to me). Together they predict who can live and work with me. I am disciplined, honest, and curious, and the world feels good to me.
       </p>
       <NestedTable {...CHARACTER} />
 
       <h2 id="drive">Drive <span className="heading-paren">(Conation)</span></h2>
       <p>
-        What moves you is a function of <strong>values</strong> (modifiable) and <strong>interests</strong> (stable), the
-        best predictors of what you do unasked and how to influence you. Mine: autonomy and
-        achievement; design, the body, then teaching; ideas and making, for people.
+        What moves me: my <strong>motivation</strong> (the values I state and the ones I reveal) and my <strong>vocation</strong> (the work I am drawn to). Together they predict what I do unasked. I run on autonomy and achievement, through ideas and making, for people.
       </p>
       <NestedTable {...DRIVE} />
 

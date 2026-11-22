@@ -271,7 +271,7 @@ export default function StoryPage() {
         Inheritance <span className="heading-paren">(Identity)</span>
       </h2>
       <p>
-        What you were given is a function of <strong>biology</strong> (fixed) and <strong>circumstance</strong> (fixed at birth), the two best predictors of your starting odds and defaults. Mine: a European body, O negative; Afrikaner, born under apartheid&rsquo;s last emergency.
+        What I was given: my <strong>biological</strong> identity (a body and its code) and my <strong>sociological</strong> identity (a state, a people, and an era). Together they set my starting odds. I was born Afrikaner, O negative, in apartheid’s last emergency.
       </p>
       <NestedTable {...INHERITANCE} />
 
@@ -279,7 +279,7 @@ export default function StoryPage() {
         Development <span className="heading-paren">(Timeline)</span>
       </h2>
       <p>
-        How you develop is a function of <strong>stage</strong> (fixed) and <strong>setting</strong> (variable), the two best predictors of what you trust and what you can bear. Mine: six households by age five, a skateboard, a death and China at sixteen, a trade in transformative education.
+        How I developed: my <strong>early</strong> years (birth to eighteen) and my <strong>adult</strong> years (nineteen on). Together they explain what I trust and what I can bear. By five I had lived in six households; at sixteen came a death and China; then a trade in education.
       </p>
       <NestedTable {...DEVELOPMENT} />
 
@@ -287,7 +287,7 @@ export default function StoryPage() {
         Emergence <span className="heading-paren">(Agency)</span>
       </h2>
       <p>
-        What you choose is a function of <strong>influences</strong> (arriving unbidden) and <strong>decisions</strong> (made blind), the two best predictors of who you become next. Mine: Bruce Lee to Wilber; twelve blind decisions, school left at fourteen, America entered a refugee.
+        What I chose: my <strong>dispositions</strong> (influences that arrived unbidden) and my <strong>decisions</strong> (twelve, made blind). Together they predict who I become next. I left school at fourteen, read Bruce Lee through Wilber, and entered America a refugee.
       </p>
       <NestedTable {...EMERGENCE} />
 

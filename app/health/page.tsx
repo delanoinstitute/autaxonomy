@@ -550,19 +550,19 @@ export default function HealthPage() {
 
       <h2 id="integrity">Integrity <span className="heading-paren">(Structure)</span></h2>
       <p>
-        How your body is built is a function of <strong>frame</strong> (fixed) and <strong>composition</strong> (earned), the two best predictors of injury risk and metabolic health. Mine: leaner than 19 in 20 men, more muscle than 4 in 5, sound bone, a narrow waist.
+        How my body is built: its <strong>composition</strong> (fat, muscle, and bone) and its <strong>geometry</strong> (waist to height). Together they predict injury risk and metabolic health. I am leaner than 19 in 20 men, with more muscle than 4 in 5.
       </p>
       <NestedTable {...STRUCTURAL_INTEGRITY} />
 
       <h2 id="balance">Balance <span className="heading-paren">(Homeostasis)</span></h2>
       <p>
-        How your body rests is a function of <strong>chemistry</strong> (modifiable) and <strong>circulation</strong> (trainable), the two best predictors of how it ages and what it can absorb. Mine: low lipids, sugar, and inflammation; clean liver and kidneys; a heart that idles low.
+        How my body rests: its <strong>biochemistry</strong> (what my blood carries) and its <strong>circulation</strong> (how my heart moves it). Together they predict how I age and what I can absorb. My lipids, sugar, and inflammation run low, and my heart idles low.
       </p>
       <NestedTable {...FUNCTIONAL_HOMEOSTASIS} />
 
       <h2 id="capacity">Capacity <span className="heading-paren">(Performance)</span></h2>
       <p>
-        What your body can do is a function of <strong>strength</strong> (built) and <strong>engine</strong> (built and inherited), the two best predictors of your independence late in life. Mine: a one-leg squat, a double-bodyweight pull, 60 kg overhead, top-decile oxygen uptake.
+        What my body can do: its <strong>biomechanics</strong> (strength by joint) and its <strong>bioenergetics</strong> (the engine behind it). Together they predict late-life independence. I squat on one leg, pull double bodyweight, and sit in the top decile for oxygen uptake.
       </p>
       <NestedTable {...FUNCTIONAL_CAPACITY} />
 

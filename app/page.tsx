@@ -688,7 +688,7 @@ export default function AboutPage() {
         Lorenzo <span className="heading-paren">(Introduction)</span>
       </h2>
       <p>
-        Who you are is a function of <strong>specialization</strong> (chosen) and <strong>mission</strong> (stable), the two best predictors of what you do with a free hour. Mine: applied taxonomist, obsessed with making knowledge personally transformative, for myself first and then for others.
+        Who I am: what I’m <strong>about</strong> (specialization, mission, and background) and my <strong>status</strong> (my work and life right now). Together they tell you what I do with a free hour. I am an applied taxonomist, making knowledge personally transformative.
       </p>
       <NestedTable {...LORENZO} />
 
@@ -696,7 +696,7 @@ export default function AboutPage() {
         Website <span className="heading-paren">(Guide)</span>
       </h2>
       <p>
-        How your record is built is a function of its <strong>map</strong> (one) and its <strong>pages</strong> (eight), the two best predictors of whether a reader can trust it. Mine: a personal record and a public storefront in one, four constitutional pages, four capital, three parts each.
+        How this site works: its <strong>purpose</strong> (what it does and how I built it) and its <strong>navigation</strong> (four paths, by the time you have). Together they show why you can trust it. It is my personal record and public storefront, on eight identical pages.
       </p>
       <NestedTable {...WEBSITE} />
 
@@ -704,7 +704,7 @@ export default function AboutPage() {
         Contact <span className="heading-paren">(Offers)</span>
       </h2>
       <p>
-        What you offer is a function of <strong>published work</strong> (free) and <strong>commitments</strong> (one at a time), the two best predictors of how well you can serve whoever comes next. Mine: all published, one patron at a time, a build for whoever brings market or capital.
+        What I offer: my <strong>published</strong> works (free to use on your own) and my <strong>hired</strong> ventures (one commitment at a time). Together they show how I can serve you. I have published everything, and I take one patron at a time or a build with a partner.
       </p>
       <NestedTable {...CONTACT} />
 

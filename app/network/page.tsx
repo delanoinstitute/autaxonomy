@@ -654,7 +654,7 @@ export default function NetworkPage() {
         Care <span className="heading-paren">(Support)</span>
       </h2>
       <p>
-        Who you lean on is a function of <strong>family</strong> (given) and <strong>professionals</strong> (hired), the two best predictors of how far you reach and how fast you recover. Mine: care I call on rather than schedule, and one hired seat per capital, one advisor for all.
+        Who I lean on: my <strong>personal</strong> nurturers (family) and my <strong>professional</strong> nurturers (people I hire). Together they decide how far I reach and how fast I recover. I call on care instead of scheduling it, and I hire one seat for each capital.
       </p>
       <NestedTable {...NURTURE} />
 
@@ -662,7 +662,7 @@ export default function NetworkPage() {
         Collaboration <span className="heading-paren">(Exchange)</span>
       </h2>
       <p>
-        Who you walk beside is a function of <strong>companions</strong> (chosen) and <strong>partners</strong> (aligned), the two best predictors of your pace and who you become. Mine: the people I share life with, practitioners past baseline, minds I trade with, builders beside me.
+        Who I walk beside: my <strong>personal</strong> partners (companions) and my <strong>professional</strong> partners (coaches, peers, and owners). Together they set my pace and who I become. I share life with companions, trade wisdom with peers, and build beside owners.
       </p>
       <NestedTable {...PROGRESS} />
 
@@ -670,7 +670,7 @@ export default function NetworkPage() {
         Contribution <span className="heading-paren">(Service)</span>
       </h2>
       <p>
-        Who counts on you is a function of <strong>dependents</strong> (personal) and <strong>receivers</strong> (professional), the two best predictors of what your work is for and how it pays. Mine: the people my work is for, the learners downstream, those who turn it into income.
+        Who counts on me: my <strong>personal</strong> dependents (family) and my <strong>professional</strong> dependents (learners and patrons). Together they decide what my work is for and how it pays. I build first for family, then for learners downstream of what I know.
       </p>
       <NestedTable {...CONTRIBUTION} />
 

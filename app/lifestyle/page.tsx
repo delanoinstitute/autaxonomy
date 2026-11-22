@@ -860,19 +860,19 @@ export default function LifestylePage() {
 
       <h2 id="activity">Activity <span className="heading-paren">(Habits)</span></h2>
       <p>
-        What you do is a function of <strong>habits</strong> (chosen) and <strong>needs</strong> (fixed), the two best predictors of which capital grows and which drains. Mine: twelve habits, creative work first, hard training matched by recovery, shared hours that ask nothing back.
+        What I do: my <strong>personal</strong> habits (done alone) and my <strong>relational</strong> habits (done with or for others). Together they decide which capital grows and which drains. I keep twelve: creative work first, hard training matched by recovery.
       </p>
       <NestedTable {...ACTIVITY} />
 
       <h2 id="time">Time <span className="heading-paren">(Routines)</span></h2>
       <p>
-        When you do things is a function of <strong>energy</strong> (rhythmic) and <strong>schedule</strong> (chosen), the two best predictors of what gets done and what keeps slipping. Mine: fresh hours for solo work, peak hours for body and people, evenings for loose ends.
+        When I do it: my perfect <strong>days</strong> (hour by hour) and my ideal <strong>weeks</strong> (day by day). Together they decide what gets done and what slips. I give fresh hours to solo work, peak hours to body and people, and evenings to loose ends.
       </p>
       <NestedTable {...TIME} />
 
       <h2 id="space">Space <span className="heading-paren">(Resources)</span></h2>
       <p>
-        Where you live is a function of <strong>conditions</strong> (given) and <strong>services</strong> (chosen), the two best predictors of what your life costs and allows. Mine: New York City, graded on land, market, and people; a home in five layers, from the shell to my bag.
+        Where I live: my <strong>environmental</strong> conditions (the city I chose) and my <strong>living</strong> conditions (the services I use). Together they decide what my life costs and allows. I grade New York City on land, market, and people, and my home by layer.
       </p>
       <NestedTable {...SPACE} />
 

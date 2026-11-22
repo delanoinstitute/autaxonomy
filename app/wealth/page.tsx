@@ -757,7 +757,7 @@ export default function WealthPage() {
         Security <span className="heading-paren">(Protection)</span>
       </h2>
       <p>
-        What you can risk is a function of <strong>cover</strong> (bought) and <strong>earning capacity</strong> (built), the two best predictors of how long a setback lasts. Mine: capacity and possessions insured before any upside; hours and assets earning on separate lines.
+        What I can risk: my <strong>insurance</strong> (cover I buy) and my <strong>income</strong> (capacity I build). Together they decide how long a setback lasts. I insure my capacity and possessions before any upside; hours and assets earn on separate lines.
       </p>
       <NestedTable {...SECURITY} />
 
@@ -765,7 +765,7 @@ export default function WealthPage() {
         Efficiency <span className="heading-paren">(Leverage)</span>
       </h2>
       <p>
-        How much you keep is a function of <strong>burn</strong> (chosen) and <strong>dues</strong> (owed), the two best predictors of how fast free cash appears. Mine: living costs under a third of income, one-off costs capped, tax paid in full, free cash with three rules.
+        How much I keep: my <strong>expenses</strong> (the burn I choose) and my <strong>payments</strong> (the dues I owe). Together they decide how fast free cash appears. I hold living costs under a third of income, pay tax in full, and give free cash three rules.
       </p>
       <NestedTable {...EFFICIENCY} />
 
@@ -773,7 +773,7 @@ export default function WealthPage() {
         Growth <span className="heading-paren">(Allocation)</span>
       </h2>
       <p>
-        How far your remainder goes is a function of <strong>investments</strong> (standing) and <strong>ventures</strong> (active), the two best predictors of the horizon you can afford. Mine: three months of burn in cash, future me funded first, the market bought whole, businesses mine first.
+        How far my remainder goes: my <strong>investments</strong> (money left standing) and my <strong>ventures</strong> (assets I work myself). Together they decide the horizon I can afford. I hold three months of burn in cash, fund my future self first, and buy the market whole.
       </p>
       <NestedTable {...GROWTH} />
 

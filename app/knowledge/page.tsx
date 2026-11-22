@@ -38,19 +38,19 @@ export default function KnowledgePage() {
 
       <h2 id="works">Works <span className="heading-paren">(Production)</span></h2>
       <p>
-        What you have made is a function of <strong>employment</strong> (given) and <strong>authorship</strong> (chosen), the two best predictors of what you are trusted to build next. Mine: two methodologies, one for learning, one for teaching, and the programs built with them.
+        What I’ve made: my <strong>professional</strong> experience (for employers and partners) and my <strong>personal</strong> works (authored alone). Together they show what I can be trusted to build next. Start with my two methodologies: one to learn, one to teach.
       </p>
       <NestedTable {...WORKS} />
 
       <h2 id="skills">Skills <span className="heading-paren">(Practice)</span></h2>
       <p>
-        What you can do is a function of <strong>technical</strong> skill (trained) and <strong>interpersonal</strong> skill (earned), the two best predictors of what you deliver alone and through others. Mine: organizing knowledge, designing systems, producing content, teaching anything.
+        What I can do: my <strong>technical</strong> skills (what I deliver alone) and my <strong>interpersonal</strong> skills (what I deliver through others). Together they show what to hand me. I organize knowledge, design systems, produce content, and teach any subject.
       </p>
       <NestedTable {...SKILLS} />
 
       <h2 id="education">Education <span className="heading-paren">(Theory)</span></h2>
       <p>
-        What you know is a function of <strong>schooling</strong> (issued) and <strong>curriculum</strong> (chosen), the two best predictors of how fast you learn the next domain. Mine: seven grades of school, Mandarin to distinction, enrollment only when a domain demands it.
+        What I know: my <strong>guided</strong> education (taught in person) and my <strong>independent</strong> learning (chosen and done remotely). Together they show how fast I learn a new domain. I sat seven grades of school and took Mandarin to distinction.
       </p>
       <NestedTable {...EDUCATION} />
 
