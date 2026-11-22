@@ -12,6 +12,9 @@ import Infobox from "./Infobox";
 export default function MobileInfobox() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  // The Family page opens with its own identity strip (portrait, name, role),
+  // so the folded profile card above it would only repeat it.
+  if (pathname === "/family") return null;
 
   return (
     <details

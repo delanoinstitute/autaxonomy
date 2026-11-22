@@ -73,18 +73,18 @@ const SERVICE: StatTableData = {
           category: "Principals (decisions)",
           metrics: [
             ["", "I return your time, your health, and your clear thinking", false],
-            ["Thinking", "I question the decision in front of you until it fits on one page", true],
-            ["Producing", "I arrange your week, devices, files, and home so each one saves you hours", true],
-            ["Health", "I assess your bloods and fitness, then train you and plan meals that fit your week", true],
+            ["Thinking", "I question the decision in front of you until it fits on one page, and research the ones you have no time for", true],
+            ["Producing", "I arrange your week, devices, files, and home to save you hours, and bring AI into the work you already do", true],
+            ["Health", "I assess your labs and fitness on one family dashboard, then train you and plan meals that fit your week", true],
           ],
         },
         {
           category: "Children (learning)",
           metrics: [
             ["", "I teach your children how to think, focus, and move", false],
-            ["Thinking", "I tutor by asking questions and mentor each child on a project of their own", true],
-            ["Producing", "I set up a school-week schedule and a study space they keep themselves", true],
-            ["Health", "I coach movement skills through play, programmed for each child’s age", true],
+            ["Thinking", "I tutor by asking questions, mentor each child on a project of their own, and build lessons around what school leaves out", true],
+            ["Producing", "I set up a school-week schedule, a study space they keep themselves, and healthy habits with their devices", true],
+            ["Health", "I coach movement skills through play, and write an exercise and eating plan for each child’s age", true],
           ],
         },
       ],
@@ -98,9 +98,9 @@ const SERVICE: StatTableData = {
           category: "Staff (standards)",
           metrics: [
             ["", "I train your staff to one written standard, then step back", false],
-            ["Thinking", "I write each role and its checklists, and review them with your team every week", true],
-            ["Producing", "I build the registers, shopping lists, and routines that run the home", true],
-            ["Health", "I train your chef to cook to your lab results and your trainer to follow one program", true],
+            ["Thinking", "I write each role and its procedures down, train your tutors to make the most of their hours, and review the team every week", true],
+            ["Producing", "I build the registers, lists, and routines that run the home, and set the workflow between you and your assistant", true],
+            ["Health", "I train your chef to cook to your lab results and your trainer to one program, and liaise with your doctor and coaches", true],
           ],
         },
       ],
@@ -341,7 +341,7 @@ export default function FamilyPage() {
       </section>
 
       <p>
-        Everything I teach I have tested on myself first, and the rest of this site is the record of that. The three sections below give the detail behind each column.
+        Everything I teach I have tested on myself first, and <WikiLink href="/">the rest of this site</WikiLink> is the record of that. The three sections below give the detail behind each column.
       </p>
 
       <hr className="zone-rule" />
