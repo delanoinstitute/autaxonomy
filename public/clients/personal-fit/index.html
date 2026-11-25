@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!-- Sample photos are hotlinked from Unsplash (free licence) and chosen without identifiable faces; replace them with Personal Fit's own before launch. -->
+<link rel="preconnect" href="https://images.unsplash.com">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Personal Fit · Centro wellness en Avenida Escazú</title>
 <meta name="description" content="Entrenamiento funcional, yoga y fisioterapia en Avenida Escazú. Solicita tu sesión de cortesía por WhatsApp.">
@@ -63,8 +65,9 @@ nav a:hover { color: var(--text); }
 
 /* placeholders for photos */
 .ph { position: relative; overflow: hidden; border-radius: var(--r); background: linear-gradient(135deg, #2a2d2f 0%, #17191a 55%, #101112 100%); min-height: 200px; display: flex; align-items: flex-end; }
-.ph::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 22px); }
-.ph span { position: relative; margin: 14px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px dashed #5a5f66; border-radius: 99px; padding: 4px 12px; background: rgba(11, 11, 12, 0.5); }
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05) brightness(0.85); }
+.ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(11, 11, 12, 0.6), transparent 45%); }
+.ph span { position: relative; z-index: 1; margin: 14px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px dashed #5a5f66; border-radius: 99px; padding: 4px 12px; background: rgba(11, 11, 12, 0.5); }
 
 /* hero */
 .hero { border-top: 0; padding: 40px 0 56px; }
@@ -85,6 +88,7 @@ nav a:hover { color: var(--text); }
 .cards { display: grid; gap: 16px; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; display: grid; gap: 12px; align-content: start; }
 .card .ph { min-height: 170px; margin: -20px -20px 6px; border-radius: var(--r) var(--r) 0 0; }
+.card .ph.tall { min-height: 260px; }
 .card p { color: var(--muted); }
 .steps { counter-reset: s; }
 .steps .card::before { counter-increment: s; content: "0" counter(s); font-size: 0.8rem; letter-spacing: 0.16em; color: var(--muted); }
@@ -200,7 +204,7 @@ footer a { color: var(--text); }
       </div>
       <p class="note" data-en="We answer on WhatsApp · Torre 301, 2nd floor">Respondemos por WhatsApp · Torre 301, piso 2</p>
     </div>
-    <div class="ph" role="img" aria-label="Foto de la sala principal"><span data-en="Photo or video: main training floor">Foto o video: sala principal</span></div>
+    <div class="ph"><img src="https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&w=1400&q=70" alt="Sala de entrenamiento con racks y mancuernas" fetchpriority="high" decoding="async"><span data-en="Sample image">Imagen de muestra</span></div>
   </div>
 </section>
 
@@ -221,17 +225,17 @@ footer a { color: var(--text); }
     </div>
     <div class="cards">
       <article class="card rise">
-        <div class="ph" role="img" aria-label="Foto de entrenamiento funcional"><span data-en="Photo: functional session">Foto: sesión funcional</span></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1632077804406-188472f1a810?auto=format&fit=crop&w=900&q=70" alt="Pesas rusas en el piso del gimnasio" loading="lazy" decoding="async"><span data-en="Sample image">Imagen de muestra</span></div>
         <h3 data-en="Functional training">Entrenamiento funcional</h3>
         <p data-en="Strength, mobility, and endurance for real life, with your technique corrected on every rep.">Fuerza, movilidad y resistencia para la vida real, con la técnica corregida en cada repetición.</p>
       </article>
       <article class="card rise">
-        <div class="ph" role="img" aria-label="Foto de clase de yoga"><span data-en="Photo: yoga class">Foto: clase de yoga</span></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=900&q=70" alt="Persona en postura de yoga sobre un mat" loading="lazy" decoding="async"><span data-en="Sample image">Imagen de muestra</span></div>
         <h3>Yoga</h3>
         <p data-en="Breathing, flexibility, and control to balance your strength work.">Respiración, flexibilidad y control para equilibrar el trabajo de fuerza.</p>
       </article>
       <article class="card rise">
-        <div class="ph" role="img" aria-label="Foto de fisioterapia"><span data-en="Photo: physiotherapy">Foto: fisioterapia</span></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1645005512968-0c1fe99f0093?auto=format&fit=crop&w=900&q=70" alt="Fisioterapeuta tratando un hombro" loading="lazy" decoding="async"><span data-en="Sample image">Imagen de muestra</span></div>
         <h3 data-en="Physiotherapy">Fisioterapia</h3>
         <p data-en="Assessment and treatment to train again without pain and to prevent injuries.">Evaluación y tratamiento para volver a entrenar sin dolor y prevenir lesiones.</p>
       </article>
@@ -257,13 +261,13 @@ footer a { color: var(--text); }
 <section id="equipo">
   <div class="wrap">
     <div class="head rise">
-      <p class="eyebrow"><span data-en="The team">El equipo</span> &nbsp;<span class="tag" data-en="Sample">Ejemplo</span></p>
+      <p class="eyebrow"><span data-en="The team">El equipo</span> &nbsp;<span class="tag" data-en="Sample photos">Fotos de muestra</span></p>
       <h2 data-en="The people who train you.">Las personas que te entrenan.</h2>
     </div>
     <div class="cards">
-      <article class="card rise"><div class="ph" role="img" aria-label="Retrato del coach"><span data-en="Portrait">Retrato</span></div><h3 data-en="Coach name">Nombre del coach</h3><p data-en="Speciality · certification · years of experience">Especialidad · certificación · años de experiencia</p></article>
-      <article class="card rise"><div class="ph" role="img" aria-label="Retrato del coach"><span data-en="Portrait">Retrato</span></div><h3 data-en="Coach name">Nombre del coach</h3><p data-en="Speciality · certification · years of experience">Especialidad · certificación · años de experiencia</p></article>
-      <article class="card rise"><div class="ph" role="img" aria-label="Retrato del coach"><span data-en="Portrait">Retrato</span></div><h3 data-en="Coach name">Nombre del coach</h3><p data-en="Speciality · certification · years of experience">Especialidad · certificación · años de experiencia</p></article>
+      <article class="card rise"><div class="ph tall"><img src="https://images.unsplash.com/photo-1604233098531-90b71b1b17a6?auto=format&fit=crop&w=800&q=70" alt="Persona haciendo dominadas, de espaldas" loading="lazy" decoding="async"><span data-en="Sample image">Imagen de muestra</span></div><h3>Federico</h3><p data-en="Founder">Fundador</p></article>
+      <article class="card rise"><div class="ph tall"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=70" alt="Silueta de una persona meditando" loading="lazy" decoding="async"><span data-en="Sample image">Imagen de muestra</span></div><h3>Lorenzo</h3><p data-en="Designer">Diseñador</p></article>
+      <article class="card rise"><div class="ph tall"><img src="https://images.unsplash.com/photo-1641337221253-fdc7237f6b61?auto=format&fit=crop&w=800&q=70" alt="Persona con una mancuerna, de espaldas" loading="lazy" decoding="async"><span data-en="Sample image">Imagen de muestra</span></div><h3>Alvaro</h3><p data-en="Trainer">Entrenador</p></article>
     </div>
   </div>
 </section>
