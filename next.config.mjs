@@ -13,7 +13,14 @@ const nextConfig = {
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
         ],
       },
+      // Client demos are shown by link only: keep them out of search.
+      { source: "/clients/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] },
     ];
+  },
+  async rewrites() {
+    // Client demos are single static files in public/clients/<name>/index.html.
+    // Personal Fit's source of truth is ~/Developer/Sites/PersonalFit/index.html; copy it here to update the demo.
+    return [{ source: "/clients/personal-fit", destination: "/clients/personal-fit/index.html" }];
   },
   async redirects() {
     // Preserve old URLs after the navigation restructure.

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Fit · Centro wellness en Avenida Escazú</title>
+<meta name="description" content="Entrenamiento funcional, yoga y fisioterapia en Avenida Escazú. Solicita tu sesión de cortesía por WhatsApp.">
+<meta name="robots" content="noindex, nofollow"><!-- demo: remove at launch -->
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:title" content="Personal Fit · Centro wellness en Avenida Escazú">
+<meta property="og:description" content="Entrenamiento funcional, yoga y fisioterapia. Tu primera sesión es de cortesía.">
+<meta property="og:type" content="website">
+<style>
+:root {
+  --bg: #0b0b0c; --surface: #151617; --raised: #1d1f20; --line: #2b2e30;
+  --text: #f4f2ed; --muted: #a4a8ad; --paper: #f4f2ed; --ink: #0b0b0c;
+  --wa: #25d366; --wa-ink: #06310f;
+  --wrap: 1120px; --pad: 20px; --r: 14px;
+  --sans: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 var(--sans); padding-bottom: 76px; }
+img, iframe { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--pad); }
+section { padding: 64px 0; border-top: 1px solid var(--line); scroll-margin-top: 64px; }
+h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+h1 { font-size: clamp(2.5rem, 6.4vw, 4.5rem); text-transform: uppercase; }
+h2 { font-size: clamp(1.75rem, 5vw, 3rem); text-transform: uppercase; }
+h3 { font-size: 1.2rem; letter-spacing: -0.01em; line-height: 1.2; }
+p { margin: 0; }
+.eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.lead { color: var(--muted); font-size: 1.08rem; max-width: 56ch; }
+.head { display: grid; gap: 14px; margin-bottom: 32px; }
+
+/* demo marks */
+.demo { background: var(--paper); color: var(--ink); font-size: 0.8rem; text-align: center; padding: 7px var(--pad); }
+.tag { display: inline-block; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; border: 1px dashed var(--muted); color: var(--muted); border-radius: 99px; padding: 2px 10px; }
+
+/* header */
+header { position: sticky; top: 0; z-index: 20; background: rgba(11, 11, 12, 0.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.bar { display: flex; align-items: center; gap: 16px; height: 60px; }
+.mark { font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; font-size: 0.95rem; line-height: 1; }
+.mark b { display: block; font-weight: 300; letter-spacing: 0.34em; }
+nav { display: none; gap: 26px; margin-left: auto; font-size: 0.86rem; }
+nav a { text-decoration: none; color: var(--muted); }
+nav a:hover { color: var(--text); }
+.lang { margin-left: auto; display: flex; border: 1px solid var(--line); border-radius: 99px; overflow: hidden; }
+.lang button { background: none; border: 0; color: var(--muted); font: 600 0.75rem var(--sans); letter-spacing: 0.08em; padding: 7px 11px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--text); color: var(--ink); }
+.bar .btn { display: none; }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 99px; font: 700 0.95rem var(--sans); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform 0.15s ease, background 0.15s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn.primary { background: var(--text); color: var(--ink); }
+.btn.ghost { border-color: var(--line); color: var(--text); }
+.btn.small { min-height: 38px; padding: 0 16px; font-size: 0.82rem; }
+.btn svg { width: 20px; height: 20px; flex: none; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* placeholders for photos */
+.ph { position: relative; overflow: hidden; border-radius: var(--r); background: linear-gradient(135deg, #2a2d2f 0%, #17191a 55%, #101112 100%); min-height: 200px; display: flex; align-items: flex-end; }
+.ph::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 22px); }
+.ph span { position: relative; margin: 14px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px dashed #5a5f66; border-radius: 99px; padding: 4px 12px; background: rgba(11, 11, 12, 0.5); }
+
+/* hero */
+.hero { border-top: 0; padding: 40px 0 56px; }
+.hero .grid { display: grid; gap: 28px; }
+.hero .copy { display: grid; gap: 20px; align-content: center; }
+.hero .ph { min-height: 300px; }
+.note { font-size: 0.85rem; color: var(--muted); }
+
+/* proof */
+.proof { padding: 0; }
+.proof ul { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; }
+.proof li { padding: 24px var(--pad); border-bottom: 1px solid var(--line); }
+.proof li:nth-child(odd) { border-right: 1px solid var(--line); }
+.proof strong { display: block; font-size: clamp(1.5rem, 5vw, 2.25rem); letter-spacing: -0.02em; line-height: 1.1; }
+.proof span { color: var(--muted); font-size: 0.86rem; }
+
+/* cards */
+.cards { display: grid; gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; display: grid; gap: 12px; align-content: start; }
+.card .ph { min-height: 170px; margin: -20px -20px 6px; border-radius: var(--r) var(--r) 0 0; }
+.card p { color: var(--muted); }
+.steps { counter-reset: s; }
+.steps .card::before { counter-increment: s; content: "0" counter(s); font-size: 0.8rem; letter-spacing: 0.16em; color: var(--muted); }
+.price { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+.price small { font-size: 0.85rem; font-weight: 400; color: var(--muted); }
+.card ul { margin: 0; padding-left: 18px; color: var(--muted); display: grid; gap: 4px; }
+.card.pick { border-color: var(--text); }
+.quote { font-size: 1.08rem; color: var(--text) !important; }
+
+/* schedule */
+.table { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r); }
+table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+th, td { text-align: left; padding: 13px 9px; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { padding-left: 14px; }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+td:first-child { font-weight: 700; }
+td { color: var(--muted); }
+td:first-child { color: var(--text); }
+
+/* location */
+.place { display: grid; gap: 24px; }
+.place address { font-style: normal; font-size: 1.2rem; line-height: 1.4; }
+.map { border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: var(--surface); }
+.map iframe { width: 100%; height: 320px; border: 0; filter: grayscale(1) invert(0.92) contrast(0.9); }
+
+/* faq */
+details { border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; list-style: none; padding: 18px 0; font-weight: 700; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--muted); font-weight: 400; }
+details[open] summary::after { content: "–"; }
+details p { color: var(--muted); padding: 0 0 18px; max-width: 64ch; }
+
+/* closing and footer */
+.close { text-align: center; }
+.close .head { justify-items: center; }
+.close .actions { justify-content: center; }
+footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted); font-size: 0.86rem; }
+footer .wrap { display: grid; gap: 14px; }
+footer a { color: var(--text); }
+
+/* WhatsApp, always on screen */
+.sticky { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 30; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; border-radius: 99px; background: var(--wa); color: var(--wa-ink); font: 700 0.95rem var(--sans); text-decoration: none; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+.sticky svg { width: 22px; height: 22px; }
+
+.rise { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.rise.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .rise { opacity: 1; transform: none; transition: none; } .btn { transition: none; } }
+
+@media (min-width: 760px) {
+  :root { --pad: 32px; }
+  body { padding-bottom: 0; }
+  section { padding: 96px 0; }
+  nav { display: flex; }
+  .lang { margin-left: 0; }
+  .bar .btn { display: inline-flex; }
+  .hero { padding: 72px 0 88px; }
+  .hero .grid { grid-template-columns: 1.2fr 0.8fr; gap: 48px; }
+  .hero .ph { min-height: 480px; }
+  .proof ul { grid-template-columns: repeat(4, 1fr); }
+  .proof li { border-bottom: 0; border-right: 1px solid var(--line); padding: 32px; }
+  .proof li:last-child { border-right: 0; }
+  .cards { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .head.split { grid-template-columns: 1fr 1fr; align-items: end; }
+  .place { grid-template-columns: 0.8fr 1.2fr; align-items: start; }
+  .map iframe { height: 420px; }
+  table { font-size: 1rem; }
+  th, td { padding: 14px 16px; }
+  th:first-child, td:first-child { padding-left: 16px; }
+  th { font-size: 0.72rem; letter-spacing: 0.14em; }
+  footer { padding-bottom: 96px; }
+  .sticky { left: auto; right: 24px; bottom: 24px; padding: 0 22px; }
+  footer .wrap { grid-template-columns: 1fr auto; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo" data-en="Demo. Sections marked “Sample” use example content until Personal Fit supplies its own.">Demo. Las secciones marcadas “Ejemplo” usan contenido de muestra hasta recibir el de Personal Fit.</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#top" aria-label="Personal Fit">Personal<b>Fit</b></a>
+    <nav aria-label="Secciones">
+      <a href="#servicios" data-en="Services">Servicios</a>
+      <a href="#membresias" data-en="Memberships">Membresías</a>
+      <a href="#horarios" data-en="Schedule">Horarios</a>
+      <a href="#ubicacion" data-en="Location">Ubicación</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn primary small wa" data-cta="header" href="#" data-en="Courtesy session">Sesión de cortesía</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap grid">
+    <div class="copy">
+      <p class="eyebrow" data-en="Wellness centre · Avenida Escazú">Centro wellness · Avenida Escazú</p>
+      <h1 data-en="Train with a plan made for you.">Entrena con un plan hecho para ti.</h1>
+      <p class="lead" data-en="Functional training, yoga, and physiotherapy in one place, with a coach at your side. Your first session is on us.">Entrenamiento funcional, yoga y fisioterapia en un solo lugar, con un entrenador a tu lado. Tu primera sesión es de cortesía.</p>
+      <div class="actions">
+        <a class="btn primary wa" data-cta="hero" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Zm-4 8.1a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm4 0a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm4 0a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z" fill-rule="evenodd"/></svg>
+          <span data-en="Request your courtesy session">Solicita tu sesión de cortesía</span>
+        </a>
+        <a class="btn ghost" href="#servicios" data-en="See services">Ver servicios</a>
+      </div>
+      <p class="note" data-en="We answer on WhatsApp · Torre 301, 2nd floor">Respondemos por WhatsApp · Torre 301, piso 2</p>
+    </div>
+    <div class="ph" role="img" aria-label="Foto de la sala principal"><span data-en="Photo or video: main training floor">Foto o video: sala principal</span></div>
+  </div>
+</section>
+
+<section class="proof" aria-label="Personal Fit en cifras">
+  <ul class="wrap" style="padding:0">
+    <li><strong>16K+</strong><span data-en="people follow us on Instagram">personas nos siguen en Instagram</span></li>
+    <li><strong>3</strong><span data-en="disciplines under one roof">disciplinas bajo un mismo techo</span></li>
+    <li><strong data-en="1st">1ª</strong><span data-en="session free, to get to know us">sesión de cortesía, para conocernos</span></li>
+    <li><strong>Escazú</strong><span data-en="Avenida Escazú, Torre 301, 2nd floor">Avenida Escazú, Torre 301, piso 2</span></li>
+  </ul>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="head split rise">
+      <div><p class="eyebrow" data-en="Services">Servicios</p><h2 data-en="Three ways to move better.">Tres formas de moverte mejor.</h2></div>
+      <p class="lead" data-en="Each discipline works on its own. Together they cover strength, mobility, and recovery.">Cada disciplina funciona por sí sola. Juntas cubren fuerza, movilidad y recuperación.</p>
+    </div>
+    <div class="cards">
+      <article class="card rise">
+        <div class="ph" role="img" aria-label="Foto de entrenamiento funcional"><span data-en="Photo: functional session">Foto: sesión funcional</span></div>
+        <h3 data-en="Functional training">Entrenamiento funcional</h3>
+        <p data-en="Strength, mobility, and endurance for real life, with your technique corrected on every rep.">Fuerza, movilidad y resistencia para la vida real, con la técnica corregida en cada repetición.</p>
+      </article>
+      <article class="card rise">
+        <div class="ph" role="img" aria-label="Foto de clase de yoga"><span data-en="Photo: yoga class">Foto: clase de yoga</span></div>
+        <h3>Yoga</h3>
+        <p data-en="Breathing, flexibility, and control to balance your strength work.">Respiración, flexibilidad y control para equilibrar el trabajo de fuerza.</p>
+      </article>
+      <article class="card rise">
+        <div class="ph" role="img" aria-label="Foto de fisioterapia"><span data-en="Photo: physiotherapy">Foto: fisioterapia</span></div>
+        <h3 data-en="Physiotherapy">Fisioterapia</h3>
+        <p data-en="Assessment and treatment to train again without pain and to prevent injuries.">Evaluación y tratamiento para volver a entrenar sin dolor y prevenir lesiones.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="cortesia">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="eyebrow" data-en="Courtesy session">Sesión de cortesía</p>
+      <h2 data-en="Your first session, at no cost.">Tu primera sesión, sin costo.</h2>
+    </div>
+    <div class="cards steps">
+      <article class="card rise"><h3 data-en="Message us on WhatsApp">Escríbenos por WhatsApp</h3><p data-en="Tell us your goal and when you are free.">Cuéntanos tu objetivo y tu disponibilidad.</p></article>
+      <article class="card rise"><h3 data-en="Choose your time">Elige tu horario</h3><p data-en="We agree on the day and the discipline you want to try.">Coordinamos el día y la disciplina que quieres probar.</p></article>
+      <article class="card rise"><h3 data-en="Come and train">Ven y entrena</h3><p data-en="Meet the centre, the team, and your starting point.">Conoce el centro, al equipo y tu punto de partida.</p></article>
+    </div>
+    <div class="actions" style="margin-top:28px"><a class="btn primary wa" data-cta="steps" href="#" data-en="Request your courtesy session">Solicita tu sesión de cortesía</a></div>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="eyebrow"><span data-en="The team">El equipo</span> &nbsp;<span class="tag" data-en="Sample">Ejemplo</span></p>
+      <h2 data-en="The people who train you.">Las personas que te entrenan.</h2>
+    </div>
+    <div class="cards">
+      <article class="card rise"><div class="ph" role="img" aria-label="Retrato del coach"><span data-en="Portrait">Retrato</span></div><h3 data-en="Coach name">Nombre del coach</h3><p data-en="Speciality · certification · years of experience">Especialidad · certificación · años de experiencia</p></article>
+      <article class="card rise"><div class="ph" role="img" aria-label="Retrato del coach"><span data-en="Portrait">Retrato</span></div><h3 data-en="Coach name">Nombre del coach</h3><p data-en="Speciality · certification · years of experience">Especialidad · certificación · años de experiencia</p></article>
+      <article class="card rise"><div class="ph" role="img" aria-label="Retrato del coach"><span data-en="Portrait">Retrato</span></div><h3 data-en="Coach name">Nombre del coach</h3><p data-en="Speciality · certification · years of experience">Especialidad · certificación · años de experiencia</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="membresias">
+  <div class="wrap">
+    <div class="head split rise">
+      <div><p class="eyebrow"><span data-en="Memberships">Membresías</span> &nbsp;<span class="tag" data-en="Sample">Ejemplo</span></p><h2 data-en="Clear prices, no fine print.">Precios claros, sin letra pequeña.</h2></div>
+      <p class="lead" data-en="Plan names, prices, and what each includes come from Personal Fit.">Los nombres, precios y lo que incluye cada plan los define Personal Fit.</p>
+    </div>
+    <div class="cards">
+      <article class="card rise"><h3 data-en="Plan one">Plan uno</h3><p class="price">₡ — <small data-en="/ month">/ mes</small></p><ul><li data-en="Sessions per week">Sesiones por semana</li><li data-en="Disciplines included">Disciplinas incluidas</li><li data-en="Initial assessment">Evaluación inicial</li></ul></article>
+      <article class="card pick rise"><h3 data-en="Plan two · most chosen">Plan dos · el más elegido</h3><p class="price">₡ — <small data-en="/ month">/ mes</small></p><ul><li data-en="Sessions per week">Sesiones por semana</li><li data-en="Disciplines included">Disciplinas incluidas</li><li data-en="Progress follow-up">Seguimiento de progreso</li></ul></article>
+      <article class="card rise"><h3 data-en="Plan three">Plan tres</h3><p class="price">₡ — <small data-en="/ month">/ mes</small></p><ul><li data-en="Sessions per week">Sesiones por semana</li><li data-en="Disciplines included">Disciplinas incluidas</li><li data-en="Physiotherapy included">Fisioterapia incluida</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="horarios">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="eyebrow"><span data-en="Schedule">Horarios</span> &nbsp;<span class="tag" data-en="Sample">Ejemplo</span></p>
+      <h2 data-en="The week at a glance.">La semana de un vistazo.</h2>
+    </div>
+    <div class="table rise">
+      <table>
+        <thead><tr><th data-en="Discipline">Disciplina</th><th data-en="Monday to Friday">Lunes a viernes</th><th data-en="Saturday">Sábado</th><th data-en="Sunday">Domingo</th></tr></thead>
+        <tbody>
+          <tr><td data-en="Functional">Funcional</td><td>— a —</td><td>— a —</td><td data-en="To confirm">Por confirmar</td></tr>
+          <tr><td>Yoga</td><td>— a —</td><td>— a —</td><td data-en="To confirm">Por confirmar</td></tr>
+          <tr><td data-en="Physiotherapy">Fisioterapia</td><td data-en="By appointment">Con cita</td><td data-en="By appointment">Con cita</td><td data-en="To confirm">Por confirmar</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="resultados">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="eyebrow"><span data-en="Results">Resultados</span> &nbsp;<span class="tag" data-en="Sample">Ejemplo</span></p>
+      <h2 data-en="Members, in their own words.">Miembros, en sus propias palabras.</h2>
+    </div>
+    <div class="cards">
+      <article class="card rise"><p class="quote" data-en="“A member’s experience goes here, in their own words.”">“Aquí va la experiencia de un miembro, en sus propias palabras.”</p><p data-en="Name · member since 20XX">Nombre · miembro desde 20XX</p></article>
+      <article class="card rise"><p class="quote" data-en="“A concrete result: what changed, and in how long.”">“Un resultado concreto: qué cambió y en cuánto tiempo.”</p><p data-en="Name · member since 20XX">Nombre · miembro desde 20XX</p></article>
+      <article class="card rise"><p class="quote" data-en="“What they would say to someone who is still deciding.”">“Lo que le diría a alguien que todavía lo está pensando.”</p><p data-en="Name · member since 20XX">Nombre · miembro desde 20XX</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="ubicacion">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="eyebrow" data-en="Location">Ubicación</p>
+      <h2 data-en="In the heart of Avenida Escazú.">En el corazón de Avenida Escazú.</h2>
+    </div>
+    <div class="place">
+      <div class="rise" style="display:grid;gap:18px">
+        <address>Avenida Escazú<br><span data-en="Torre 301, 2nd floor">Torre 301, piso 2</span><br>Escazú, San José, Costa Rica</address>
+        <p class="note"><span data-en="Parking: to confirm">Parqueo: por confirmar</span> &nbsp;<span class="tag" data-en="Sample">Ejemplo</span></p>
+        <div class="actions"><a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Personal+Fit+Avenida+Escaz%C3%BA+Torre+301" data-en="How to get there">Cómo llegar</a></div>
+      </div>
+      <div class="map rise"><iframe title="Mapa: Avenida Escazú, Torre 301" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Avenida+Escaz%C3%BA+Torre+301&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="eyebrow"><span data-en="Questions">Preguntas</span> &nbsp;<span class="tag" data-en="Sample">Ejemplo</span></p>
+      <h2 data-en="What people ask before coming.">Lo que nos preguntan antes de venir.</h2>
+    </div>
+    <div class="rise">
+      <details><summary data-en="Do I need experience?">¿Necesito experiencia previa?</summary><p data-en="No. The courtesy session shows your starting point, and the plan adapts to you.">No. La sesión de cortesía sirve para conocer tu punto de partida y adaptar el plan a ti.</p></details>
+      <details><summary data-en="What do I bring to the first session?">¿Qué llevo a la primera sesión?</summary><p data-en="Comfortable clothes, training shoes, and water.">Ropa cómoda, tenis y agua.</p></details>
+      <details><summary data-en="Can I combine functional training, yoga, and physiotherapy?">¿Puedo combinar funcional, yoga y fisioterapia?</summary><p data-en="Answer from Personal Fit: how the plans combine the three.">Respuesta de Personal Fit: cómo combinan los planes las tres disciplinas.</p></details>
+      <details><summary data-en="Is there parking?">¿Hay parqueo?</summary><p data-en="Answer from Personal Fit: where to park and what it costs.">Respuesta de Personal Fit: dónde parquear y cuánto cuesta.</p></details>
+      <details><summary data-en="What does it cost after the courtesy session?">¿Cuánto cuesta después de la sesión de cortesía?</summary><p data-en="The plans and prices are in Memberships, above.">Los planes y precios están en Membresías, más arriba.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <div class="head rise">
+      <h2 data-en="Start with a courtesy session.">Empieza con una sesión de cortesía.</h2>
+      <p class="lead" data-en="Message us today and choose your time.">Escríbenos hoy y elige tu horario.</p>
+    </div>
+    <div class="actions"><a class="btn primary wa" data-cta="close" href="#" data-en="Request your courtesy session">Solicita tu sesión de cortesía</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--text)">Personal Fit</strong> · Avenida Escazú, Torre 301, <span data-en="2nd floor">piso 2</span> · <a href="https://www.instagram.com/personalfitcr/" target="_blank" rel="noopener">Instagram</a></p>
+    <p>© <span id="y">2026</span> Personal Fit · <span data-en="Demonstration site">Sitio de demostración</span></p>
+  </div>
+</footer>
+
+<a class="sticky wa" data-cta="sticky" href="#">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Zm-4 8.1a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm4 0a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm4 0a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z" fill-rule="evenodd"/></svg>
+  <span data-en="Courtesy session on WhatsApp">Sesión de cortesía por WhatsApp</span>
+</a>
+
+<script>
+(function () {
+  // One destination for every button: the gym's WhatsApp, with a message that says the visitor came from the site.
+  var WA = 'https://wa.me/50688709095?text=' + encodeURIComponent('Hola, vengo del sitio web y quiero solicitar mi sesión de cortesía.');
+  document.querySelectorAll('a.wa').forEach(function (a) { a.href = WA; a.target = '_blank'; a.rel = 'noopener'; });
+
+  // Language: Spanish is in the markup, English in data-en.
+  var nodes = document.querySelectorAll('[data-en]');
+  nodes.forEach(function (n) { n.dataset.es = n.innerHTML; });
+  function setLang(l) {
+    nodes.forEach(function (n) { n.innerHTML = l === 'en' ? n.dataset.en : n.dataset.es; });
+    document.documentElement.lang = l;
+    document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === l)); });
+    try { localStorage.setItem('pf-lang', l); } catch (e) {}
+  }
+  document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+  var saved = null; try { saved = localStorage.getItem('pf-lang'); } catch (e) {}
+  if (saved === 'en') setLang('en');
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // Sections rise into view once; without the observer everything is simply visible.
+  var rise = document.querySelectorAll('.rise');
+  if (!('IntersectionObserver' in window)) { rise.forEach(function (n) { n.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+  rise.forEach(function (n) { io.observe(n); });
+})();
+</script>
+</body>
+</html>
