@@ -298,7 +298,7 @@ Devices:
 
 The tabled taxonomy is the brand's signature deliverable; its anatomy is
 constant even as its grid changes. The full standard (54 principles, the
-17 types, every term defined) is **Taxonomy (Spec)**, Works/3Squared in
+9 types and their 17 kinds, every term defined) is **Taxonomy (Spec)**, Works/3Squared in
 Drive, brand 3Squared; the Systems repo's `/taxonomy` skill applies it.
 This section keeps the identity-level rules.
 
@@ -369,7 +369,7 @@ Anatomy, top-down:
 - **Sections:** the full anatomy. Every table is a complete knowledge unit,
   so a supporting table keeps its own PRACTICE, PROPOSITIONS and
   PRINCIPLES.
-- **Types:** any of the 17 on Taxonomy (Map) (Register, List, Index,
+- **Kinds:** any of the 17 on Taxonomy (Map), in its 9 types (Register, List, Index,
   Glossary, Budget, Schedule, Checklist, Routine, Form, Spec, Map, Plan,
   Program, Assessment, Model, Portfolio, Log).
 - **Checklist links:** the code links to the item's best tutorial, `(guide)`
