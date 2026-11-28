@@ -102,7 +102,7 @@ const SERVICE: StatTableData = {
           metrics: [
             ["", "I keep your home running to one written standard", false],
             ["Office", "I manage your vendors, keep the household records, coordinate your staff, and do the online purchasing; I write the household procedures, build AI workflows for routine work, and plan seasonal openings", true],
-            ["Field", "I walk the house on daily rounds, run household errands, do minor repairs, organize storage, and look after the cars", true],
+            ["Field", "I walk the house on daily rounds, run household errands, organize storage, and look after the cars", true],
             ["Presence", "I supervise your staff and vendors on site; I can also hire and train your staff", true],
           ],
         },
