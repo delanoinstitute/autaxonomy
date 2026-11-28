@@ -211,6 +211,8 @@ const ENGAGEMENT: StatTableData = {
             ["Safety", "CPR and AED certified by the American Heart Association (valid to November 2028)", true],
             ["Driving", "New York driver’s license in progress", true],
             ["Languages", "English, Afrikaans, and Mandarin Chinese", true],
+            ["Habits", "Non-smoker and teetotaler: I do not drink alcohol", true],
+            ["Status", "Unmarried, with no children of my own", true],
           ],
         },
       ],
