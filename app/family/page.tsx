@@ -86,7 +86,7 @@ const SERVICE: StatTableData = {
           metrics: [
             ["", "I keep your children’s week on track and teach them what school leaves out", false],
             ["Office", "I keep the children’s schedules and liaise with their schools; I can also design a learning program for each child", true],
-            ["Field", "I run family errands, drive the children (New York license in progress), and care for your pets", true],
+            ["Field", "I run family errands, drive the children (New York license in progress), and look after your elders and pets", true],
             ["Presence", "I supervise the children; I can also tutor them, coach sport and fitness, build healthy habits with their devices, and teach them to use AI", true],
           ],
         },
