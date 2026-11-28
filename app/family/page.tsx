@@ -13,18 +13,21 @@ import WikiLink from "@/components/WikiLink";
 // NAV_GROUPS (so it stays out of the menu and the sitemap) and its metadata
 // tells search engines not to index it; the link is sent, never found.
 // Structure follows the site standard: three branches, exactly two bands each.
-// Service (Offer) restates Offers (Register) in a parent's words: Thinking ·
-// Producing · Health for Principals · Children · Staff. Record (Proof) shows the
-// range of people taught, by role only: NO client or family names on this page,
-// ever (consent rule); references are given on request. Engagement (Hiring)
-// gives the method and the terms a recruiter needs to place me.
+// Service (Offer) restates Offers (List) in a family's words: one category per
+// part of the household (Principals · Family · Home), one row per setting
+// (Office · Field · Presence). Each sentence runs from the core duties, through
+// the ones that depend on the household, to the extras ("I can also"). Record
+// (Proof) shows the range of people served, by role only: NO client or family
+// names on this page, ever (consent rule); references are given on request.
+// Engagement (Hiring) gives the five steps of the list's Practice and the terms
+// a recruiter needs to place me.
 
 // At a glance — the ten-second read for a recruiter who will not open the
 // tables. Three columns mirror the three branches below (same names, same
 // order, the first band hue of each), three lines each. Every line restates a
 // row of the tables: change the tables first, then this.
 const PORTRAIT = CAROUSEL[0];
-const ROLE = "Private educator and household chief of staff";
+const ROLE = "Family chief of staff";
 const GLANCE: { id: string; title: string; paren: string; hue: string; rows: [string, string][] }[] = [
   {
     id: "service",
@@ -32,9 +35,9 @@ const GLANCE: { id: string; title: string; paren: string; hue: string; rows: [st
     paren: "Offer",
     hue: "red",
     rows: [
-      ["Thinking", "Decisions questioned down to one page"],
-      ["Producing", "A week, devices, files, and home in order"],
-      ["Health", "Assessment, training, and meals"],
+      ["Principals", "Calendar, travel, bills, research, errands"],
+      ["Home", "Vendors, records, staff, purchasing"],
+      ["Family", "Schedules, school, driving, tutoring"],
     ],
   },
   {
@@ -65,26 +68,26 @@ const SERVICE: StatTableData = {
   title: "Service",
   groups: [
     {
-      domain: "Family Care",
+      domain: "Personal Affairs",
       hue: "red",
       label: "",
       rows: [
         {
-          category: "Principals (decisions)",
+          category: "Principals (assistant)",
           metrics: [
-            ["", "I return your time, your health, and your clear thinking", false],
-            ["Thinking", "I question the decision in front of you until it fits on one page, and research the ones you have no time for", true],
-            ["Producing", "I arrange your week, devices, files, and home to save you hours, and bring AI into the work you already do", true],
-            ["Health", "I assess your labs and fitness on one family dashboard, then train you and plan meals that fit your week", true],
+            ["", "I take the administration of your life off your desk", false],
+            ["Office", "I manage your calendar, book your travel, pay bills and track expenses, research what you have no time for, plan your events, and handle correspondence; I can also write your training and meal plans and design a product with you", true],
+            ["Field", "I run your personal errands and drive you (New York license in progress); I can also pack for your trips and cook", true],
+            ["Presence", "I travel with you, help with your tech, and host your events; I can also train you in person and teach you to use AI and your devices", true],
           ],
         },
         {
-          category: "Children (learning)",
+          category: "Family (coordinator)",
           metrics: [
-            ["", "I teach your children how to think, focus, and move", false],
-            ["Thinking", "I tutor by asking questions, mentor each child on a project of their own, and build lessons around what school leaves out", true],
-            ["Producing", "I set up a school-week schedule, a study space they keep themselves, and healthy habits with their devices", true],
-            ["Health", "I coach movement skills through play, and write an exercise and eating plan for each child’s age", true],
+            ["", "I keep your children’s week on track and teach them what school leaves out", false],
+            ["Office", "I keep the children’s schedules and liaise with their schools; I can also design a learning program for each child", true],
+            ["Field", "I run family errands, drive the children (New York license in progress), and care for your pets", true],
+            ["Presence", "I supervise the children; I can also tutor them, coach sport and fitness, build healthy habits with their devices, and teach them to use AI", true],
           ],
         },
       ],
@@ -95,12 +98,12 @@ const SERVICE: StatTableData = {
       label: "",
       rows: [
         {
-          category: "Staff (standards)",
+          category: "Home (manager)",
           metrics: [
-            ["", "I train your staff to one written standard, then step back", false],
-            ["Thinking", "I write each role and its procedures down, train your tutors to make the most of their hours, and review the team every week", true],
-            ["Producing", "I build the registers, lists, and routines that run the home, and set the workflow between you and your assistant", true],
-            ["Health", "I train your chef to cook to your lab results and your trainer to one program, and liaise with your doctor and coaches", true],
+            ["", "I keep your home running to one written standard", false],
+            ["Office", "I manage your vendors, keep the household records, coordinate your staff, and do the online purchasing; I write the household procedures, build AI workflows for routine work, and plan seasonal openings", true],
+            ["Field", "I walk the house on daily rounds, run household errands, do minor repairs, organize storage, and look after the cars", true],
+            ["Presence", "I supervise your staff and vendors on site; I can also hire and train your staff", true],
           ],
         },
       ],
@@ -173,11 +176,12 @@ const ENGAGEMENT: StatTableData = {
         {
           category: "Steps (sequence)",
           metrics: [
-            ["", "I measure first, arrange second, train third, and hand over last", false],
-            ["Assess", "I measure each person against a benchmark before I change anything", true],
-            ["Arrange", "I set up the home and its tools so the right action is the easy one", true],
-            ["Train", "I teach each person to run their part alone, then raise the level", true],
-            ["Hand over", "I write the standard down and train the family or its staff to keep it", true],
+            ["", "I learn your way first, run the core myself, write it down, hand it over, and only then add", false],
+            ["Learn", "I learn how your family already does each thing before I change anything", true],
+            ["Run", "I do the duties I was hired for myself, without reminders, until nothing is dropped", true],
+            ["Document", "I write each recurring duty down as a checklist anyone can follow", true],
+            ["Delegate", "I train your staff and vendors to the written procedure, then check their work", true],
+            ["Add", "I use the hours this frees to offer one extra at a time: training, tutoring, cooking, or AI lessons", true],
           ],
         },
       ],
@@ -191,9 +195,10 @@ const ENGAGEMENT: StatTableData = {
           category: "Commitment (one household)",
           metrics: [
             ["", "I serve one household at a time and give it all of my working hours", false],
-            ["Role", "Private educator and household chief of staff", true],
+            ["Role", "Family chief of staff: personal assistant, house manager, and family coordinator", true],
             ["Basis", "Full time, as an employee or on retainer", true],
             ["Location", "New York City and the New York area", true],
+            ["Willingness", "No request is beneath me; when staff are missing I do the work myself, then fix the gap", true],
           ],
         },
         {
@@ -306,9 +311,9 @@ export default function FamilyPage() {
         </div>
       </div>
 
-      <p id="introduction" className="page-hook">I give a family back its time, its health, and its clear thinking.</p>
+      <p id="introduction" className="page-hook">I take the running of a household off a family’s hands.</p>
       <p className="page-promise">
-        I work with <strong>one household</strong> at a time, as private educator and household chief of staff. I counsel the parents, teach the children, and train the staff, then arrange the home so the right action is the easy one.
+        I work for <strong>one household</strong> at a time, as assistant to the principals, manager of the home, and coordinator for the family. You hire me for the core duties; once those run, I add training, tutoring, cooking, and AI.
       </p>
 
       <section className="glance" aria-label="At a glance">
@@ -341,7 +346,7 @@ export default function FamilyPage() {
       </section>
 
       <p>
-        Everything I teach I have tested on myself first, and <WikiLink href="/">the rest of this site</WikiLink> is the record of that. The three sections below give the detail behind each column.
+        Everything I offer a household I have tested in my own first, and <WikiLink href="/">the rest of this site</WikiLink> is the record of that. The three sections below give the detail behind each column.
       </p>
 
       <hr className="zone-rule" />
@@ -350,7 +355,7 @@ export default function FamilyPage() {
         Service <span className="heading-paren">(Offer)</span>
       </h2>
       <p>
-        What I do for a household: <strong>family</strong> care (parents and children) and household <strong>operations</strong> (staff). Together they decide whether change lasts. I counsel the parents, teach the children, train the staff, and build the systems that hold it together.
+        What I do for a household: your <strong>personal</strong> affairs (the principals and their family) and household <strong>operations</strong> (the home). Together they are the whole job. Each line names my duties in one setting (at a desk, out on errands, or in person), from the ones every household hires for to the ones I add.
       </p>
       <NestedTable {...SERVICE} defaultOpen />
 
@@ -366,7 +371,7 @@ export default function FamilyPage() {
         Engagement <span className="heading-paren">(Hiring)</span>
       </h2>
       <p>
-        How we would work: my <strong>method</strong> (four steps) and my <strong>terms</strong> (one household, with the checks you need). Together they decide whether the work outlives me. I assess, arrange, train, and hand over, for one family at a time.
+        How we would work: my <strong>method</strong> (five steps) and my <strong>terms</strong> (one household, with the checks you need). Together they decide whether the work outlives me. I learn, run, document, delegate, and add, for one family at a time.
       </p>
       <NestedTable {...ENGAGEMENT} defaultOpen />
 
